@@ -1,7 +1,7 @@
 
-export default{
+export default {
   message: {
-    index:'index',
+    index: 'index',
     createTime: 'createTime',
     handle: 'handle',
     noData: 'No data',
@@ -11,6 +11,18 @@ export default{
   questionnaire: {
     title: 'title',
     status: 'status'
+  },
+  member: {
+    mobile: 'mobile',
+    email: 'email',
+    status: 'status',
+    country: 'country',
+    language: 'language',
+    avatar: 'avatar',
+    nickname: 'nickname',
+    from: 'from'
+
+
   }
 }
 

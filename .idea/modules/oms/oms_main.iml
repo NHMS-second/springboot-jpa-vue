@@ -4,6 +4,11 @@
     <facet type="Spring" name="Spring">
       <configuration />
     </facet>
+    <facet type="web" name="Web">
+      <configuration>
+        <webroots />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/../../../oms/out/production/classes" />
@@ -57,7 +62,7 @@
     <orderEntry type="library" name="Gradle: cn.jpush.api:jpush-client:3.3.3" level="project" />
     <orderEntry type="library" name="Gradle: com.yunpian.sdk:yunpian-java-sdk:1.2.5" level="project" />
     <orderEntry type="library" name="Gradle: com.ccp:rest-sdk-java:2.7r" level="project" />
-    <orderEntry type="library" name="Gradle: com.qiniu:qiniu-java-sdk:7.2.10" level="project" />
+    <orderEntry type="library" name="Gradle: com.qiniu:qiniu-java-sdk:7.2.11" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpclient:4.5.3" level="project" />
     <orderEntry type="library" name="Gradle: org.jdom:jdom:1.1" level="project" />
     <orderEntry type="library" name="Gradle: net.sf.json-lib:json-lib:jdk15:2.4" level="project" />

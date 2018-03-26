@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanyun.oms.mapper.MemberMapper">
+
+<resultMap id="MemberMap" type="com.yanyun.oms.entity.member.Member">
+
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="mobile" property="mobile" />
+		<result column="email" property="email" />
+		<result column="password" property="password" />
+		<result column="salt" property="salt" />
+		<result column="auth_id" property="authId" />
+		<result column="status" property="status" />
+		<result column="country" property="country" />
+		<result column="language" property="language" />
+		<result column="avatar" property="avatar" />
+		<result column="nickname" property="nickname" />
+		<result column="alias_id" property="aliasId" />
+		<result column="fingerprint" property="fingerprint" />
+		<result column="from" property="from" />
+		<result column="device_pwd" property="devicePwd" />
+		<result column="created_id" property="createdId" />
+		<result column="modified_id" property="modifiedId" />
+		<result column="created_time" property="createdTime" />
+		<result column="modified_time" property="modifiedTime" />
+		<result column="deleted" property="deleted" />
+    </resultMap>
+	
+	<!--表名 -->
+	<sql id="tableName">
+		ec_member
+	</sql>
+	
+	<!-- 字段 -->
+	<sql id="Field">
+		id,
+		mobile,
+		email,
+		password,
+		salt,
+		auth_id,
+		status,
+		country,
+		`language`,
+		avatar,
+		nickname,
+		alias_id,
+		fingerprint,
+		`from`,
+		device_pwd,
+		created_id,
+		modified_id,
+		created_time,
+		modified_time,
+		deleted
+	</sql>
+	
+	<!-- 字段值 -->
+	<sql id="FieldValue">
+		#{id, jdbcType=INTEGER},
+		#{mobile, jdbcType=VARCHAR},
+		#{email, jdbcType=VARCHAR},
+		#{password, jdbcType=VARCHAR},
+		#{salt, jdbcType=VARCHAR},
+		#{authId, jdbcType=VARCHAR},
+		#{status, jdbcType=TINYINT},
+		#{country, jdbcType=VARCHAR},
+		#{language, jdbcType=VARCHAR},
+		#{avatar, jdbcType=VARCHAR},
+		#{nickname, jdbcType=VARCHAR},
+		#{aliasId, jdbcType=VARCHAR},
+		#{fingerprint, jdbcType=VARCHAR},
+		#{from, jdbcType=TINYINT},
+		#{devicePwd, jdbcType=VARCHAR},
+		#{createdId, jdbcType=INTEGER},
+		#{modifiedId, jdbcType=INTEGER},
+		#{createdTime, jdbcType=TIMESTAMP},
+		#{modifiedTime, jdbcType=TIMESTAMP},
+		#{deleted, jdbcType=TINYINT}
+	</sql>
+
+	<!-- 查询全部记录 -->
+    <select id="findAll" resultMap="MemberMap">
+        SELECT
+        	<include refid="Field"></include>
+        FROM
+        	<include refid="tableName"></include>
+		WHERE
+			deleted = 0
+    </select>
+	
+	<!-- 新增-->
+<insert id="insert" parameterType="com.yanyun.oms.entity.member.Member" useGeneratedKeys="true" keyProperty="id">
+
+        INSERT INTO
+			<include refid="tableName"></include>
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+				id,
+            </if>
+            <if test="mobile != null">
+				mobile,
+            </if>
+            <if test="email != null">
+				email,
+            </if>
+            <if test="password != null">
+				password,
+            </if>
+            <if test="salt != null">
+				salt,
+            </if>
+            <if test="authId != null">
+				auth_id,
+            </if>
+            <if test="status != null">
+				status,
+            </if>
+            <if test="country != null">
+				country,
+            </if>
+            <if test="language != null">
+				language,
+            </if>
+            <if test="avatar != null">
+				avatar,
+            </if>
+            <if test="nickname != null">
+				nickname,
+            </if>
+            <if test="aliasId != null">
+				alias_id,
+            </if>
+            <if test="fingerprint != null">
+				fingerprint,
+            </if>
+            <if test="from != null">
+				from,
+            </if>
+            <if test="devicePwd != null">
+				device_pwd,
+            </if>
+            <if test="createdId != null">
+				created_id,
+            </if>
+            <if test="modifiedId != null">
+				modified_id,
+            </if>
+            <if test="createdTime != null">
+				created_time,
+            </if>
+            <if test="modifiedTime != null">
+				modified_time,
+            </if>
+            <if test="deleted != null">
+				deleted,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+				#{id},
+            </if>
+            <if test="mobile != null">
+				#{mobile},
+            </if>
+            <if test="email != null">
+				#{email},
+            </if>
+            <if test="password != null">
+				#{password},
+            </if>
+            <if test="salt != null">
+				#{salt},
+            </if>
+            <if test="authId != null">
+				#{authId},
+            </if>
+            <if test="status != null">
+				#{status},
+            </if>
+            <if test="country != null">
+				#{country},
+            </if>
+            <if test="language != null">
+				#{language},
+            </if>
+            <if test="avatar != null">
+				#{avatar},
+            </if>
+            <if test="nickname != null">
+				#{nickname},
+            </if>
+            <if test="aliasId != null">
+				#{aliasId},
+            </if>
+            <if test="fingerprint != null">
+				#{fingerprint},
+            </if>
+            <if test="from != null">
+				#{from},
+            </if>
+            <if test="devicePwd != null">
+				#{devicePwd},
+            </if>
+            <if test="createdId != null">
+				#{createdId},
+            </if>
+            <if test="modifiedId != null">
+				#{modifiedId},
+            </if>
+            <if test="createdTime != null">
+				#{createdTime},
+            </if>
+            <if test="modifiedTime != null">
+				#{modifiedTime},
+            </if>
+            <if test="deleted != null">
+				#{deleted},
+            </if>
+        </trim>
+	</insert>
+	
+	<!-- 删除-->
+	<delete id="delete" parameterType="java.lang.Integer">
+		UPDATE
+			<include refid="tableName"></include>
+		SET
+			deleted = 1
+		WHERE
+			id = #{id}
+	</delete>
+
+    <!-- 批量删除 -->
+    <delete id="deleteByIds">
+        UPDATE
+        	<include refid="tableName"></include>
+		SET
+			deleted = 1
+        WHERE
+			id IN
+			<foreach item="item" index="index" collection="array" open="(" separator="," close=")">
+				#{item}
+			</foreach>
+    </delete>
+	
+	<!-- 更新记录 -->
+<update id="update" parameterType="com.yanyun.oms.entity.member.Member">
+		UPDATE
+			<include refid="tableName"></include>
+        <set>
+			<if test="mobile != null">
+				mobile = #{mobile},
+			</if>
+			<if test="email != null">
+				email = #{email},
+			</if>
+			<if test="password != null">
+				password = #{password},
+			</if>
+			<if test="salt != null">
+				salt = #{salt},
+			</if>
+			<if test="authId != null">
+				auth_id = #{authId},
+			</if>
+			<if test="status != null">
+				status = #{status},
+			</if>
+			<if test="country != null">
+				country = #{country},
+			</if>
+			<if test="language != null">
+				language = #{language},
+			</if>
+			<if test="avatar != null">
+				avatar = #{avatar},
+			</if>
+			<if test="nickname != null">
+				nickname = #{nickname},
+			</if>
+			<if test="aliasId != null">
+				alias_id = #{aliasId},
+			</if>
+			<if test="fingerprint != null">
+				fingerprint = #{fingerprint},
+			</if>
+			<if test="from != null">
+				from = #{from},
+			</if>
+			<if test="devicePwd != null">
+				device_pwd = #{devicePwd},
+			</if>
+			<if test="createdId != null">
+				created_id = #{createdId},
+			</if>
+			<if test="modifiedId != null">
+				modified_id = #{modifiedId},
+			</if>
+			<if test="createdTime != null">
+				created_time = #{createdTime},
+			</if>
+			<if test="modifiedTime != null">
+				modified_time = #{modifiedTime},
+			</if>
+			<if test="deleted != null">
+				deleted = #{deleted},
+			</if>
+        </set>
+        WHERE id = #{id}
+	</update>
+	
+	<!-- 通过编号查询 -->
+	<select id="findById" parameterType="java.lang.Integer" resultMap="MemberMap">
+		SELECT
+			<include refid="Field"></include>
+		FROM
+			<include refid="tableName"></include>
+		WHERE id = #{id}
+	</select>
+
+    <!--更新会员状态-->
+    <update id="updateStatus">
+        UPDATE
+        	<include refid="tableName"></include>
+        SET
+        	status = #{status, jdbcType=INTEGER}
+        WHERE
+        	id
+        IN
+        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
+			#{id}
+        </foreach>
+    </update>
+
+</mapper>

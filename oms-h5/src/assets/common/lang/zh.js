@@ -11,5 +11,18 @@ export default{
   questionnaire: {
     title: '问卷调查标题',
     status: '状态'
+    
+  },
+  member: {
+    mobile: '手机号',
+    email: '邮箱',
+    status: '用户状态',
+    country: '国家',
+    language: '语言',
+    avatar: '头像',
+    nickname: '昵称',
+    from: '注册方式'
+
+
   }
 }

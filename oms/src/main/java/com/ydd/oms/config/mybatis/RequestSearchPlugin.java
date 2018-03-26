@@ -146,6 +146,9 @@ public class RequestSearchPlugin implements Interceptor {
         String[] sections = parseKey(param.getKey());
 
         String name = splitWithUnderline(sections[2]).replace("$", ".");
+        if("from".equals(name)){
+            name = "`from`";
+        }
         String operator = sections[1];
 
         if ("eq".equalsIgnoreCase(operator)) {
