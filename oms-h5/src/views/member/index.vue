@@ -102,7 +102,25 @@
         <template scope="scope">
           <span>{{scope.row.nickname}}</span>
         </template>
+
+        
       </el-table-column>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+      
 
       <!-- 别名ID -->
       <!-- <el-table-column align="center" label="别名ID">
@@ -170,6 +188,7 @@ export default {
         search_eq_status: undefined,
         search_eq_from: undefined
       },
+
       ooss: {
         bbbs: [
           { value: 1, label: '手机短信' },

@@ -13,7 +13,6 @@ export function find(id) {
 export function updateStatus(ids, status) {
   return http.post('/member/status', { 'id[]': ids, 'status': status })
 }
-
 /**
  * 删除会员
  */

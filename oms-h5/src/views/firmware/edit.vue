@@ -16,8 +16,7 @@
         <el-upload
         class="upload-demo"
         action="/api/uploadFiles"
-        :on-success="handleSuccess"
-        :on-error="handleError">
+        :on-success="handleSuccess">
         <el-button size="small" type="primary">点击上传</el-button>
         <div slot="tip" class="el-upload__tip">只能上传固件升级文件</div>
       </el-upload>
@@ -73,7 +72,7 @@ import { find, save } from '@/api//firmware'
 export default {
   data() {
     return {
-      fileList: [{ name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}],
+      fileList: [{ name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100' }, { name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100' }],
       dialogImageUrl: '',
       dialogVisible: false,
       form: {
@@ -140,18 +139,14 @@ export default {
         this.form.type = response.firmware.type
       })
     },
-    handleSuccess(response, file, fileList){
-      var fName = response.fileName;
-    
-       console.log("fNAME:"+fName);
-      this.form.fileName = fName;
-      this.form.bytes = response.bytes;
-        console.log(response);
-    },
-    handleError(err, file, fileList){
+    handleSuccess(response, file, fileList) {
+      var fName = response.fileName
 
+      console.log('fNAME:' + fName)
+      this.form.fileName = fName
+      this.form.bytes = response.bytes
+      console.log(response)
     },
-
     handlePictureCardPreview(file) {
       this.dialogImageUrl = file.url
       this.dialogVisible = true
