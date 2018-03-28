@@ -8,9 +8,14 @@ import com.yanyun.oms.entity.member.Member;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Controller - 会员
@@ -70,6 +75,26 @@ public class MemberController extends OmsController {
 		memberService.updateStatus(ids, status);
 		String operationName = "成功";
 		return ResponseDTO.ok(operationName);
+	}
+
+
+	/**
+	 * 导出
+	 * @return
+	 */
+	@RequestMapping(value = "/export", method = RequestMethod.GET)
+	public ModelAndView exportReconciliation(HttpServletRequest request) {
+		/*try {
+
+			ModelAndView model = getExcelView(request);
+			List<ChargeLog> list = chargeService.list(searchParams, new Sort(Sort.Direction.DESC,"id"));
+			chargeService.setData(list);
+			model.addObject("result", list);
+			return model;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}*/
+		return null;
 	}
 
 }

@@ -6,7 +6,9 @@ export default {
     handle: 'handle',
     noData: 'No data',
     add: 'Add',
-    search: 'Search'
+    search: 'Search',
+    edit: 'edit',
+    delete: 'delete'
   },
   questionnaire: {
     title: 'title',
@@ -23,6 +25,14 @@ export default {
     from: 'from'
 
 
+  },
+  firmware: {
+    revision: 'revision',
+    name: 'name',
+    fileName: 'fileName',
+    chipType: 'chipType',
+    bytes: 'bytes',
+    type: 'type'
   }
 }
 

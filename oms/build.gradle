@@ -11,6 +11,7 @@ buildscript {
     }
 }
 
+
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 
@@ -23,12 +24,15 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
+    mavenLocal()
     maven {url 'http://maven.ydd100.cn/repository/maven-public/'}
     mavenCentral()
 }
 
 
 dependencies {
+    compile 'com.amazonaws:aws-java-sdk:1.9.6'
+    compile 'net.sf.jxls:jxls-core:1.0.6'
     testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
     compile "org.springframework.boot:spring-boot-starter-jetty:${springBootVersion}"
     compile "org.springframework.boot:spring-boot-devtools:${springBootVersion}"

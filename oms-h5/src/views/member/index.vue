@@ -28,6 +28,7 @@
 
     <el-button class="filter-item" type="primary" v-waves icon="search" @click="handleSearch">{{$t('message.search')}}</el-button>
     <!-- <el-button class="filter-item pull-right" type="success" icon="edit" @click="handleCreate">添加</el-button> -->
+    <el-button class="filter-item pull-right" type="success" icon="edit" @click="handleDownload">下载</el-button>
   </div>
 
   <!-- 列表数据 -->
@@ -197,6 +198,9 @@ export default {
      */
     handleSearch() {
       this.$refs.pagination.pageRequest()
+    },
+
+    handleDownload() {
     },
 
     /**

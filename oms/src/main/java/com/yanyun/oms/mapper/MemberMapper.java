@@ -1,5 +1,6 @@
 package com.yanyun.oms.mapper;
 
+import com.yanyun.oms.dto.CommonDto;
 import com.yanyun.oms.entity.member.Member;
 import org.apache.ibatis.annotations.Param;
 
@@ -51,6 +52,8 @@ public interface MemberMapper {
      * @return 会员
      */
     Member findById(Integer id);
+
+    CommonDto findNow();
 
     /**
      * 查询会员

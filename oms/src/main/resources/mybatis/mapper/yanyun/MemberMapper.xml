@@ -2,6 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yanyun.oms.mapper.MemberMapper">
 
+<resultMap id="date" type="java.util.Date">
+	<result column="now" property="now" />
+	<result column="today" property="today" />
+</resultMap>
+
 <resultMap id="MemberMap" type="com.yanyun.oms.entity.member.Member">
 
 		<id column="id" jdbcType="INTEGER" property="id" />
@@ -316,6 +321,11 @@
 		FROM
 			<include refid="tableName"></include>
 		WHERE id = #{id}
+	</select>
+
+
+	<select id="findNow" resultMap="MemberMap">
+		select now() now , now() today from dual
 	</select>
 
     <!--更新会员状态-->
