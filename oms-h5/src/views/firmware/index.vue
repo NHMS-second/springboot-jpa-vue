@@ -2,10 +2,10 @@
 <div class="app-container calendar-list-container">
   <!-- 筛选条件 -->
   <div class="filter-container">
-    <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" placeholder="版本号" v-model="params.search_like_revision"></el-input>
-  <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" placeholder="文本名称" v-model="params.search_like_name"></el-input>
+    <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" :placeholder="$t('firmware.revision')" v-model="params.search_like_revision"></el-input>
+  <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" :placeholder="$t('firmware.name')" v-model="params.search_like_name"></el-input>
 
-<el-select v-model="params.search_eq_chipType" style="width: 120px" class="filter-item" clearable placeholder="设备类型">
+<el-select v-model="params.search_eq_chipType" style="width: 120px" class="filter-item" clearable :placeholder="$t('firmware.chipType')">
       <el-option v-for="item in chip.type"
         :key="item.value"
         :label="item.label"
@@ -13,7 +13,7 @@
       </el-option>
     </el-select>
 
-    <el-select v-model="params.search_eq_type" style="width: 120px" class="filter-item" clearable placeholder="升级状态">
+    <el-select v-model="params.search_eq_type" style="width: 120px" class="filter-item" clearable :placeholder="$t('firmware.type')">
       <el-option v-for="item in type.options"
         :key="item.value"
         :label="item.label"
@@ -109,8 +109,8 @@ export default {
       },
       type: {
         options: [
-          { value: 0, label: '不强制' },
-          { value: 1, label: '强制' }
+          { value: 0, label: this.$t('firmware.noforce') },
+          { value: 1, label: this.$t('firmware.force') }
         ]
       }
     }

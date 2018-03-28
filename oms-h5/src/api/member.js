@@ -26,3 +26,10 @@ export function remove(ids) {
 export function save(params) {
   return http.post('/member', params)
 }
+
+/**
+ * 下载
+ */
+export function download(params) {
+  return http.get('/member/export' + params, { })
+}

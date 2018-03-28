@@ -8,7 +8,9 @@ export default {
     add: 'Add',
     search: 'Search',
     edit: 'edit',
-    delete: 'delete'
+    delete: 'delete',
+    save: 'save',
+    cancel: 'cancel'
   },
   questionnaire: {
     title: 'title',
@@ -32,7 +34,16 @@ export default {
     fileName: 'fileName',
     chipType: 'chipType',
     bytes: 'bytes',
-    type: 'type'
+    type: 'type',
+    upload: 'upload',
+    force: 'force',
+    noforce: 'noforce',
+    clickUpload: 'clickUpload',
+    onlyChip: 'onlyChip',
+    inputRevision: 'please input revision',
+    revisionMaxlength: 'revision max length 50 ',
+    inputName: 'please input name',
+    nameMaxlength: 'name max length 50 '
   }
 }
 
