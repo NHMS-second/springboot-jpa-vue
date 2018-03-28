@@ -71,8 +71,8 @@ public class UploadController {
                     if(fileName.contains(".")){
                         fName = fileName.split("\\.")[0];
                     }
-                    //File f = new File("/opt/"+fileName);
-                    File f = new File("D:\\sssss\\"+fileName);
+                    File f = new File("/opt/"+fileName);
+                    //File f = new File("D:\\sssss\\"+fileName);
                     inputstreamtofile(file.getInputStream(),f);
 
                     /*String bucketName = "yanyun";
