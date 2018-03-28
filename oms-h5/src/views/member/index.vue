@@ -170,7 +170,7 @@
 </template>
 
 <script>
-import { remove, updateStatus, download } from '@/api//member'
+import { remove, updateStatus } from '@/api//member'
 import waves from '@/directive/waves.js'// 水波纹指令
 import Pagination from '@/components/Pagination'
 import Status from '@/components/Status'

@@ -32,6 +32,11 @@ public class MenuDTO implements Serializable {
     private String name;
 
     /**
+     * 菜单英文名称
+     */
+    private String enName;
+
+    /**
      * 地址
      */
     private String url;
@@ -71,6 +76,14 @@ public class MenuDTO implements Serializable {
      */
     private List<PermissionDTO> permissionList = new ArrayList<>();
 
+
+    public String getEnName() {
+        return enName;
+    }
+
+    public void setEnName(String enName) {
+        this.enName = enName;
+    }
 
     /**
      * 设置编号

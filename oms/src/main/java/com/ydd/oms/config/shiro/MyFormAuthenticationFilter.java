@@ -37,10 +37,11 @@ public class MyFormAuthenticationFilter extends FormAuthenticationFilter {
                                      ServletResponse response) throws Exception {
 
         Integer adminId = ((ShiroAdmin) subject.getPrincipal()).getId();
-
+        String language = request.getParameter("language");
+        language = "en";
         ResponseDTO ret = ResponseDTO.ok("登录成功");
         ret.put("admin", subject.getPrincipal());
-        ret.put("menus", menuService.findListByAdminId(adminId));
+        ret.put("menus", menuService.findListByAdminId(adminId,language));
         ret.put("permissions", permissionService.findListByAdminId(adminId));
         response.setContentType("application/json;charset=utf-8");
         response.getWriter().write(JsonMapper.nonEmptyMapper().toJson(ret));
