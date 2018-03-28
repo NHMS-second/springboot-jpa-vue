@@ -105,6 +105,7 @@ public class UploadController {
 
                     //result.put("fileName", file.getOriginalFilename());
                     rsp.addAttribute("fileName",fName);
+                    rsp.addAttribute("bytes",file.getSize());
                     //result.put("url", ret);
                 }
             }
