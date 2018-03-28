@@ -16,7 +16,7 @@ public class Member implements Serializable {
 
 
     /**
-     * 
+     *
      */
     private Integer id;
 
@@ -46,9 +46,9 @@ public class Member implements Serializable {
     private String authId;
 
     /**
-     * 用户状态
+     * 用户状态小时限制
      *
-     * @see com.ydd.framework.core.entity.enums.StatusEnum
+     * @see MemberStatusEnum
      */
     private Integer status;
 
@@ -56,22 +56,22 @@ public class Member implements Serializable {
     private String statusStr;
 
     /**
-     * 
+     *
      */
     private String country;
 
     /**
-     * 
+     *
      */
     private String language;
 
     /**
-     * 
+     *
      */
     private String avatar;
 
     /**
-     * 
+     *
      */
     private String nickname;
 
@@ -87,6 +87,8 @@ public class Member implements Serializable {
 
     /**
      * 注册方式
+     *
+     * @see MemberFromEnum
      */
     private Integer from;
 
@@ -144,18 +146,18 @@ public class Member implements Serializable {
     /**
      * 设置
      *
-     * @param id 
+     * @param id
      */
-    public void setId(Integer id){
+    public void setId(Integer id) {
         this.id = id;
     }
 
     /**
      * 获取
      *
-     * @return 
+     * @return
      */
-    public Integer getId(){
+    public Integer getId() {
         return id;
     }
 
@@ -165,7 +167,7 @@ public class Member implements Serializable {
      *
      * @param mobile 手机号
      */
-    public void setMobile(String mobile){
+    public void setMobile(String mobile) {
         this.mobile = mobile;
     }
 
@@ -174,7 +176,7 @@ public class Member implements Serializable {
      *
      * @return 手机号
      */
-    public String getMobile(){
+    public String getMobile() {
         return mobile;
     }
 
@@ -184,7 +186,7 @@ public class Member implements Serializable {
      *
      * @param email 邮箱
      */
-    public void setEmail(String email){
+    public void setEmail(String email) {
         this.email = email;
     }
 
@@ -193,7 +195,7 @@ public class Member implements Serializable {
      *
      * @return 邮箱
      */
-    public String getEmail(){
+    public String getEmail() {
         return email;
     }
 
@@ -203,7 +205,7 @@ public class Member implements Serializable {
      *
      * @param password 密码
      */
-    public void setPassword(String password){
+    public void setPassword(String password) {
         this.password = password;
     }
 
@@ -212,7 +214,7 @@ public class Member implements Serializable {
      *
      * @return 密码
      */
-    public String getPassword(){
+    public String getPassword() {
         return password;
     }
 
@@ -222,7 +224,7 @@ public class Member implements Serializable {
      *
      * @param salt 密码盐
      */
-    public void setSalt(String salt){
+    public void setSalt(String salt) {
         this.salt = salt;
     }
 
@@ -231,7 +233,7 @@ public class Member implements Serializable {
      *
      * @return 密码盐
      */
-    public String getSalt(){
+    public String getSalt() {
         return salt;
     }
 
@@ -241,7 +243,7 @@ public class Member implements Serializable {
      *
      * @param authId 第三方登录ID
      */
-    public void setAuthId(String authId){
+    public void setAuthId(String authId) {
         this.authId = authId;
     }
 
@@ -250,7 +252,7 @@ public class Member implements Serializable {
      *
      * @return 第三方登录ID
      */
-    public String getAuthId(){
+    public String getAuthId() {
         return authId;
     }
 
@@ -258,18 +260,17 @@ public class Member implements Serializable {
     /**
      * 设置用户状态
      *
-     *
      * @param status 用户状态
      */
-    public void setStatus(Integer status){
-        if(status == null){
+    public void setStatus(Integer status) {
+        if (status == null) {
             this.statusStr = "";
-        }else{
-            if(MemberStatusEnum.INVALID.value == status.intValue()){
+        } else {
+            if (MemberStatusEnum.INVALID.value == status.intValue()) {
                 this.statusStr = MemberStatusEnum.INVALID.name;
-            }else if(MemberStatusEnum.LIMIT.value == status.intValue()){
+            } else if (MemberStatusEnum.LIMIT.value == status.intValue()) {
                 this.statusStr = MemberStatusEnum.LIMIT.name;
-            }else{
+            } else {
                 this.statusStr = MemberStatusEnum.VALID.name;
             }
         }
@@ -280,10 +281,9 @@ public class Member implements Serializable {
     /**
      * 获取用户状态
      *
-     *
      * @return 用户状态
      */
-    public Integer getStatus(){
+    public Integer getStatus() {
 
         return status;
     }
@@ -292,18 +292,18 @@ public class Member implements Serializable {
     /**
      * 设置
      *
-     * @param country 
+     * @param country
      */
-    public void setCountry(String country){
+    public void setCountry(String country) {
         this.country = country;
     }
 
     /**
      * 获取
      *
-     * @return 
+     * @return
      */
-    public String getCountry(){
+    public String getCountry() {
         return country;
     }
 
@@ -311,18 +311,18 @@ public class Member implements Serializable {
     /**
      * 设置
      *
-     * @param language 
+     * @param language
      */
-    public void setLanguage(String language){
+    public void setLanguage(String language) {
         this.language = language;
     }
 
     /**
      * 获取
      *
-     * @return 
+     * @return
      */
-    public String getLanguage(){
+    public String getLanguage() {
         return language;
     }
 
@@ -330,18 +330,18 @@ public class Member implements Serializable {
     /**
      * 设置
      *
-     * @param avatar 
+     * @param avatar
      */
-    public void setAvatar(String avatar){
+    public void setAvatar(String avatar) {
         this.avatar = avatar;
     }
 
     /**
      * 获取
      *
-     * @return 
+     * @return
      */
-    public String getAvatar(){
+    public String getAvatar() {
         return avatar;
     }
 
@@ -349,18 +349,18 @@ public class Member implements Serializable {
     /**
      * 设置
      *
-     * @param nickname 
+     * @param nickname
      */
-    public void setNickname(String nickname){
+    public void setNickname(String nickname) {
         this.nickname = nickname;
     }
 
     /**
      * 获取
      *
-     * @return 
+     * @return
      */
-    public String getNickname(){
+    public String getNickname() {
         return nickname;
     }
 
@@ -370,7 +370,7 @@ public class Member implements Serializable {
      *
      * @param aliasId 别名ID
      */
-    public void setAliasId(String aliasId){
+    public void setAliasId(String aliasId) {
         this.aliasId = aliasId;
     }
 
@@ -379,7 +379,7 @@ public class Member implements Serializable {
      *
      * @return 别名ID
      */
-    public String getAliasId(){
+    public String getAliasId() {
         return aliasId;
     }
 
@@ -389,7 +389,7 @@ public class Member implements Serializable {
      *
      * @param fingerprint 指纹
      */
-    public void setFingerprint(String fingerprint){
+    public void setFingerprint(String fingerprint) {
         this.fingerprint = fingerprint;
     }
 
@@ -398,7 +398,7 @@ public class Member implements Serializable {
      *
      * @return 指纹
      */
-    public String getFingerprint(){
+    public String getFingerprint() {
         return fingerprint;
     }
 
@@ -408,25 +408,25 @@ public class Member implements Serializable {
      *
      * @param from 注册方式
      */
-    public void setFrom(Integer from){
-        if(from == null){
+    public void setFrom(Integer from) {
+        if (from == null) {
             this.fromStr = "-";
-        }else {
-            if(MemberFromEnum.message.value == from.intValue()){
+        } else {
+            if (MemberFromEnum.message.value == from.intValue()) {
                 this.fromStr = MemberFromEnum.message.name;
-            }else if(MemberFromEnum.phone.value == from.intValue()){
+            } else if (MemberFromEnum.phone.value == from.intValue()) {
                 this.fromStr = MemberFromEnum.phone.name;
-            }else if(MemberFromEnum.wechat.value == from.intValue()){
+            } else if (MemberFromEnum.wechat.value == from.intValue()) {
                 this.fromStr = MemberFromEnum.wechat.name;
-            }else if(MemberFromEnum.qq.value == from.intValue()){
+            } else if (MemberFromEnum.qq.value == from.intValue()) {
                 this.fromStr = MemberFromEnum.qq.name;
-            }else if(MemberFromEnum.email.value == from.intValue()){
+            } else if (MemberFromEnum.email.value == from.intValue()) {
                 this.fromStr = MemberFromEnum.email.name;
-            }else if(MemberFromEnum.facebook.value == from.intValue()){
+            } else if (MemberFromEnum.facebook.value == from.intValue()) {
                 this.fromStr = MemberFromEnum.facebook.name;
-            }else if(MemberFromEnum.google.value == from.intValue()){
+            } else if (MemberFromEnum.google.value == from.intValue()) {
                 this.fromStr = MemberFromEnum.google.name;
-            }else{
+            } else {
                 this.fromStr = "-";
             }
         }
@@ -438,7 +438,7 @@ public class Member implements Serializable {
      *
      * @return 注册方式
      */
-    public Integer getFrom(){
+    public Integer getFrom() {
         return from;
     }
 
@@ -448,7 +448,7 @@ public class Member implements Serializable {
      *
      * @param devicePwd 设备登录密码
      */
-    public void setDevicePwd(String devicePwd){
+    public void setDevicePwd(String devicePwd) {
         this.devicePwd = devicePwd;
     }
 
@@ -457,7 +457,7 @@ public class Member implements Serializable {
      *
      * @return 设备登录密码
      */
-    public String getDevicePwd(){
+    public String getDevicePwd() {
         return devicePwd;
     }
 
@@ -467,7 +467,7 @@ public class Member implements Serializable {
      *
      * @param createdId 创建者编号
      */
-    public void setCreatedId(Integer createdId){
+    public void setCreatedId(Integer createdId) {
         this.createdId = createdId;
     }
 
@@ -476,7 +476,7 @@ public class Member implements Serializable {
      *
      * @return 创建者编号
      */
-    public Integer getCreatedId(){
+    public Integer getCreatedId() {
         return createdId;
     }
 
@@ -486,7 +486,7 @@ public class Member implements Serializable {
      *
      * @param modifiedId 更新者编号
      */
-    public void setModifiedId(Integer modifiedId){
+    public void setModifiedId(Integer modifiedId) {
         this.modifiedId = modifiedId;
     }
 
@@ -495,7 +495,7 @@ public class Member implements Serializable {
      *
      * @return 更新者编号
      */
-    public Integer getModifiedId(){
+    public Integer getModifiedId() {
         return modifiedId;
     }
 
@@ -505,7 +505,7 @@ public class Member implements Serializable {
      *
      * @param createdTime 创建时间
      */
-    public void setCreatedTime(Date createdTime){
+    public void setCreatedTime(Date createdTime) {
         this.createdTime = createdTime;
     }
 
@@ -514,7 +514,7 @@ public class Member implements Serializable {
      *
      * @return 创建时间
      */
-    public Date getCreatedTime(){
+    public Date getCreatedTime() {
         return createdTime;
     }
 
@@ -524,7 +524,7 @@ public class Member implements Serializable {
      *
      * @param modifiedTime 更新时间
      */
-    public void setModifiedTime(Date modifiedTime){
+    public void setModifiedTime(Date modifiedTime) {
         this.modifiedTime = modifiedTime;
     }
 
@@ -533,7 +533,7 @@ public class Member implements Serializable {
      *
      * @return 更新时间
      */
-    public Date getModifiedTime(){
+    public Date getModifiedTime() {
         return modifiedTime;
     }
 
@@ -541,20 +541,20 @@ public class Member implements Serializable {
     /**
      * 设置删除标识位
      *
-     * @see com.ydd.framework.core.entity.enums.DeletedEnum
      * @param deleted 删除标识位
+     * @see com.ydd.framework.core.entity.enums.DeletedEnum
      */
-    public void setDeleted(Integer deleted){
+    public void setDeleted(Integer deleted) {
         this.deleted = deleted;
     }
 
     /**
      * 获取删除标识位
      *
-     * @see com.ydd.framework.core.entity.enums.DeletedEnum
      * @return 删除标识位
+     * @see com.ydd.framework.core.entity.enums.DeletedEnum
      */
-    public Integer getDeleted(){
+    public Integer getDeleted() {
         return deleted;
     }
 
