@@ -75,8 +75,8 @@ public class UploadController {
                     if(fileName.contains(".")){
                         fName = fileName.split("\\.")[0];
                     }
-                    //File f = new File("/opt/"+fileName);
-                    File f = new File("D:\\sssss\\"+fileName);
+                    File f = new File("/opt/"+fileName);
+                    //File f = new File("D:\\sssss\\"+fileName);
                     if(f.exists()){
                         f.delete();
                     }
