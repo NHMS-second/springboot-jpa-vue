@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.yanyun.oms.mapper.FirmwareMapper;
 import com.yanyun.oms.service.FirmwareService;
 import com.ydd.framework.core.common.Pagination;
+import com.ydd.framework.core.common.dto.ResponseDTO;
 import com.ydd.framework.core.service.impl.BaseServiceImpl;
 
 import com.yanyun.oms.entity.firmware.Firmware;
@@ -37,7 +38,17 @@ public class FirmwareServiceImpl extends BaseServiceImpl implements FirmwareServ
 	 */
 	@Override
 	@Transactional
-    public void save(Firmware firmware) {
+    public ResponseDTO save(Firmware firmware) {
+		synchronized (this){
+			Firmware ware = firmwareMapper.findByName(firmware.getName());
+			if(ware!=null && firmware.getId() !=null &&
+					ware.getId().intValue()!=firmware.getId().intValue()){
+				return new ResponseDTO(-2,"文件名称不能重复");
+			}
+			if(ware!=null && firmware.getId() ==null){
+				return new ResponseDTO(-2,"文件名称不能重复");
+			}
+		}
 		if (firmware.getId() != null && firmware.getId() > 0) {
 			// 更新
 			firmwareMapper.update(firmware);
@@ -45,6 +56,7 @@ public class FirmwareServiceImpl extends BaseServiceImpl implements FirmwareServ
 			// 新建
 			firmwareMapper.insert(firmware);
 		}
+		return ResponseDTO.ok("保存成功");
 	}
 
 	/**
@@ -97,6 +109,7 @@ public class FirmwareServiceImpl extends BaseServiceImpl implements FirmwareServ
 	public Firmware findById(Integer id) {
 		return firmwareMapper.findById(id);
 	}
+
 
 	/**
 	 * 查询设备固件

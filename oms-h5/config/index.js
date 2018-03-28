@@ -30,7 +30,7 @@ module.exports = {
         assetsPublicPath: '/',
         proxyTable: {
             '/api': {
-                target: 'http://127.0.0.1:8000',
+                target: 'http://127.0.0.1:8098',
                 // target: 'http://oms.ldnz.ydd100.cn/api',
                 changeOrigin: true,
                 pathRewrite: {

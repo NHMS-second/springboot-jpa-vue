@@ -5,6 +5,8 @@ import com.amazonaws.services.s3.model.GeneratePresignedUrlRequest;
 import com.amazonaws.services.s3.model.GetObjectRequest;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.google.common.collect.Maps;
+import com.yanyun.oms.entity.firmware.Firmware;
+import com.yanyun.oms.service.FirmwareService;
 import com.ydd.framework.core.common.dto.ResponseDTO;
 import com.ydd.framework.core.controller.BaseController;
 import com.ydd.oms.config.shiro.ShiroAdmin;
@@ -16,6 +18,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -37,6 +40,7 @@ import static com.ydd.oms.util.S3Sample.getAmazon;
 public class UploadController {
 
     private Logger logger = LoggerFactory.getLogger(UploadController.class);
+
 
 
     @RequestMapping(value = "/uploadFiles", method = RequestMethod.GET)
@@ -71,8 +75,11 @@ public class UploadController {
                     if(fileName.contains(".")){
                         fName = fileName.split("\\.")[0];
                     }
-                    File f = new File("/opt/"+fileName);
-                    //File f = new File("D:\\sssss\\"+fileName);
+                    //File f = new File("/opt/"+fileName);
+                    File f = new File("D:\\sssss\\"+fileName);
+                    if(f.exists()){
+                        f.delete();
+                    }
                     inputstreamtofile(file.getInputStream(),f);
 
                     /*String bucketName = "yanyun";
@@ -104,7 +111,8 @@ public class UploadController {
                     logger.info(url.toString());*/
 
                     //result.put("fileName", file.getOriginalFilename());
-                    rsp.addAttribute("fileName",fName);
+                    rsp.addAttribute("fileName",fileName);
+                    rsp.addAttribute("name",fName);
                     rsp.addAttribute("bytes",file.getSize());
                     //result.put("url", ret);
                 }

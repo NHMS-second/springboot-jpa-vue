@@ -1,5 +1,6 @@
 package com.yanyun.oms.service;
 import com.ydd.framework.core.common.Pagination;
+import com.ydd.framework.core.common.dto.ResponseDTO;
 import com.ydd.framework.core.service.BaseService;
 
 import com.yanyun.oms.entity.firmware.Firmware;
@@ -18,7 +19,7 @@ public interface FirmwareService extends BaseService {
      *
      * @param firmware 设备固件
      */
-    void save(Firmware firmware);
+    ResponseDTO save(Firmware firmware);
 
     /**
      * 更新设备固件
@@ -50,6 +51,7 @@ public interface FirmwareService extends BaseService {
      * @return 设备固件
      */
     Firmware findById(Integer id);
+
 
     /**
      * 查询设备固件

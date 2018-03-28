@@ -48,8 +48,7 @@ public class FirmwareController extends OmsController {
 	 */
 	@RequestMapping(value = "/firmware", method = RequestMethod.POST)
 	public ResponseDTO save(Firmware firmware) {
-		firmwareService.save(firmware);
-		return ResponseDTO.ok("保存成功");
+		return  firmwareService.save(firmware);
 	}
 
 	/**

@@ -52,6 +52,8 @@ public interface FirmwareMapper {
      */
     Firmware findById(Integer id);
 
+    Firmware findByName(String name);
+
     /**
      * 查询设备固件
      *

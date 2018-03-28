@@ -222,4 +222,13 @@
 		WHERE id = #{id}
 	</select>
 
+
+	<select id="findByName" parameterType="java.lang.String" resultMap="FirmwareMap">
+		SELECT
+		<include refid="Field"></include>
+		FROM
+		<include refid="tableName"></include>
+		WHERE name = #{name}
+	</select>
+
 </mapper>
