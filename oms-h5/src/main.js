@@ -15,18 +15,17 @@ import enLocale from 'element-ui/lib/locale/lang/en'
 import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
 import zh from './assets/common/lang/zh'
 import en from './assets/common/lang/en'
-const e = Object.assign(enLocale, en)
-const z = Object.assign(zhLocale, zh)
 Vue.use(VueI18n)
 Vue.use(ElementUI)
-Vue.config.lang = 'en'
-Vue.locale('zh', z)
+const e = Object.assign(enLocale, en)
+const z = Object.assign(zhLocale, zh)
 Vue.locale('en', e)
-
+Vue.locale('zh', z)
 // register global utility filters.
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
+Vue.config.lang = localStorage.getItem('lang')
 
 Vue.config.productionTip = false
 new Vue({
@@ -34,5 +33,6 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  VueI18n
 })

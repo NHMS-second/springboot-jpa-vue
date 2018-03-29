@@ -5,7 +5,13 @@
 		<tabs-view></tabs-view>
 		<error-log v-if="log.length>0" class="errLog-container" :logsList="log"></error-log>
 		<!-- <screenfull class='screenfull'></screenfull> -->
-		<span class="logout-container"><i class="el-icon-fa-sign-out el-icon-fa-2x" @click="logout"></i></span>
+		
+		
+		<span class="logout-container">			
+			<el-button type="text" @click="changeZh()">中文</el-button>
+			<el-button type="text" @click="changeEn()">English</el-button>
+			<i class="el-icon-fa-sign-out el-icon-fa-2x" @click="logout"></i>
+		</span>
 		<!-- <el-dropdown class="avatar-container" trigger="click">
 			<div class="avatar-wrapper">
 				<img class="user-avatar" :src="avatar+'?imageView2/1/w/80/h/80'">
@@ -29,6 +35,7 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import { mapGetters } from 'vuex'
 import Levelbar from './Levelbar'
 import TabsView from './TabsView'
@@ -58,6 +65,16 @@ export default {
     ])
   },
   methods: {
+    changeZh() {
+      localStorage.setItem('lang', 'zh')
+      Vue.config.lang = 'zh'
+      window.location.reload()
+    },
+    changeEn() {
+      localStorage.setItem('lang', 'en')
+      Vue.config.lang = 'en'
+      window.location.reload()
+    },
     toggleSideBar() {
       this.$store.dispatch('ToggleSideBar')
     },
