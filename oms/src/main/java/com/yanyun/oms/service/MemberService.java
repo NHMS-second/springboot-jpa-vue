@@ -5,6 +5,9 @@ import com.ydd.framework.core.service.BaseService;
 
 import com.yanyun.oms.entity.member.Member;
 
+import java.io.File;
+import java.util.List;
+
 
 /**
  * Service - 会员
@@ -51,6 +54,9 @@ public interface MemberService extends BaseService {
      * @return 会员
      */
     Member findById(Integer id);
+
+
+    File exportExcel(String language);
 
     /**
      * 查询会员

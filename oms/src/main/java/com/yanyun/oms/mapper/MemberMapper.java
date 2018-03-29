@@ -1,6 +1,7 @@
 package com.yanyun.oms.mapper;
 
 import com.yanyun.oms.dto.CommonDto;
+import com.yanyun.oms.dto.user.MemberExportDto;
 import com.yanyun.oms.entity.member.Member;
 import org.apache.ibatis.annotations.Param;
 
@@ -55,12 +56,9 @@ public interface MemberMapper {
 
     CommonDto findNow();
 
-    /**
-     * 查询会员
-     *
-     * @return 会员集合
-     */
-    List<Member> findAll();
+
+
+    List<Member> findAll(@Param("searchKey") String searchKey);
 
     /**
      * 更新状态

@@ -1,4 +1,5 @@
 package com.yanyun.oms.controller.member;
+import com.yanyun.oms.service.CommonService;
 import com.yanyun.oms.service.MemberService;
 import com.ydd.framework.core.common.Pagination;
 import com.ydd.framework.core.common.dto.ResponseDTO;
@@ -14,6 +15,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -30,6 +35,9 @@ public class MemberController extends OmsController {
 	
 	@Resource
 	private MemberService memberService;
+
+	@Resource
+	private CommonService commonService;
 
 	/**
 	 * 分页查询会员
@@ -82,19 +90,56 @@ public class MemberController extends OmsController {
 	 * 导出
 	 * @return
 	 */
-	@RequestMapping(value = "/export", method = RequestMethod.GET)
-	public ModelAndView exportReconciliation(HttpServletRequest request) {
-		/*try {
-
+	@RequestMapping(value = "/member/exportTest", method = RequestMethod.GET)
+	public ModelAndView exportTest(HttpServletRequest request) {
+		try {
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+			String now = sdf.format(new Date());
+			request.setAttribute("fileName","Member");
+			request.setAttribute("now",now);
 			ModelAndView model = getExcelView(request);
-			List<ChargeLog> list = chargeService.list(searchParams, new Sort(Sort.Direction.DESC,"id"));
-			chargeService.setData(list);
-			model.addObject("result", list);
+			//List<Member> members = memberService.findAll(null);
+			//model.addObject("result", members);
 			return model;
 		} catch (Exception e) {
 			e.printStackTrace();
-		}*/
+		}
 		return null;
 	}
+
+	/**
+	 * 导出
+	 * @return
+	 */
+	@RequestMapping(value = "/member/export", method = RequestMethod.GET)
+	public void exportTest(HttpServletRequest request, HttpServletResponse response) {
+	    //en:英文  cn:中文
+	    String language = request.getParameter("language");
+		File file = memberService.exportExcel(language);
+		response.setContentLength((int) file.length());
+		response.setHeader("Content-Disposition", "attachment;filename="
+				+ "aaa.xlsx");// 设置在下载框默认显示的文件名
+		response.setContentType("application/octet-stream");// 指明response的返回对象是文件流
+		// 读出文件到response
+		// 这里是先需要把要把文件内容先读到缓冲区
+		// 再把缓冲区的内容写到response的输出流供用户下载
+        FileInputStream fileInputStream = null;
+        try {
+            fileInputStream = new FileInputStream(file);
+            BufferedInputStream bufferedInputStream = new BufferedInputStream(
+                    fileInputStream);
+            byte[] b = new byte[bufferedInputStream.available()];
+            bufferedInputStream.read(b);
+            OutputStream outputStream = response.getOutputStream();
+            outputStream.write(b);
+            bufferedInputStream.close();
+            outputStream.flush();
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+	}
+
 
 }

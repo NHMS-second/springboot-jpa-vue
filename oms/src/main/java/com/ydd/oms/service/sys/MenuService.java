@@ -91,6 +91,6 @@ public interface MenuService extends BaseService {
      * @param adminId 管理员编号
      * @return 菜单集合
      */
-    List<MenuDTO> findListByAdminId(Integer adminId);
+    List<MenuDTO> findListByAdminId(Integer adminId,String language);
 }
 

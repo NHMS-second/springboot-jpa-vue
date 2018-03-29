@@ -1,6 +1,7 @@
 package com.ydd.oms.service.sys.impl;
 
 import com.github.pagehelper.PageHelper;
+import com.yanyun.oms.enums.OmsLanguageEnum;
 import com.ydd.framework.core.common.Pagination;
 import com.ydd.framework.core.common.utils.ValidationUtils;
 import com.ydd.framework.core.entity.enums.StatusEnum;
@@ -208,12 +209,16 @@ public class MenuServiceImpl extends BaseServiceImpl implements MenuService {
 	 * @return 菜单集合
 	 */
 	@Override
-	public List<MenuDTO> findListByAdminId(Integer adminId) {
+	public List<MenuDTO> findListByAdminId(Integer adminId,String language) {
 		ValidationUtils.assertNotNull(adminId);
 
 		// 菜单列表
 		List<MenuDTO> menuList = menuMapper.findListByAdminId(adminId);
-
+		if(OmsLanguageEnum.en.name.equals(language)){
+			for(MenuDTO dto : menuList){
+				dto.setName(dto.getEnName());
+			}
+		}
 		// 筛选一级菜单
 		Map<Integer, MenuDTO> parentMap = new HashMap<>();
 		Iterator<MenuDTO> iterator = menuList.iterator();

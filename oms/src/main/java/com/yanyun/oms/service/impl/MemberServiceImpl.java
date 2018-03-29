@@ -1,7 +1,12 @@
 package com.yanyun.oms.service.impl;
 import com.github.pagehelper.PageHelper;
+import com.yanyun.oms.dto.user.MemberExcelDto;
+import com.yanyun.oms.dto.user.MemberExcelEnDto;
+import com.yanyun.oms.dto.user.MemberExportDto;
 import com.yanyun.oms.enums.MemberStatusEnum;
+import com.yanyun.oms.enums.OmsLanguageEnum;
 import com.yanyun.oms.mapper.MemberMapper;
+import com.yanyun.oms.service.BigDataExcelService;
 import com.yanyun.oms.service.MemberService;
 import com.ydd.framework.core.common.Pagination;
 import com.ydd.framework.core.entity.enums.StatusEnum;
@@ -15,6 +20,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Service - 会员
@@ -30,6 +39,9 @@ public class MemberServiceImpl extends BaseServiceImpl implements MemberService 
 
 	@Resource
 	private MemberMapper memberMapper;
+
+	@Resource
+	private BigDataExcelService bigDataExcelService;
 
 	/**
 	 * 创建会员
@@ -109,8 +121,38 @@ public class MemberServiceImpl extends BaseServiceImpl implements MemberService 
 	public Pagination findPage(Pagination pagination) {
 		PageHelper.startPage(pagination.getPage(), pagination.getPageSize());
 		PageHelper.orderBy("id desc");
-		pagination.setQueryResult(memberMapper.findAll());
+		pagination.setQueryResult(memberMapper.findAll(null));
 		return pagination;
+	}
+
+
+	/**
+	 * 导出excel
+	 * @return
+	 */
+	@Override
+	public File exportExcel(String language) {
+		File file = new File("/opt/"+System.currentTimeMillis()+".xlsx");
+		//File file = new File("D:\\export\\"+System.currentTimeMillis()+".xlsx");
+		List<Member> members = memberMapper.findAll(null);
+        try {
+            if("en".equals(OmsLanguageEnum.en.name)){
+                List<MemberExcelEnDto> dtos = new ArrayList<>();
+                for(Member member : members){
+                    dtos.add(new MemberExcelEnDto(member));
+                }
+                bigDataExcelService.writeToExcel(dtos,file);
+            }else{
+                List<MemberExcelDto> excelDtos = new ArrayList<>();
+                for(Member member : members){
+                    excelDtos.add(new MemberExcelDto(member));
+                }
+                bigDataExcelService.writeToExcel(excelDtos,file);
+            }
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return file;
 	}
 
 	/**

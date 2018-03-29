@@ -170,7 +170,7 @@
 </template>
 
 <script>
-import { remove, updateStatus, download } from '@/api//member'
+import { remove, updateStatus } from '@/api//member'
 import waves from '@/directive/waves.js'// 水波纹指令
 import Pagination from '@/components/Pagination'
 import Status from '@/components/Status'
@@ -185,6 +185,8 @@ export default {
   data() {
     return {
       params: {
+        search_like_mobile: undefined,
+        search_like_email: undefined,
         search_eq_status: undefined,
         search_eq_from: undefined
       },
@@ -220,11 +222,21 @@ export default {
     },
 
     handleDownload() {
-      var params = '?search_eq_status=' + '1' + '&search_eq_from=' + '1'
-      this.$message.warning({ message: 'response.err_msg', center: true })
-      download(params).then(response => {
-        // this.handleSearch()
-      })
+      var paramsVal = ''
+      if (this.params.search_like_mobile !== undefined) {
+        paramsVal = '&search_like_mobile=' + this.params.search_like_mobile
+      }
+      if (this.params.search_like_email !== undefined) {
+        paramsVal = '&search_like_email=' + this.params.search_like_email
+      }
+      if (this.params.search_eq_status !== undefined) {
+        paramsVal = '&search_eq_status=' + this.params.search_eq_status
+      }
+      if (this.params.search_eq_from !== undefined) {
+        paramsVal = '&search_eq_from=' + this.params.search_eq_from
+      }
+      console.log('aa:' + paramsVal)
+      window.open('http://localhost:8098/member/export?language=en' + paramsVal)
     },
 
     /**

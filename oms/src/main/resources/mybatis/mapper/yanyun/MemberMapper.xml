@@ -7,6 +7,8 @@
 	<result column="today" property="today" />
 </resultMap>
 
+
+
 <resultMap id="MemberMap" type="com.yanyun.oms.entity.member.Member">
 
 		<id column="id" jdbcType="INTEGER" property="id" />
@@ -30,6 +32,11 @@
 		<result column="modified_time" property="modifiedTime" />
 		<result column="deleted" property="deleted" />
     </resultMap>
+
+
+<resultMap id="MemberDtoMap" type="com.yanyun.oms.dto.user.MemberExportDto" extends="MemberMap">
+	<result column="company_name" property="companyName"></result>
+</resultMap>
 	
 	<!--表名 -->
 	<sql id="tableName">
@@ -84,15 +91,7 @@
 		#{deleted, jdbcType=TINYINT}
 	</sql>
 
-	<!-- 查询全部记录 -->
-    <select id="findAll" resultMap="MemberMap">
-        SELECT
-        	<include refid="Field"></include>
-        FROM
-        	<include refid="tableName"></include>
-		WHERE
-			deleted = 0
-    </select>
+
 	
 	<!-- 新增-->
 <insert id="insert" parameterType="com.yanyun.oms.entity.member.Member" useGeneratedKeys="true" keyProperty="id">
@@ -324,8 +323,8 @@
 	</select>
 
 
-	<select id="findNow" resultMap="MemberMap">
-		select now() now , now() today from dual
+	<select id="findNow" resultMap="date">
+		select now() now , now() today from dual where 1 = 1
 	</select>
 
     <!--更新会员状态-->
@@ -341,5 +340,18 @@
 			#{id}
         </foreach>
     </update>
+
+	<!-- 查询全部记录 -->
+	<select id="findAll" resultMap="MemberMap">
+		SELECT m.* from ec_member m
+		WHERE 1=1
+		<if test="searchKey != '' and searchKey != null">
+			and (
+			or m.mobile LIKE CONCAT('%',#{searchKey},'%')
+			or m.email LIKE CONCAT('%',#{searchKey},'%')
+			)
+		</if>
+		order by id desc
+	</select>
 
 </mapper>

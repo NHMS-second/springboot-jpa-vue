@@ -22,6 +22,7 @@
 		<id column="id" jdbcType="INTEGER" property="id" />
 		<result column="status" property="status" />
 		<result column="name" property="name" />
+		<result column="en_name" property="enName" />
 		<result column="url" property="url" />
 		<result column="icon" property="icon" />
 		<result column="parent_id" property="parentId" />

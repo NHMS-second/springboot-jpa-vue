@@ -31,6 +31,11 @@ public class Menu implements Serializable{
     private String name;
 
     /**
+     * 菜单英文名称
+     */
+    private String enName;
+
+    /**
      * 地址
      */
     private String url;
@@ -81,6 +86,15 @@ public class Menu implements Serializable{
      * @see com.ydd.framework.core.entity.enums.DeletedEnum
      */
     private Integer deleted;
+
+
+    public String getEnName() {
+        return enName;
+    }
+
+    public void setEnName(String enName) {
+        this.enName = enName;
+    }
 
 
     /**
