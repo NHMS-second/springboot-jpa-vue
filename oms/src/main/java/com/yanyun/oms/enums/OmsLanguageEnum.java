@@ -3,7 +3,7 @@ package com.yanyun.oms.enums;
 public enum OmsLanguageEnum {
 
 
-    en(1, "en"), cn(2, "cn")
+    en(1, "en"), zh(2, "zh")
     ;
     public Integer value;
     public String name;

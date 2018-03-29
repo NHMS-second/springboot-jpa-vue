@@ -21,6 +21,7 @@
       </el-form-item>
 
       <el-button type="primary" style="width:100%;margin-bottom:30px;" :loading="loading" @click.native.prevent="handleLogin">登录</el-button>
+     <!--  <el-button type="primary" style="width:100%;margin-bottom:30px;" :loading="loading" @click.native.prevent="changeLangEvent">changeLanguage</el-button> -->
     </el-form>
   </div>
 </template>
@@ -73,6 +74,26 @@ export default {
         this.pwdType = 'password'
       }
     },
+
+    /* changeLangEvent() {
+      this.$confirm('确定切换语言吗?', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'warning'
+      }).then(() => {
+        if (this.lang === 'zh') {
+          this.lang = 'en'
+          this.$i18n.locale = this.lang// 关键语句
+        } else {
+          this.lang = 'zh'
+          this.$i18n.locale = this.lang// 关键语句
+        }
+      }).catch(() => {
+        this.$message({
+          type: 'info'
+        })
+      })
+    }, */
 
     /**
      * 登录

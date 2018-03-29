@@ -5,10 +5,11 @@ import http from '@/utils/http'
  * @param {*} username 用户名
  * @param {*} password 密码
  */
-export function loginByUsername(username, password) {
+export function loginByUsername(username, password, language) {
   return http.post('/login', {
     username,
-    password
+    password,
+    language
   })
 }
 

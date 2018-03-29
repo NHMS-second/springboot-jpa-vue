@@ -42,7 +42,8 @@ const user = {
     LoginByUsername({ commit }, userInfo) {
       const username = userInfo.username.trim()
       return new Promise((resolve, reject) => {
-        loginByUsername(username, userInfo.password).then(response => {
+        var lang = localStorage.getItem('lang')
+        loginByUsername(username, userInfo.password, lang).then(response => {
           setToken(response.admin.username)
           storage.set('permissions', response.permissions)
           storage.set('menus', response.menus)
