@@ -20,11 +20,20 @@
 
     <Pagination uri="/menus" :request-params="params" ref="pagination">
 
-      <el-table-column align="center" label="名称" min-width="130">
+      <el-table-column align="center" label="中文名称" min-width="130">
         <template scope="scope">
           <el-button v-if="!params.search_eq_parentId" type="text" @click="viewChildMenus(scope.row.id)">{{scope.row.name}}</el-button>
           <el-button v-if="params.search_eq_parentId" type="text" @click="viewPermissions(scope.row.id)">{{scope.row.name}}</el-button>
           <!-- <span v-if="params.search_eq_parentId">{{scope.row.name}}</span> -->
+        </template>
+      </el-table-column>
+      
+     
+
+      <el-table-column align="center" label="英文名称" min-width="130">
+        <template scope="scope">
+          <el-button v-if="!params.search_eq_parentId" type="text" @click="viewChildMenus(scope.row.id)">{{scope.row.enName}}</el-button>
+          <el-button v-if="params.search_eq_parentId" type="text" @click="viewPermissions(scope.row.id)">{{scope.row.enName}}</el-button>
         </template>
       </el-table-column>
 

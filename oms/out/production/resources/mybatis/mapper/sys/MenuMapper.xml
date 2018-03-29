@@ -6,6 +6,7 @@
 		<id column="id" jdbcType="INTEGER" property="id" />
 		<result column="status" property="status" />
 		<result column="name" property="name" />
+		<result column="en_name" property="enName" />
 		<result column="url" property="url" />
 		<result column="icon" property="icon" />
 		<result column="parent_id" property="parentId" />
@@ -22,6 +23,7 @@
 		<id column="id" jdbcType="INTEGER" property="id" />
 		<result column="status" property="status" />
 		<result column="name" property="name" />
+		<result column="en_name" property="enName" />
 		<result column="url" property="url" />
 		<result column="icon" property="icon" />
 		<result column="parent_id" property="parentId" />
@@ -39,6 +41,7 @@
 		id,
 		status,
 		name,
+		en_name,
 		url,
 		icon,
 		parent_id,
@@ -106,6 +109,9 @@
             <if test="name != null">
 				name,
             </if>
+			<if test="enName != null">
+				en_name,
+			</if>
             <if test="url != null">
 				url,
             </if>
@@ -147,6 +153,9 @@
             <if test="name != null">
 				#{name},
             </if>
+			<if test="enName != null">
+				#{enName},
+			</if>
             <if test="url != null">
 				#{url},
             </if>
@@ -213,6 +222,9 @@
 			</if>
 			<if test="name != null">
 				name = #{name},
+			</if>
+			<if test="enName != null">
+				en_name = #{enName},
 			</if>
 			<if test="url != null">
 				url = #{url},

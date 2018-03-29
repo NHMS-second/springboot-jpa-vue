@@ -46,5 +46,14 @@ export default{
     inputName: '请输入文本名称',
     nameMaxlength: '文本名称不能超过50个字符'
     
+  },
+  mes: {
+    add: '添加',
+    img: '图片',
+    system: '系统消息',
+    personal: '个人消息',
+    title: '标题',
+    type: '消息类型',
+    content: '内容'
   }
 }

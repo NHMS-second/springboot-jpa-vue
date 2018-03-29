@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-upload name="image" ref="upload" action="/api/upload/image" :on-error="handleError" :on-success="handleSuccess" :file-list="getFileList" list-type="picture-card" 
+    <el-upload name="file" ref="upload" action="/api/uploadFiles" :on-error="handleError" :on-success="handleSuccess" :file-list="getFileList" list-type="picture-card" 
     :on-preview="handlePictureCardPreview" :on-remove="handleRemove" :on-change="handleChange" :on-progress="handleOverSize">
       <i class="el-icon-plus"></i>
     </el-upload>
@@ -92,7 +92,8 @@ export default {
           duration: 2000
         })
       } else {
-        file.url = response.img.url
+        // file.url = response.img.url
+        file.url = 'https://yingdd.oss-cn-hangzhou.aliyuncs.com/5118124efb97baad87c6d68e67113fdc.png'
       }
     },
     handleError(err, file, fileList) {

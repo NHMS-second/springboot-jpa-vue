@@ -44,6 +44,16 @@ export default {
     revisionMaxlength: 'revision max length 50 ',
     inputName: 'please input name',
     nameMaxlength: 'name max length 50 '
+  },
+  mes: {
+    add: 'add',
+    img: 'image',
+    system: 'system',
+    personal: 'personal',
+    title: 'title',
+    type: 'type',
+    content: 'content'
+
   }
 }
 

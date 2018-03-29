@@ -6,8 +6,12 @@
         <el-input v-model="parentName" :readonly="true"></el-input>
       </el-form-item>
     
-      <el-form-item label="菜单名称" prop="name">
-        <el-input v-model="form.name" placeholder="请输入菜单名称"></el-input>
+      <el-form-item label="菜单中文名称" prop="name">
+        <el-input v-model="form.name" placeholder="请输入菜单中文名称"></el-input>
+      </el-form-item>
+
+      <el-form-item label="菜单英文名称" prop="enName">
+        <el-input v-model="form.enName" placeholder="请输入菜单英文名称"></el-input>
       </el-form-item>
 
       <el-form-item label="菜单地址" prop="url" v-if="form.parentId">
@@ -50,6 +54,7 @@ export default {
         id: undefined,
         parentId: undefined,
         name: '',
+        enName: '',
         url: '',
         icon: '',
         sort: 0,
@@ -64,8 +69,12 @@ export default {
       // 表单验证规则
       rules: {
         name: [
-          { required: true, message: '请输入菜单名称', trigger: 'blur' },
-          { max: 6, message: '菜单名称不能超过6个字符', trigger: 'blur' }
+          { required: true, message: '请输入菜单中文名称', trigger: 'blur' },
+          { max: 6, message: '菜单中文名称不能超过6个字符', trigger: 'blur' }
+        ],
+        enName: [
+          { required: true, message: '请输入菜单英文名称', trigger: 'blur' },
+          { max: 50, message: '菜单英文名称不能超过50个字符', trigger: 'blur' }
         ],
         url: [
           { required: true, message: '请输入菜单地址', trigger: 'blur' }
