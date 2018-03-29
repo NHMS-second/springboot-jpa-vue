@@ -1,0 +1,26 @@
+project(':youmeng-push') {
+
+    apply plugin: 'java'
+
+    jar {
+        baseName = 'youmeng-push'
+        version = '1.0.0'
+    }
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenLocal()
+        maven { url 'http://maven.ydd100.cn/repository/maven-public/' }
+        mavenCentral()
+    }
+
+
+    dependencies {
+        compile 'org.json:json:20090211'
+        compile 'org.apache.httpcomponents:httpclient:4.3.5'
+
+    }
+
+}
