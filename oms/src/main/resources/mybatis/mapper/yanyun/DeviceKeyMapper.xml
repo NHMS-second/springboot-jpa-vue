@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yanyun.oms.mapper.DeviceKeyMapper">
+
+<resultMap id="DeviceKeyDtoMap" type="com.yanyun.oms.dto.DeviceKeyDto">
+
+	<id column="id" jdbcType="INTEGER" property="id" />
+	<result column="device_qnique_id" property="deviceQniqueId" />
+	<result column="device_key" property="deviceKey" />
+	<result column="status" property="status" />
+	<result column="created_id" property="createdId" />
+	<result column="modified_id" property="modifiedId" />
+	<result column="created_time" property="createdTime" />
+	<result column="modified_time" property="modifiedTime" />
+
+    <collection column="device_id" property="device" select="com.yanyun.oms.mapper.DeviceMapper.findById"/>
+</resultMap>
+
+
+<resultMap id="DeviceKeyMap" type="com.yanyun.oms.entity.deviceKey.DeviceKey">
+
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="device_qnique_id" property="deviceQniqueId" />
+		<result column="device_key" property="deviceKey" />
+		<result column="status" property="status" />
+		<result column="device_id" property="deviceId" />
+		<result column="created_id" property="createdId" />
+		<result column="modified_id" property="modifiedId" />
+		<result column="created_time" property="createdTime" />
+		<result column="modified_time" property="modifiedTime" />
+    </resultMap>
+
+	<!--表名 -->
+	<sql id="tableName">
+		ec_device_key
+	</sql>
+
+	<!-- 字段 -->
+	<sql id="Field">
+		id,
+		device_qnique_id,
+		device_key,
+		status,
+		device_id,
+		created_id,
+		modified_id,
+		created_time,
+		modified_time
+	</sql>
+
+	<!-- 字段值 -->
+	<sql id="FieldValue">
+		#{id, jdbcType=INTEGER},
+		#{deviceQniqueId, jdbcType=VARCHAR},
+		#{deviceKey, jdbcType=VARCHAR},
+		#{status, jdbcType=TINYINT},
+		#{deviceId, jdbcType=INTEGER},
+		#{createdId, jdbcType=INTEGER},
+		#{modifiedId, jdbcType=INTEGER},
+		#{createdTime, jdbcType=TIMESTAMP},
+		#{modifiedTime, jdbcType=TIMESTAMP}
+	</sql>
+
+	<!-- 查询全部记录 -->
+    <select id="findAll" resultMap="DeviceKeyDtoMap">
+        SELECT
+        	<include refid="Field"></include>
+        FROM
+        	<include refid="tableName"></include>
+
+    </select>
+
+	<!-- 新增-->
+<insert id="insert" parameterType="com.yanyun.oms.entity.deviceKey.DeviceKey" useGeneratedKeys="true" keyProperty="id">
+
+        INSERT INTO
+			<include refid="tableName"></include>
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+				id,
+            </if>
+            <if test="deviceQniqueId != null">
+				device_qnique_id,
+            </if>
+            <if test="deviceKey != null">
+				device_key,
+            </if>
+            <if test="status != null">
+				status,
+            </if>
+            <if test="deviceId != null">
+				device_id,
+            </if>
+            <if test="createdId != null">
+				created_id,
+            </if>
+            <if test="modifiedId != null">
+				modified_id,
+            </if>
+            <if test="createdTime != null">
+				created_time,
+            </if>
+            <if test="modifiedTime != null">
+				modified_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+				#{id},
+            </if>
+            <if test="deviceQniqueId != null">
+				#{deviceQniqueId},
+            </if>
+            <if test="deviceKey != null">
+				#{deviceKey},
+            </if>
+            <if test="status != null">
+				#{status},
+            </if>
+            <if test="deviceId != null">
+				#{deviceId},
+            </if>
+            <if test="createdId != null">
+				#{createdId},
+            </if>
+            <if test="modifiedId != null">
+				#{modifiedId},
+            </if>
+            <if test="createdTime != null">
+				#{createdTime},
+            </if>
+            <if test="modifiedTime != null">
+				#{modifiedTime},
+            </if>
+        </trim>
+	</insert>
+
+	<!-- 删除-->
+	<delete id="delete" parameterType="java.lang.Integer">
+		DELETE
+		FROM <include refid="tableName"></include>
+		WHERE
+			id = #{id}
+	</delete>
+
+    <!-- 批量删除 -->
+    <delete id="deleteByIds">
+		DELETE
+		FROM <include refid="tableName"></include>
+        WHERE
+			id IN
+			<foreach item="item" index="index" collection="array" open="(" separator="," close=")">
+				#{item}
+			</foreach>
+    </delete>
+
+	<!-- 更新记录 -->
+<update id="update" parameterType="com.yanyun.oms.entity.deviceKey.DeviceKey">
+		UPDATE
+			<include refid="tableName"></include>
+        <set>
+			<if test="deviceQniqueId != null">
+				device_qnique_id = #{deviceQniqueId},
+			</if>
+			<if test="deviceKey != null">
+				device_key = #{deviceKey},
+			</if>
+			<if test="deviceId != null">
+				device_id = #{deviceId},
+			</if>
+			<if test="createdId != null">
+				created_id = #{createdId},
+			</if>
+			<if test="modifiedId != null">
+				modified_id = #{modifiedId},
+			</if>
+			<if test="createdTime != null">
+				created_time = #{createdTime},
+			</if>
+			<if test="modifiedTime != null">
+				modified_time = #{modifiedTime},
+			</if>
+        </set>
+        WHERE id = #{id}
+	</update>
+
+	<!-- 通过编号查询 -->
+	<select id="findById" parameterType="java.lang.Integer" resultMap="DeviceKeyMap">
+		SELECT
+			<include refid="Field"></include>
+		FROM
+			<include refid="tableName"></include>
+		WHERE id = #{id}
+	</select>
+
+	<select id="findByQniqueId" parameterType="java.lang.String" resultMap="DeviceKeyMap">
+		SELECT
+		<include refid="Field"></include>
+		FROM
+		<include refid="tableName"></include>
+		WHERE device_qnique_id = #{deviceQniqueId}
+	</select>
+
+	<select id="findByKey" parameterType="java.lang.String" resultMap="DeviceKeyMap">
+		SELECT
+		<include refid="Field"></include>
+		FROM
+		<include refid="tableName"></include>
+		WHERE device_key = #{deviceKey}
+	</select>
+
+    <!--更新设备唯一序列号状态-->
+    <update id="updateStatus">
+        UPDATE
+        	<include refid="tableName"></include>
+        SET
+        	status = #{status, jdbcType=TINYINT}
+        WHERE
+        	id
+        IN
+        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
+			#{id}
+        </foreach>
+    </update>
+
+</mapper>
