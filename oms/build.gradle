@@ -32,7 +32,7 @@
 
 
     dependencies {
-        compile project(':youmeng-push')
+        compile fileTree(include: '*.jar', dir: 'src/libs')
         compile 'com.amazonaws:aws-java-sdk:1.9.6'
         compile 'net.sf.jxls:jxls-core:1.0.6'
         testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"

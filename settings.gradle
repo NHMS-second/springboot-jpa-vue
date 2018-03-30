@@ -1,5 +1,4 @@
 rootProject.name = 'Yanyun-com'
-include 'youmeng-push'
 include 'oms'
 
 
