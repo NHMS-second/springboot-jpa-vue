@@ -35,7 +35,7 @@ public class PushService {
 	public void sendAndroidBroadcast() throws Exception {
 		AndroidBroadcast broadcast = new AndroidBroadcast(appkey,appMasterSecret);
 		broadcast.setTicker( "Android broadcast ticker");
-		broadcast.setTitle(  "张宁hello.....");
+		broadcast.setTitle(  "张宁再一次再一次再一次再一次hello.....");
 		broadcast.setText(   "Android broadcast text");
 		broadcast.goAppAfterOpen();
 		broadcast.setDisplayType(AndroidNotification.DisplayType.NOTIFICATION);

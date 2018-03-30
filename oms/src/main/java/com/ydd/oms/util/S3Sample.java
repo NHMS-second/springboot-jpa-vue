@@ -16,6 +16,8 @@ package com.ydd.oms.util;
 
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
+import com.amazonaws.HttpMethod;
+import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
@@ -23,6 +25,7 @@ import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.*;
 
 import java.io.*;
+import java.net.URL;
 import java.util.UUID;
 
 /**
@@ -41,8 +44,8 @@ public class S3Sample {
 
     public static AmazonS3 getAmazon(){
         AmazonS3 s3 = new AmazonS3Client();
-        Region usWest2 = Region.getRegion(Regions.CN_NORTH_1);
-        s3.setRegion(usWest2);
+        Region cnNorth = Region.getRegion(Regions.CN_NORTH_1);
+        s3.setRegion(cnNorth);
         return s3;
     }
 
@@ -98,6 +101,16 @@ public class S3Sample {
              */
             System.out.println("Uploading a new object to S3 from a file\n");
             s3.putObject(new PutObjectRequest(bucketName, key, createSampleFile()));
+
+
+            //AmazonS3 s3client = new AmazonS3Client(new ProfileCredentialsProvider());
+            java.util.Date expiration = new java.util.Date();
+            long msec = expiration.getTime(); msec += 1000 * 60 * 60;  // 1 hour.
+            expiration.setTime(msec);
+            GeneratePresignedUrlRequest generatePresignedUrlRequest = new GeneratePresignedUrlRequest("yanyun", "aaa.png");
+            generatePresignedUrlRequest.setMethod(HttpMethod.GET); // Default.
+            generatePresignedUrlRequest.setExpiration(expiration);
+            URL s = s3.generatePresignedUrl(generatePresignedUrlRequest);
 
             /*
              * Download an object - When you download an object, you get all of
