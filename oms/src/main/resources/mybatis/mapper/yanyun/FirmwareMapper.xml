@@ -8,7 +8,7 @@
 		<result column="revision" property="revision" />
 		<result column="name" property="name" />
 		<result column="file_name" property="fileName" />
-		<result column="chip_type" property="chipType" />
+		<!--<result column="chip_type" property="chipType" />-->
 		<result column="bytes" property="bytes" />
 		<result column="type" property="type" />
 		<result column="created_id" property="createdId" />
@@ -29,7 +29,7 @@
 		revision,
 		name,
 		file_name,
-		chip_type,
+		/*chip_type,*/
 		bytes,
 		type,
 		created_id,
@@ -45,7 +45,7 @@
 		#{revision, jdbcType=VARCHAR},
 		#{name, jdbcType=VARCHAR},
 		#{fileName, jdbcType=VARCHAR},
-		#{chipType, jdbcType=TINYINT},
+		/*#{chipType, jdbcType=TINYINT},*/
 		#{bytes, jdbcType=INTEGER},
 		#{type, jdbcType=TINYINT},
 		#{createdId, jdbcType=INTEGER},
@@ -83,9 +83,9 @@
             <if test="fileName != null">
 				file_name,
             </if>
-            <if test="chipType != null">
+            <!--<if test="chipType != null">
 				chip_type,
-            </if>
+            </if>-->
             <if test="bytes != null">
 				bytes,
             </if>
@@ -121,9 +121,9 @@
             <if test="fileName != null">
 				#{fileName},
             </if>
-            <if test="chipType != null">
+            <!--<if test="chipType != null">
 				#{chipType},
-            </if>
+            </if>-->
             <if test="bytes != null">
 				#{bytes},
             </if>
@@ -185,9 +185,9 @@
 			<if test="fileName != null">
 				file_name = #{fileName},
 			</if>
-			<if test="chipType != null">
+			<!--<if test="chipType != null">
 				chip_type = #{chipType},
-			</if>
+			</if>-->
 			<if test="bytes != null">
 				bytes = #{bytes},
 			</if>
@@ -228,7 +228,7 @@
 		<include refid="Field"></include>
 		FROM
 		<include refid="tableName"></include>
-		WHERE name = #{name}
+		WHERE name = #{name} and deleted = 0
 	</select>
 
 </mapper>

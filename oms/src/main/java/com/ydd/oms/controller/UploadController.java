@@ -56,4 +56,11 @@ public class UploadController {
        return uploadService.uploadFile(fileData);
     }
 
+
+    @RequestMapping(value = "/importExcel", method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseDTO importExcel(@RequestParam("file") MultipartFile fileData) {
+        return uploadService.uploadExcel(fileData);
+    }
+
 }

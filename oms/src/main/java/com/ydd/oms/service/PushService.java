@@ -28,14 +28,14 @@ public class PushService {
 	}
 
 	public PushService(){
-		this.appkey = "5ab9b3ffb27b0a48af0000f6";
-		this.appMasterSecret = "rfnwopisy0sekj6qwmhefvcufbrsyxno";
+		this.appkey = "5abda54af29d98752400007d";
+		this.appMasterSecret = "e6qmje6z2hpy4dyzzdnec6muwoumxlwv";
 	}
 	
 	public void sendAndroidBroadcast() throws Exception {
 		AndroidBroadcast broadcast = new AndroidBroadcast(appkey,appMasterSecret);
 		broadcast.setTicker( "Android broadcast ticker");
-		broadcast.setTitle(  "中文的title");
+		broadcast.setTitle(  "张宁hello.....");
 		broadcast.setText(   "Android broadcast text");
 		broadcast.goAppAfterOpen();
 		broadcast.setDisplayType(AndroidNotification.DisplayType.NOTIFICATION);
@@ -238,9 +238,9 @@ public class PushService {
 	
 	public static void main(String[] args) {
 		// TODO set your appkey and master secret here
-		PushService demo = new PushService("5ab9b3ffb27b0a48af0000f6", "rfnwopisy0sekj6qwmhefvcufbrsyxno");
+		PushService demo = new PushService("5abda54af29d98752400007d", "e6qmje6z2hpy4dyzzdnec6muwoumxlwv");
 		try {
-			demo.sendAndroidUnicast();
+			demo.sendAndroidBroadcast();
 			/* TODO these methods are all available, just fill in some fields and do the test
 			 * demo.sendAndroidCustomizedcastFile();
 			 * demo.sendAndroidBroadcast();

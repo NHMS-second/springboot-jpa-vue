@@ -39,10 +39,10 @@ public class Firmware implements Serializable {
      * 设备类型
      * @see com.yanyun.oms.enums.FirmwareChipTypeEnum
      */
-    private Integer chipType;
+    //private Integer chipType;
 
 
-    private String chipTypeStr;
+    //private String chipTypeStr;
 
 
     /**
@@ -87,13 +87,13 @@ public class Firmware implements Serializable {
     private Integer deleted;
 
 
-    public String getChipTypeStr() {
+   /* public String getChipTypeStr() {
         return chipTypeStr;
     }
 
     public void setChipTypeStr(String chipTypeStr) {
         this.chipTypeStr = chipTypeStr;
-    }
+    }*/
 
     public String getTypeStr() {
         return typeStr;
@@ -184,7 +184,7 @@ public class Firmware implements Serializable {
      *
      * @param chipType 设备类型
      */
-    public void setChipType(Integer chipType){
+    /*public void setChipType(Integer chipType){
         if(chipType == null){
             this.chipTypeStr = "";
         }else {
@@ -197,16 +197,16 @@ public class Firmware implements Serializable {
             }
         }
         this.chipType = chipType;
-    }
+    }*/
 
     /**
      * 获取设备类型
      *
      * @return 设备类型
      */
-    public Integer getChipType(){
+    /*public Integer getChipType(){
         return chipType;
-    }
+    }*/
 
 
     /**

@@ -43,6 +43,7 @@ const user = {
       const username = userInfo.username.trim()
       return new Promise((resolve, reject) => {
         var lang = localStorage.getItem('lang')
+        console.log('lang:' + lang)
         loginByUsername(username, userInfo.password, lang).then(response => {
           setToken(response.admin.username)
           storage.set('permissions', response.permissions)

@@ -5,13 +5,13 @@
     <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" :placeholder="$t('firmware.revision')" v-model="params.search_like_revision"></el-input>
   <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" :placeholder="$t('firmware.name')" v-model="params.search_like_name"></el-input>
 
-<el-select v-model="params.search_eq_chipType" style="width: 120px" class="filter-item" clearable :placeholder="$t('firmware.chipType')">
+<!-- <el-select v-model="params.search_eq_chipType" style="width: 120px" class="filter-item" clearable :placeholder="$t('firmware.chipType')">
       <el-option v-for="item in chip.type"
         :key="item.value"
         :label="item.label"
         :value="item.value">
       </el-option>
-    </el-select>
+    </el-select> -->
 
     <el-select v-model="params.search_eq_type" style="width: 120px" class="filter-item" clearable :placeholder="$t('firmware.type')">
       <el-option v-for="item in type.options"
@@ -24,6 +24,9 @@
     
     <el-button class="filter-item" type="primary" v-waves icon="search" @click="handleSearch">{{$t('message.search')}}</el-button>
     <el-button class="filter-item pull-right" type="success" icon="edit" @click="handleCreate">{{$t('message.add')}}</el-button>
+
+   
+
   </div>
 
   <!-- 列表数据 -->
@@ -45,11 +48,11 @@
 
 
       <!-- 设备类型 -->
-      <el-table-column align="center" :label="$t('firmware.chipType')">
+      <!-- <el-table-column align="center" :label="$t('firmware.chipType')">
         <template scope="scope">
           <span>{{scope.row.chipTypeStr}}</span>
         </template>
-      </el-table-column>
+      </el-table-column> -->
 
       <!-- 文件大小 -->
       <el-table-column align="center" :label="$t('firmware.bytes')">

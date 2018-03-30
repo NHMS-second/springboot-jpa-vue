@@ -30,8 +30,7 @@
 
 
       <!-- 设备类型 -->
-      <el-form-item :label="$t('firmware.chipType')" prop="chipType">
-        <!-- <el-input v-model="form.chipType" placeholder="请输入设备类型"></el-input> -->
+      <!-- <el-form-item :label="$t('firmware.chipType')" prop="chipType">
         <el-select v-model="form.chipType" style="width: 120px" class="filter-item" clearable :placeholder="$t('firmware.chipType')">
           <el-option v-for="item in chip.type"
             :key="item.value"
@@ -39,7 +38,7 @@
             :value="item.value">
           </el-option>
         </el-select>
-      </el-form-item>
+      </el-form-item> -->
 
 
       <!-- 升级状态 -->
@@ -131,7 +130,7 @@ export default {
         this.form.revision = response.firmware.revision
         this.form.name = response.firmware.name
         this.form.fileName = response.firmware.fileName
-        this.form.chipType = response.firmware.chipType
+        // this.form.chipType = response.firmware.chipType
         this.form.bytes = response.firmware.bytes
         this.form.type = response.firmware.type
       })

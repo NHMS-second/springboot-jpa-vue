@@ -10,7 +10,11 @@ export default {
     edit: 'edit',
     delete: 'delete',
     save: 'save',
-    cancel: 'cancel'
+    cancel: 'cancel',
+    status: 'status',
+    export: 'export',
+    import: 'import',
+    sort: 'sort'
   },
   questionnaire: {
     title: 'title',
@@ -54,6 +58,25 @@ export default {
     type: 'type',
     content: 'content'
 
+  },
+  deviceKey:{
+    qniqueId:'qniqueId',
+    key: 'key',
+    inputQniqueId: 'please input qniqueId',
+    qniqueIdMaxlength: 'qniqueId max length 50 ',
+    inputKey: 'please input key',
+    keyMaxlength: 'key max length 50 ',
+    noUsered: 'noUsered',
+    usered: 'usered',
+    import: 'import excel file for saving device Keys '
+  },
+  device:{
+    nickname:'device nickname'
+
+  },
+  faq:{
+    title: 'title',
+    answer: 'answer'
   }
 }
 
