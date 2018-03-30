@@ -19,11 +19,11 @@
         </template>
       </el-table-column>
 
-      <el-table-column align="center" :label="$t('mes.img')">
+      <!-- <el-table-column align="center" :label="$t('mes.img')">
         <template scope="scope">
           <img :width="60" :height="60" :src="scope.row.img" />
         </template>
-      </el-table-column>
+      </el-table-column> -->
 
       <!-- 消息类型 1系统消息 2个人消息 -->
       <el-table-column align="center" :label="$t('mes.type')">
