@@ -36,6 +36,7 @@
 
 <script>
 import Vue from 'vue'
+import { getMenus } from '@/api/login'
 import { mapGetters } from 'vuex'
 import Levelbar from './Levelbar'
 import TabsView from './TabsView'
@@ -43,6 +44,7 @@ import Hamburger from 'components/Hamburger'
 import Screenfull from 'components/Screenfull'
 import ErrorLog from 'components/ErrLog'
 import errLogStore from 'store/errLog'
+import storage from '@/utils/storage'
 
 export default {
   components: {
@@ -68,12 +70,18 @@ export default {
     changeZh() {
       localStorage.setItem('lang', 'zh')
       Vue.config.lang = 'zh'
-      window.location.reload()
+      getMenus('zh').then(response => {
+        storage.set('menus', response.menus)
+        window.location.reload()
+      })
     },
     changeEn() {
       localStorage.setItem('lang', 'en')
       Vue.config.lang = 'en'
-      window.location.reload()
+      getMenus('en').then(response => {
+        storage.set('menus', response.menus)
+        window.location.reload()
+      })
     },
     toggleSideBar() {
       this.$store.dispatch('ToggleSideBar')
