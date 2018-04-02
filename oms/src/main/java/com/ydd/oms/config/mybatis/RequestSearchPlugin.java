@@ -61,7 +61,6 @@ public class RequestSearchPlugin implements Interceptor {
             boundSql = (BoundSql) args[5];
         }
         String sql = null;
-        Method method = invocation.getMethod();
         sql = buildSearchRequestParameters(boundSql.getSql());
 
         ReflectUtil.setFieldValue(boundSql, "sql", sql);
@@ -83,18 +82,6 @@ public class RequestSearchPlugin implements Interceptor {
         if(request == null)
             return sql;
         StringBuilder condition = new StringBuilder(" 1 = 1 ");
-//        Map<String, String[]> parameterMap = request.getParameterMap();
-//        Set<Map.Entry<String, String[]>> entrySet = parameterMap.entrySet();
-//        int searchParamSize = 0 ;
-//        for (Map.Entry<String, String[]> entry : entrySet) {
-//            if (entry.getKey().toLowerCase().startsWith(SEARCH_PREFIX)
-//                    && StringUtils.isNotBlank(entry.getValue()[0])) {
-//                buildCondition(condition, entry);
-//                searchParamSize++;
-//            }
-//        }
-//        if(searchParamSize <= 0)
-//            return sql;//没有搜索参数直接返回
         List<SearchParam> searchParams = ParamsUtils.getLocalParams();
         if(searchParams == null || searchParams.size() <= 0)
             return sql;//没有搜索参数直接返回

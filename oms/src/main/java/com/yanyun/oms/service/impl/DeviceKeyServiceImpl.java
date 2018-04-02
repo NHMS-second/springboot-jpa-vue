@@ -43,7 +43,7 @@ public class DeviceKeyServiceImpl extends BaseServiceImpl implements DeviceKeySe
 	@Transactional
     public ResponseDTO save(DeviceKey deviceKey) {
 		synchronized (this){
-			DeviceKey qnique = deviceKeyMapper.findByQniqueId(deviceKey.getDeviceQniqueId());
+			DeviceKey qnique = deviceKeyMapper.findByQniqueId(deviceKey.getDeviceUniqueId());
 			DeviceKey key = deviceKeyMapper.findByKey(deviceKey.getDeviceKey());
 
 			if(qnique!=null && deviceKey.getId() !=null &&

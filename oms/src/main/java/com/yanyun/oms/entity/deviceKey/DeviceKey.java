@@ -20,7 +20,7 @@ public class DeviceKey implements Serializable {
     /**
      * 设备唯一ID
      */
-    private String deviceQniqueId;
+    private String deviceUniqueId;
 
     /**
      * 设备唯一KEY
@@ -82,23 +82,6 @@ public class DeviceKey implements Serializable {
     }
 
 
-    /**
-     * 设置设备唯一ID
-     *
-     * @param deviceQniqueId 设备唯一ID
-     */
-    public void setDeviceQniqueId(String deviceQniqueId){
-        this.deviceQniqueId = deviceQniqueId;
-    }
-
-    /**
-     * 获取设备唯一ID
-     *
-     * @return 设备唯一ID
-     */
-    public String getDeviceQniqueId(){
-        return deviceQniqueId;
-    }
 
 
     /**
@@ -234,6 +217,11 @@ public class DeviceKey implements Serializable {
     }
 
 
+    public String getDeviceUniqueId() {
+        return deviceUniqueId;
+    }
 
-
+    public void setDeviceUniqueId(String deviceUniqueId) {
+        this.deviceUniqueId = deviceUniqueId;
+    }
 }

@@ -95,7 +95,7 @@ public class UploadService {
 						}
 
 						DeviceKey device = new DeviceKey();
-						device.setDeviceQniqueId(qnique_id);
+						device.setDeviceUniqueId(qnique_id);
 						device.setDeviceKey(device_key);
 						lists.add(device);
 					}

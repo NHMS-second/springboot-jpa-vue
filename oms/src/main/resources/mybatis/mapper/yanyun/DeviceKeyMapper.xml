@@ -5,7 +5,7 @@
 <resultMap id="DeviceKeyDtoMap" type="com.yanyun.oms.dto.DeviceKeyDto">
 
 	<id column="id" jdbcType="INTEGER" property="id" />
-	<result column="device_qnique_id" property="deviceQniqueId" />
+	<result column="device_unique_id" property="deviceUniqueId" />
 	<result column="device_key" property="deviceKey" />
 	<result column="status" property="status" />
 	<result column="created_id" property="createdId" />
@@ -20,7 +20,7 @@
 <resultMap id="DeviceKeyMap" type="com.yanyun.oms.entity.deviceKey.DeviceKey">
 
 		<id column="id" jdbcType="INTEGER" property="id" />
-		<result column="device_qnique_id" property="deviceQniqueId" />
+		<result column="device_unique_id" property="deviceUniqueId" />
 		<result column="device_key" property="deviceKey" />
 		<result column="status" property="status" />
 		<result column="device_id" property="deviceId" />
@@ -38,7 +38,7 @@
 	<!-- 字段 -->
 	<sql id="Field">
 		id,
-		device_qnique_id,
+		device_unique_id,
 		device_key,
 		status,
 		device_id,
@@ -51,7 +51,7 @@
 	<!-- 字段值 -->
 	<sql id="FieldValue">
 		#{id, jdbcType=INTEGER},
-		#{deviceQniqueId, jdbcType=VARCHAR},
+		#{deviceUniqueId, jdbcType=VARCHAR},
 		#{deviceKey, jdbcType=VARCHAR},
 		#{status, jdbcType=TINYINT},
 		#{deviceId, jdbcType=INTEGER},
@@ -67,7 +67,7 @@
         	<include refid="Field"></include>
         FROM
         	<include refid="tableName"></include>
-
+		where 1=1
     </select>
 
 	<!-- 新增-->
@@ -79,8 +79,8 @@
             <if test="id != null">
 				id,
             </if>
-            <if test="deviceQniqueId != null">
-				device_qnique_id,
+            <if test="deviceUniqueId != null">
+				device_unique_id,
             </if>
             <if test="deviceKey != null">
 				device_key,
@@ -108,8 +108,8 @@
             <if test="id != null">
 				#{id},
             </if>
-            <if test="deviceQniqueId != null">
-				#{deviceQniqueId},
+            <if test="deviceUniqueId != null">
+				#{deviceUniqueId},
             </if>
             <if test="deviceKey != null">
 				#{deviceKey},
@@ -159,8 +159,8 @@
 		UPDATE
 			<include refid="tableName"></include>
         <set>
-			<if test="deviceQniqueId != null">
-				device_qnique_id = #{deviceQniqueId},
+			<if test="deviceUniqueId != null">
+				device_unique_id = #{deviceUniqueId},
 			</if>
 			<if test="deviceKey != null">
 				device_key = #{deviceKey},
@@ -198,7 +198,7 @@
 		<include refid="Field"></include>
 		FROM
 		<include refid="tableName"></include>
-		WHERE device_qnique_id = #{deviceQniqueId}
+		WHERE device_unique_id = #{deviceUniqueId}
 	</select>
 
 	<select id="findByKey" parameterType="java.lang.String" resultMap="DeviceKeyMap">
