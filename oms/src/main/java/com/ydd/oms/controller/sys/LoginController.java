@@ -3,7 +3,9 @@ package com.ydd.oms.controller.sys;
 import com.ydd.framework.core.common.dto.ResponseDTO;
 import com.ydd.framework.core.controller.BaseController;
 import com.ydd.oms.common.exception.OmsExceptionCodeTemplate;
+import com.ydd.oms.config.shiro.ShiroAdmin;
 import com.ydd.oms.service.sys.AdminService;
+import com.ydd.oms.service.sys.MenuService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.DisabledAccountException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -26,6 +28,9 @@ public class LoginController extends BaseController {
 
     @Resource
     private AdminService adminService;
+
+    @Resource
+    private MenuService menuService;
 
     /**
      * 未登录
@@ -65,5 +70,11 @@ public class LoginController extends BaseController {
     public ResponseDTO logout() {
         SecurityUtils.getSubject().logout();
         return ResponseDTO.ok();
+    }
+
+    @RequestMapping(value = "/menuList", method = {RequestMethod.GET})
+    public ResponseDTO findMenuList(String lang){
+        Integer adminId = ((ShiroAdmin) SecurityUtils.getSubject().getPrincipal()).getId();
+        return ResponseDTO.ok().addAttribute("menus",menuService.findListByAdminId(adminId,lang));
     }
 }

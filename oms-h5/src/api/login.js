@@ -7,9 +7,9 @@ import http from '@/utils/http'
  */
 export function loginByUsername(username, password, language) {
   return http.post('/login', {
-    username,
-    password,
-    language
+    username: username,
+    password: password,
+    lang: language
   })
 }
 
@@ -25,5 +25,12 @@ export function logout() {
  */
 export function getUserInfo() {
   return http.get('/admin')
+}
+
+/**
+ * 获取登录用户的菜单
+ */
+export function getMenus(lang) {
+  return http.get('/menuList', { lang: lang })
 }
 

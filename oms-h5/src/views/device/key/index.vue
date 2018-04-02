@@ -2,7 +2,7 @@
 <div class="app-container calendar-list-container">
   <!-- 筛选条件 -->
   <div class="filter-container">
-    <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" :placeholder="$t('deviceKey.qniqueId')" v-model="params.search_like_deviceQniqueId"></el-input>
+    <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" :placeholder="$t('deviceKey.qniqueId')" v-model="params.search_like_deviceUniqueId"></el-input>
   <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" :placeholder="$t('deviceKey.key')" v-model="params.search_like_deviceKey"></el-input>
     <el-select v-model="params.search_eq_status" style="width: 120px" class="filter-item" clearable :placeholder="$t('message.status')">
       <el-option v-for="item in options.status"
@@ -41,7 +41,7 @@
       <!-- 设备唯一ID -->
       <el-table-column align="center" :label="$t('deviceKey.qniqueId')">
         <template scope="scope">
-          <span>{{scope.row.deviceQniqueId}}</span>
+          <span>{{scope.row.deviceUniqueId}}</span>
         </template>
       </el-table-column>
 
@@ -60,12 +60,12 @@
         </template>
       </el-table-column>
 
-      <!-- 设备 -->
+<!--     
       <el-table-column align="center" :label="$t('device.nickname')">
         <template scope="scope">
           <span v-if="scope.row.device">{{scope.row.device.nickname}}</span>
         </template>
-      </el-table-column>
+      </el-table-column> -->
 
       <!-- 创建时间 -->
       <el-table-column align="center" :label="$t('message.createTime')">
@@ -103,7 +103,7 @@ export default {
     return {
       dialogVisible: false,
       params: {
-        search_like_deviceQniqueId: undefined,
+        search_like_deviceUniqueId: undefined,
         search_like_deviceKey: undefined,
         search_eq_status: undefined
       },

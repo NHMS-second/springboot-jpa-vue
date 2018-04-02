@@ -3,8 +3,8 @@
     <el-form class="small-space" :model="form" :rules="rules" ref="form" label-position="right" label-width="120px" style="width: 700px;">
 
       <!-- 设备唯一ID -->
-      <el-form-item :label="$t('deviceKey.qniqueId')" prop="deviceQniqueId">
-        <el-input v-model="form.deviceQniqueId" :placeholder="$t('deviceKey.inputQniqueId')"></el-input>
+      <el-form-item :label="$t('deviceKey.qniqueId')" prop="deviceUniqueId">
+        <el-input v-model="form.deviceUniqueId" :placeholder="$t('deviceKey.inputQniqueId')"></el-input>
       </el-form-item>
 
       <!-- 设备唯一KEY -->
@@ -28,7 +28,7 @@ export default {
     return {
       form: {
         id: undefined,
-        deviceQniqueId: '',
+        deviceUniqueId: '',
         deviceKey: '',
         deviceId: ''
       },
@@ -37,7 +37,7 @@ export default {
 
       // 表单验证规则
       rules: {
-        deviceQniqueId: [
+        deviceUniqueId: [
           { required: true, message: this.$t('deviceKey.inputQniqueId'), trigger: 'blur' },
           { max: 50, message: this.$t('deviceKey.qniqueIdMaxlength'), trigger: 'blur' }
         ],
@@ -66,7 +66,7 @@ export default {
      */
     findById(id) {
       find(id).then(response => {
-        this.form.deviceQniqueId = response.deviceKey.deviceQniqueId
+        this.form.deviceUniqueId = response.deviceKey.deviceUniqueId
         this.form.deviceKey = response.deviceKey.deviceKey
         this.form.deviceId = response.deviceKey.deviceId
       })

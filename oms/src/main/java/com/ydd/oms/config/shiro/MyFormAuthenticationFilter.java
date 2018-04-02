@@ -37,8 +37,7 @@ public class MyFormAuthenticationFilter extends FormAuthenticationFilter {
                                      ServletResponse response) throws Exception {
 
         Integer adminId = ((ShiroAdmin) subject.getPrincipal()).getId();
-        String language = request.getParameter("language");
-        language = "en";
+        String language = request.getParameter("lang");
         ResponseDTO ret = ResponseDTO.ok("登录成功");
         ret.put("admin", subject.getPrincipal());
         ret.put("menus", menuService.findListByAdminId(adminId,language));
