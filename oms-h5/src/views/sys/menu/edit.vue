@@ -108,6 +108,7 @@ export default {
         this.form.status = response.menu.status
         this.form.sort = response.menu.sort
         this.form.remark = response.menu.remark
+        this.form.enName = response.menu.enName
       })
     },
 

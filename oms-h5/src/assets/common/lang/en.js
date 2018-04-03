@@ -14,7 +14,14 @@ export default {
     status: 'status',
     export: 'export',
     import: 'import',
-    sort: 'sort'
+    sort: 'sort',
+    enable:'enable',
+    disable:'disable',
+    disabled:'disabled',
+    enabled:'enabled',
+    blacked:'blacked',
+    unknow:'unknow',
+    back:'back'
   },
   questionnaire: {
     title: 'title',
@@ -77,6 +84,23 @@ export default {
   faq:{
     title: 'title',
     answer: 'answer'
+  },
+  admin:{
+    name:'name',
+    phone:'phone',
+    email:'email',
+    sex:'sex', 
+    delAdminTip:'Confirm to delete this admin?'   
+  },
+  
+  menu:{
+    chName:'chinese Name',
+    enName:'english name',
+    icon:'icon',
+    sort:'sort',
+    url:'url',    
+    menuName:'menu name',
+    delMenuTip:'Confirm to delete this menu?'
   }
 }
 

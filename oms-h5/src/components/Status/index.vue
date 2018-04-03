@@ -13,13 +13,13 @@ export default {
   computed: {
     statusName() {
       if (this.status === 1) {
-        return '可用'
+        return this.$t('message.enabled')
       } else if (this.status === 0) {
-        return '禁用'
+        return this.$t('message.disabled')
       } else if (this.status === -1) {
-        return '黑名单'
+        return this.$t('message.blacked')
       } else {
-        return '未知'
+        return this.$t('message.unknow')
       }
     },
     type() {

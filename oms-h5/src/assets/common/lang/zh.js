@@ -14,7 +14,14 @@ export default{
     status: '状态',
     export: '导出',
     import: '导入',
-    sort: '排序'
+    sort: '排序',
+    enable:'启用',
+    disable:'禁用',
+    disabled:'禁用',
+    enabled:'可用',
+    blacked:'黑名单',
+    unknow:'未知',
+    back:'返回'
   },
   questionnaire: {
     title: '问卷调查标题',
@@ -78,5 +85,21 @@ export default{
   faq:{
     title: '问题标题',
     answer: '问题答案'
+  },
+  admin:{
+    name:'姓名',
+    phone:'手机号码',
+    email:'邮箱',
+    sex:'性别',    
+    delAdminTip:'确认删除该管理员？'
+  },
+  menu:{
+    chName:'中文名称',
+    enName:'英文名称',
+    icon:'图标',
+    sort:'排序',
+    url:'地址',
+    menuName:'菜单名称',
+    delMenuTip:'确认删除该系统菜单？'
   }
 }

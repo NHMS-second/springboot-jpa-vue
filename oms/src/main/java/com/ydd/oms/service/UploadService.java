@@ -128,7 +128,7 @@ public class UploadService {
 					fName = fileName.split("\\.")[0];
 				}
 				//File f = new File("/opt/"+fileName);
-				File f = new File("D:\\sssss\\"+fileName);
+				File f = new File("/opt/"+fileName);
 				if(f.exists()){
 					f.delete();
 				}

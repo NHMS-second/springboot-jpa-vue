@@ -44,7 +44,7 @@ export default {
 		}
 		.sidebar-container {
 			transition: width 0.28s ease-out;
-			width: 180px;
+			width: 200px;
 			height: 100%;
 			position: fixed;
 			top: 0;
@@ -57,7 +57,7 @@ export default {
 		.main-container {
 			min-height: 100%;
 			transition: margin-left 0.28s ease-out;
-			margin-left: 180px;
+			margin-left: 200px;
 		}
 	}
 </style>

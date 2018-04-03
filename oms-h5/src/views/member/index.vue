@@ -174,7 +174,7 @@ import { remove, updateStatus } from '@/api//member'
 import waves from '@/directive/waves.js'// 水波纹指令
 import Pagination from '@/components/Pagination'
 import Status from '@/components/Status'
-/* import memberStatusOptions from '@/utils/constants.js' */
+import { memberStatusOptions, memberFromOptions } from '@/utils/constants'
 
 export default {
   name: 'member_list',
@@ -192,22 +192,10 @@ export default {
       },
 
       ooss: {
-        bbbs: [
-          { value: 1, label: '手机短信' },
-          { value: 2, label: '手机注册' },
-          { value: 3, label: '微信' },
-          { value: 4, label: 'QQ' },
-          { value: 5, label: '邮箱' },
-          { value: 6, label: 'Facebook' },
-          { value: 7, label: 'Google' }
-        ]
+        bbbs: memberFromOptions
       },
       options: {
-        status: [
-          { value: -2, label: '封号' },
-          { value: -1, label: '24小时限制' },
-          { value: 0, label: '正常' }
-        ]
+        status: memberStatusOptions
       }
     }
   },
