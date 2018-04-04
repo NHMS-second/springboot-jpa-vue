@@ -46,7 +46,7 @@
         </template>
       </el-table-column>
 
-      <el-table-column align="center" :label="$t('message.status')" width="82">
+      <el-table-column align="center" :label="$t('message.status')" width="100">
         <template scope="scope">
           <Status :status="scope.row.status"></Status>
         </template>
