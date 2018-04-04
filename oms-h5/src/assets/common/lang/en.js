@@ -35,9 +35,14 @@ export default {
     language: 'language',
     avatar: 'avatar',
     nickname: 'nickname',
-    from: 'from'
-
-
+    from: 'from',    
+    blacked:'blacked',
+    dayblacked:'twenty four hours blacked',
+    normal:'normal',
+    regsterType:'register type',
+    export:'export excel',
+    black:'ban',
+    toNoraml:'to normal'
   },
   firmware: {
     revision: 'revision',
@@ -67,14 +72,14 @@ export default {
 
   },
   deviceKey:{
-    qniqueId:'qniqueId',
+    uniqueId:'uniqueId',
     key: 'key',
-    inputQniqueId: 'please input qniqueId',
-    qniqueIdMaxlength: 'qniqueId max length 50 ',
+    inputUniqueId: 'please input uniqueId',
+    uniqueIdMaxlength: 'qniqueId max length 50 ',
     inputKey: 'please input key',
     keyMaxlength: 'key max length 50 ',
-    noUsered: 'noUsered',
-    usered: 'usered',
+    notUsed: 'not used',
+    used: 'used',
     import: 'import excel file for saving device Keys '
   },
   device:{
@@ -101,6 +106,13 @@ export default {
     url:'url',    
     menuName:'menu name',
     delMenuTip:'Confirm to delete this menu?'
+  },  
+  role:{
+    name:'name',
+    userCount:'user count'
+  },
+  faq:{
+    title:'title'
   }
 }
 

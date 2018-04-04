@@ -16,12 +16,7 @@
      <el-button class="filter-item pull-right" type="success" icon="edit" @click="dialogVisible = true">{{$t('message.import')}}</el-button>
     <el-button class="filter-item pull-right" type="success" icon="edit" @click="handleCreate">{{$t('message.add')}}</el-button>
 
-     <el-dialog
-  :title="$t('deviceKey.import')"
-  :visible.sync="dialogVisible"
-  width="30%"
-  :before-close="handleClose">
-  
+     <el-dialog :title="$t('deviceKey.import')"  :visible.sync="dialogVisible"  width="30%">  
         <el-upload
         class="upload-demo"
         action="/api/importExcel"
@@ -39,7 +34,7 @@
   <Pagination uri="/device/keys" :request-params="params" ref="pagination">
 
       <!-- 设备唯一ID -->
-      <el-table-column align="center" :label="$t('deviceKey.qniqueId')">
+      <el-table-column align="center" :label="$t('deviceKey.uniqueId')">
         <template scope="scope">
           <span>{{scope.row.deviceUniqueId}}</span>
         </template>
@@ -55,8 +50,8 @@
       <!-- 设备状态 -->
       <el-table-column align="center" :label="$t('message.status')">
         <template scope="scope">
-          <span v-if="scope.row.status == 0">{{$t('deviceKey.noUsered')}}</span>
-          <span v-if="scope.row.status == 1">{{$t('deviceKey.usered')}}</span>
+          <span v-if="scope.row.status == 0">{{$t('deviceKey.notUsed')}}</span>
+          <span v-if="scope.row.status == 1">{{$t('deviceKey.used')}}</span>
         </template>
       </el-table-column>
 
@@ -143,14 +138,6 @@ export default {
           duration: 2000
         })
       }
-    },
-
-    handleClose(done) {
-      this.$confirm('确认关闭？')
-          .then(_ => {
-            done()
-          })
-          .catch(_ => {})
     },
 
     /**

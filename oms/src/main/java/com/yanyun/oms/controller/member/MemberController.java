@@ -118,7 +118,7 @@ public class MemberController extends OmsController {
 		File file = memberService.exportExcel(language);
 		response.setContentLength((int) file.length());
 		response.setHeader("Content-Disposition", "attachment;filename="
-				+ "aaa.xlsx");// 设置在下载框默认显示的文件名
+				+ "users.xlsx");// 设置在下载框默认显示的文件名
 		response.setContentType("application/octet-stream");// 指明response的返回对象是文件流
 		// 读出文件到response
 		// 这里是先需要把要把文件内容先读到缓冲区

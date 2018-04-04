@@ -2,10 +2,10 @@
 <div class="app-container calendar-list-container">
   <!-- 筛选条件 -->
   <div class="filter-container">
-    <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" placeholder="问题标题" v-model="params.search_like_title"></el-input>
-
+    <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" :placeholder="$t('faq.title')" v-model="params.search_like_title"></el-input>
+    
     <el-button class="filter-item" type="primary" v-waves icon="search" @click="handleSearch">{{$t('message.search')}}</el-button>
-   <!--  <el-button class="filter-item pull-right" type="success" icon="edit" @click="handleCreate">添加</el-button> -->
+    <el-button class="filter-item pull-right" type="success" icon="edit" @click="handleCreate">{{$t('message.add')}}</el-button>
   </div>
 
   <!-- 列表数据 -->

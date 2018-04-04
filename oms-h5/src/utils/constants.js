@@ -12,9 +12,9 @@ export const statusLabelOptions = [
 ]
 
 export const memberStatusOptions = [
-  { value: -2, label: '封号' },
-  { value: -1, label: '24小时限制' },
-  { value: 0, label: '正常' }
+  { value: -2, label: 'member.blacked' },
+  { value: -1, label: 'member.dayblacked' },
+  { value: 0, label: 'member.normal' }
 ]
 
 export const memberFromOptions = [

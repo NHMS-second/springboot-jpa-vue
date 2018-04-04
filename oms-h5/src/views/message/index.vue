@@ -26,12 +26,12 @@
       </el-table-column> -->
 
       <!-- 消息类型 1系统消息 2个人消息 -->
-      <el-table-column align="center" :label="$t('mes.type')">
+      <!-- <el-table-column align="center" :label="$t('mes.type')">
         <template scope="scope">
           <span v-if='scope.row.type==1'>{{$t('mes.system')}}</span>
           <span v-if='scope.row.type==2'>{{$t('mes.personal')}}</span>
         </template>
-      </el-table-column>
+      </el-table-column> -->
 
       <!-- 创建时间 -->
       <el-table-column align="center" :label="$t('message.createTime')">
@@ -43,7 +43,6 @@
     <el-table-column :label="$t('message.handle')" align="center" width="150">
       <template scope="scope">
         <el-button size="small" type="text" @click="handleEdit(scope.row.id)">{{$t('message.edit')}}</el-button>
-        <el-button size="small" type="text" class="danger" @click="handleDelete(scope.row)">{{$t('message.delete')}}</el-button>
       </template>
     </el-table-column>
   </Pagination>

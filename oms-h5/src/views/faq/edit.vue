@@ -4,9 +4,8 @@
 
       <!-- 问题标题 -->
       <el-form-item :label="$t('faq.title')" prop="title">
-        <span >{{form.title}}</span>
+        <el-input v-model="form.title" :placeholder="$t('faq.title')"></el-input>
       </el-form-item>
-
 
       <el-form-item :label="$t('faq.answer')" prop="content">
       <div class="editor-container">

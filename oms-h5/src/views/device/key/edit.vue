@@ -3,8 +3,8 @@
     <el-form class="small-space" :model="form" :rules="rules" ref="form" label-position="right" label-width="120px" style="width: 700px;">
 
       <!-- 设备唯一ID -->
-      <el-form-item :label="$t('deviceKey.qniqueId')" prop="deviceUniqueId">
-        <el-input v-model="form.deviceUniqueId" :placeholder="$t('deviceKey.inputQniqueId')"></el-input>
+      <el-form-item :label="$t('deviceKey.uniqueId')" prop="deviceUniqueId">
+        <el-input v-model="form.deviceUniqueId" :placeholder="$t('deviceKey.inputUniqueId')"></el-input>
       </el-form-item>
 
       <!-- 设备唯一KEY -->
@@ -38,8 +38,8 @@ export default {
       // 表单验证规则
       rules: {
         deviceUniqueId: [
-          { required: true, message: this.$t('deviceKey.inputQniqueId'), trigger: 'blur' },
-          { max: 50, message: this.$t('deviceKey.qniqueIdMaxlength'), trigger: 'blur' }
+          { required: true, message: this.$t('deviceKey.inputUniqueId'), trigger: 'blur' },
+          { max: 50, message: this.$t('deviceKey.uniqueIdMaxlength'), trigger: 'blur' }
         ],
         deviceKey: [
           { required: true, message: this.$t('deviceKey.inputKey'), trigger: 'blur' },

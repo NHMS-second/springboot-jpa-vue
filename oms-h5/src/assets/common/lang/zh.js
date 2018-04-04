@@ -36,9 +36,14 @@ export default{
     language: '语言',
     avatar: '头像',
     nickname: '昵称',
-    from: '注册方式'
-
-
+    from: '注册方式',
+    blacked:'封号',
+    dayblacked:'24小时封禁',
+    normal:'正常',
+    regsterType:'注册方式',
+    export:'导出excel',
+    black:'封号',
+    toNoraml:'恢复正常',
   },
   firmware: {
     revision: '版本号',
@@ -68,14 +73,14 @@ export default{
     content: '内容'
   },
   deviceKey:{
-    qniqueId:'设备唯一ID',
+    uniqueId:'设备唯一ID',
     key: '设备key',
-    inputQniqueId: '请输入设备唯一ID',
-    qniqueIdMaxlength: '唯一ID不能超过50个字符',
+    inputUniqueId: '请输入设备唯一ID',
+    uniqueIdMaxlength: '唯一ID不能超过50个字符',
     inputKey: '请输入设备key',
     keyMaxlength: '设备key不能超过50个字符',
-    noUsered: '未使用',
-    usered: '已使用',
+    notUsed: '未使用',
+    used: '已使用',
     import: '导入设备key数据'
   },
   device:{
@@ -101,5 +106,12 @@ export default{
     url:'地址',
     menuName:'菜单名称',
     delMenuTip:'确认删除该系统菜单？'
+  },
+  role:{
+    name:'名称',
+    userCount:'用户数'
+  },
+  faq:{
+    title:'标题'
   }
 }

@@ -35,8 +35,6 @@ export const constantRouterMap = [
       { path: '/sys/menu/edit', component: _import('sys/menu/edit'), name: '编辑菜单', hidden: true },
       { path: '/sys/role/edit', component: _import('sys/role/edit'), name: '编辑角色', hidden: true },
       { path: '/sys/permission/index', component: _import('sys/permission/index'), name: '权限点', hidden: true },
-      { path: '/questionnaire/edit', component: _import('questionnaire/edit'), hidden: true, name: 'message.add' },
-      { path: '/questionnaire/statistics', component: _import('questionnaire/statistics'), hidden: true, name: 't' },
       { path: '/firmware/edit', component: _import('firmware/edit'), hidden: true, name: 'firmware.add' },
       { path: '/message/edit', component: _import('message/edit'), hidden: true, name: 'message.add' },
       { path: '/device/key/edit', component: _import('device/key/edit'), hidden: true, name: 'message.add' },

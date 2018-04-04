@@ -2,25 +2,25 @@
 <div class="app-container calendar-list-container">
   <!-- 筛选条件 -->
   <div class="filter-container">
-    <el-input @keyup.enter.native="handleSearch" style="width: 160px;" class="filter-item" placeholder="手机号" v-model="params.search_like_mobile">
+    <el-input @keyup.enter.native="handleSearch" style="width: 160px;" class="filter-item" :placeholder="$t('member.mobile')" v-model="params.search_like_mobile">
       </el-input>
 
-      <el-input @keyup.enter.native="handleSearch" style="width: 160px;" class="filter-item" placeholder="邮箱" v-model="params.search_like_email">
+      <el-input @keyup.enter.native="handleSearch" style="width: 160px;" class="filter-item" :placeholder="$t('member.email')" v-model="params.search_like_email">
       </el-input>
 
 
-      <el-select v-model="params.search_eq_status" style="width: 120px" class="filter-item" clearable placeholder="状态">
+      <el-select v-model="params.search_eq_status" style="width: 120px" class="filter-item" clearable :placeholder="$t('message.status')">
       <el-option v-for="item in options.status"
         :key="item.value"
-        :label="item.label"
+        :label="$t(item.label)"
         :value="item.value">
       </el-option>
     </el-select>
 
-    <el-select v-model="params.search_eq_from" style="width: 120px" class="filter-item" clearable placeholder="注册方式">
+    <el-select v-model="params.search_eq_from" style="width: 160px" class="filter-item" clearable :placeholder="$t('member.regsterType')">
       <el-option v-for="item in ooss.bbbs"
         :key="item.value"
-        :label="item.label"
+        :label="$t(item.label)"
         :value="item.value">
       </el-option>
     </el-select>
@@ -28,7 +28,7 @@
 
     <el-button class="filter-item" type="primary" v-waves icon="search" @click="handleSearch">{{$t('message.search')}}</el-button>
     <!-- <el-button class="filter-item pull-right" type="success" icon="edit" @click="handleCreate">添加</el-button> -->
-    <el-button class="filter-item pull-right" type="success" icon="edit" @click="handleDownload">下载</el-button>
+    <el-button class="filter-item pull-right" type="success" icon="document" @click="handleDownload">{{$t('member.export')}}</el-button>
   </div>
 
   <!-- 列表数据 -->
@@ -48,31 +48,10 @@
         </template>
       </el-table-column>
 
-      <!-- 密码 -->
-      <!-- <el-table-column align="center" label="密码">
-        <template scope="scope">
-          <span>{{scope.row.password}}</span>
-        </template>
-      </el-table-column> -->
-
-      <!-- 密码盐 -->
-      <!-- <el-table-column align="center" label="密码盐">
-        <template scope="scope">
-          <span>{{scope.row.salt}}</span>
-        </template>
-      </el-table-column> -->
-
-      <!-- 第三方登录ID -->
-      <!-- <el-table-column align="center" label="第三方登录ID">
-        <template scope="scope">
-          <span>{{scope.row.authId}}</span>
-        </template>
-      </el-table-column> -->
-
       <!-- 用户状态 -->
       <el-table-column align="center" :label="$t('member.status')">
         <template scope="scope">
-          <span>{{scope.row.statusStr}}</span>
+          <span v-text="getUserStatus(scope.row.status)"></span>
         </template>
       </el-table-column>
 
@@ -102,53 +81,14 @@
         <template scope="scope">
           <span>{{scope.row.nickname}}</span>
         </template>
-
-        
       </el-table-column>
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-      
-
-      <!-- 别名ID -->
-      <!-- <el-table-column align="center" label="别名ID">
-        <template scope="scope">
-          <span>{{scope.row.aliasId}}</span>
-        </template>
-      </el-table-column> -->
-
-      <!-- 指纹 -->
-      <!-- <el-table-column align="center" label="指纹">
-        <template scope="scope">
-          <span>{{scope.row.fingerprint}}</span>
-        </template>
-      </el-table-column> -->
 
       <!-- 注册方式 -->
       <el-table-column align="center" :label="$t('member.from')">
         <template scope="scope">
-          <span>{{scope.row.fromStr}}</span>
+          <span v-text="getUserFrom(scope.row.from)"></span>
         </template>
       </el-table-column>
-
-      <!-- 设备登录密码 -->
-      <!-- <el-table-column align="center" label="设备登录密码">
-        <template scope="scope">
-          <span>{{scope.row.devicePwd}}</span>
-        </template>
-      </el-table-column> -->
 
       <!-- 创建时间 -->
       <el-table-column align="center" :label="$t('message.createTime')">
@@ -159,10 +99,10 @@
 
     <el-table-column :label="$t('message.handle')" align="center" width="150">
       <template scope="scope">
-        <el-button v-if="scope.row.status != -2 " size="small" type="text" @click="handleUpdateStatus(scope.row, -2)">封号</el-button>
-        <el-button v-if="scope.row.status != 0 " size="small" type="text" @click="handleUpdateStatus(scope.row, 0)">恢复正常</el-button>
+        <el-button v-if="scope.row.status != -2 " size="small" type="text" @click="handleUpdateStatus(scope.row, -2)">{{$t('member.black')}}</el-button>
+        <el-button v-if="scope.row.status != 0 " size="small" type="text" @click="handleUpdateStatus(scope.row, 0)">{{$t('member.toNoraml')}}</el-button>
         <!-- <el-button size="small" type="text" @click="handleEdit(scope.row.id)">编辑</el-button> -->
-        <el-button size="small" type="text" class="danger" @click="handleDelete(scope.row)">删除</el-button>
+        <el-button size="small" type="text" class="danger" @click="handleDelete(scope.row)">{{$t('message.delete')}}</el-button>
       </template>
     </el-table-column>
   </Pagination>
@@ -202,6 +142,22 @@ export default {
   created() {
   },
   methods: {
+    getUserStatus(status) {
+      if (status === -2) {
+        return this.$t('member.blacked')
+      } else if (status === -1) {
+        return this.$t('member.dayblacked')
+      } else if (status === 0) {
+        return this.$t('member.normal')
+      }
+    },
+    getUserFrom(from) {
+      memberFromOptions.forEach(element => {
+        if (element.value === from) {
+          return element.label
+        }
+      })
+    },
     /**
      * 搜索会员
      */
