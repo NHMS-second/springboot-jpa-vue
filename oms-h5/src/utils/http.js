@@ -8,7 +8,7 @@ import router from '../router'
 const instance = axios.create({
   baseURL: '/api',        // api的base_url
   withCredentials: true,  // 保存登录凭证
-  timeout: 5000           // 请求超时时间
+  timeout: 50000           // 请求超时时间
 })
 instance.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 

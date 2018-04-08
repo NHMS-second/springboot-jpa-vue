@@ -4,6 +4,7 @@ import com.github.pagehelper.PageHelper;
 import com.ydd.framework.core.common.Pagination;
 import com.ydd.framework.core.common.utils.ValidationUtils;
 import com.ydd.framework.core.service.impl.BaseServiceImpl;
+import com.ydd.oms.config.mybatis.ParamsUtils;
 import com.ydd.oms.dto.sys.PermissionDTO;
 import com.ydd.oms.entity.sys.Permission;
 import com.ydd.oms.mapper.sys.PermissionMapper;

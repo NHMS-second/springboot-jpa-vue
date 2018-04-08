@@ -13,6 +13,7 @@
         class="upload-demo"
         action="/api/uploadFiles"
         :limit="1"
+        :before-upload="beforeUpload"
         :on-success="handleSuccess">
         <el-button size="small" type="primary">{{$t('firmware.clickUpload')}}</el-button>
         <div slot="tip" class="el-upload__tip">{{$t('firmware.onlyChip')}}</div>
@@ -122,6 +123,13 @@ export default {
     }
   },
   methods: {
+    beforeUpload(file) {
+      const max40M = file.size / 1024 / 1024 > 40
+      if (max40M) {
+        this.$message.warning({ message: this.$t('firmware.max40M'), center: true })
+        return false
+      }
+    },
     /**
      * 查询设备固件
      */
@@ -141,7 +149,6 @@ export default {
       this.form.fileName = response.fileName
       this.form.name = response.name
       this.form.bytes = response.bytes
-      console.log(response)
     },
     handlePictureCardPreview(file) {
       this.dialogImageUrl = file.url
@@ -156,7 +163,10 @@ export default {
         if (!valid) {
           return false
         }
-
+        if (!this.form.fileName) {
+          this.$message.warning({ message: this.$t('firmware.needUpload'), center: true })
+          return
+        }
         this.onSubmit = true
         save(this.form).then(response => {
           if (response.err_code !== 0) {

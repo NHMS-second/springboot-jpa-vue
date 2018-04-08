@@ -60,8 +60,9 @@ export default{
     inputRevision: '请输入版本号',
     revisionMaxlength: '版本号不能超过50个字符',
     inputName: '请输入文本名称',
-    nameMaxlength: '文本名称不能超过50个字符'
-    
+    nameMaxlength: '文本名称不能超过50个字符',
+    needUpload:'请等待文件上传完成',
+    max40M:'文件大小不允许超过40MB'
   },
   mes: {
     add: '添加',

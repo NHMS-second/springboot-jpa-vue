@@ -59,7 +59,9 @@ export default {
     inputRevision: 'please input revision',
     revisionMaxlength: 'revision max length 50 ',
     inputName: 'please input name',
-    nameMaxlength: 'name max length 50 '
+    nameMaxlength: 'name max length 50 ',
+    needUpload:'please waiting for uploading completed',
+    max40M:'file size more than 40MB'
   },
   mes: {
     add: 'add',
