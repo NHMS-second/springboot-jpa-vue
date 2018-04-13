@@ -42,7 +42,9 @@ export default {
     regsterType:'register type',
     export:'export excel',
     black:'ban',
-    toNoraml:'to normal'
+    toNoraml:'to normal',    
+    sms:'mobile sms',
+    wechat:'wechat',
   },
   firmware: {
     revision: 'revision',
@@ -61,7 +63,8 @@ export default {
     inputName: 'please input name',
     nameMaxlength: 'name max length 50 ',
     needUpload:'please waiting for uploading completed',
-    max40M:'file size more than 40MB'
+    max40M:'file size more than 40MB',
+    add:'upload firmware',
   },
   mes: {
     add: 'add',

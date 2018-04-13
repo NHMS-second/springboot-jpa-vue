@@ -64,7 +64,7 @@
       <!-- 升级状态 -->
       <el-table-column align="center" :label="$t('firmware.type')">
         <template scope="scope">
-          <span>{{scope.row.typeStr}}</span>
+          <span v-text="getFirmwareType(scope.row.type)"></span>
         </template>
       </el-table-column>
 
@@ -77,7 +77,6 @@
 
     <el-table-column :label="$t('message.handle')" align="center" width="150">
       <template scope="scope">
-        <el-button size="small" type="text" @click="handleEdit(scope.row.id)">{{$t('message.edit')}}</el-button>
         <el-button size="small" type="text" class="danger" @click="handleDelete(scope.row)">{{$t('message.delete')}}</el-button>
       </template>
     </el-table-column>
@@ -121,6 +120,15 @@ export default {
   created() {
   },
   methods: {
+    getFirmwareType(type) {
+      var s = ''
+      this.type.options.forEach(element => {
+        if (type === element.value) {
+          s = element.label
+        }
+      })
+      return s
+    },
     /**
      * 搜索设备固件
      */

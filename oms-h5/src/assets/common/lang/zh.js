@@ -44,6 +44,8 @@ export default{
     export:'导出excel',
     black:'封号',
     toNoraml:'恢复正常',
+    sms:'手机短信',
+    wechat:'微信',
   },
   firmware: {
     revision: '版本号',
@@ -62,7 +64,8 @@ export default{
     inputName: '请输入文本名称',
     nameMaxlength: '文本名称不能超过50个字符',
     needUpload:'请等待文件上传完成',
-    max40M:'文件大小不允许超过40MB'
+    max40M:'文件大小不允许超过40MB',    
+    add:'上传固件'
   },
   mes: {
     add: '添加',

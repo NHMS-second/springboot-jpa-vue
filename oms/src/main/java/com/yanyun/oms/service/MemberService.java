@@ -75,5 +75,6 @@ public interface MemberService extends BaseService {
      */
     Integer updateStatus(Integer[] ids, Integer status);
 
+    Integer getNewMemberToday();
 }
 

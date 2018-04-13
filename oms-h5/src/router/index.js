@@ -26,7 +26,7 @@ export const constantRouterMap = [
   {
     path: '/',
     component: Layout,
-    icon: 'people',
+    icon: '',
     noDropdown: true,
     hidden: true,
     name: '',
@@ -38,7 +38,8 @@ export const constantRouterMap = [
       { path: '/firmware/edit', component: _import('firmware/edit'), hidden: true, name: 'firmware.add' },
       { path: '/message/edit', component: _import('message/edit'), hidden: true, name: 'message.add' },
       { path: '/device/key/edit', component: _import('device/key/edit'), hidden: true, name: 'message.add' },
-      { path: '/faq/edit', component: _import('faq/edit'), hidden: true, name: 'message.add' }
+      { path: '/faq/edit', component: _import('faq/edit'), hidden: true, name: 'message.add' },
+      { path: '/', component: _import('dashboard/index'), hidden: true, name: 'home' }
     ]
   }
 ]

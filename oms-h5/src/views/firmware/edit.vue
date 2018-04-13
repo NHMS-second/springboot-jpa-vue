@@ -45,7 +45,7 @@
       <!-- 升级状态 -->
       <el-form-item :label="$t('firmware.type')" prop="type">
         <!-- <el-input v-model="form.type" placeholder="请输入升级状态"></el-input> -->
-           <el-select v-model="form.type" style="width: 120px" class="filter-item" clearable :placeholder="$t('firmware.type')">
+           <el-select v-model="form.type" style="width: 120px" class="filter-item" :placeholder="$t('firmware.type')">
       <el-option v-for="item in type.options"
         :key="item.value"
         :label="item.label"
@@ -69,7 +69,6 @@ import { find, save } from '@/api//firmware'
 export default {
   data() {
     return {
-      fileList: [{ name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100' }, { name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100' }],
       dialogImageUrl: '',
       dialogVisible: false,
       form: {
@@ -79,7 +78,7 @@ export default {
         fileName: '',
         chipType: '',
         bytes: '',
-        type: ''
+        type: 0
       },
 
       chip: {

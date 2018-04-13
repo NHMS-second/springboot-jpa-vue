@@ -2,8 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yanyun.oms.mapper.DeviceMapper">
 
-<resultMap id="DeviceMap" type="com.yanyun.oms.entity.device.Device">
-
+	<resultMap id="DeviceMap" type="com.yanyun.oms.entity.device.Device">
 		<id column="id" jdbcType="INTEGER" property="id" />
 		<result column="nickname" property="nickname" />
 		<result column="device_sn" property="deviceSn" />
@@ -15,7 +14,12 @@
 		<result column="modified_time" property="modifiedTime" />
 		<result column="deleted" property="deleted" />
     </resultMap>
-	
+
+	<resultMap id="newDeviceMap" type="com.yanyun.oms.dto.StatisticsNewDeviceDTO">
+		<result property="date" column="date"></result>
+		<result property="deviceNum" column="device_num"></result>
+	</resultMap>
+
 	<!--表名 -->
 	<sql id="tableName">
 		ec_device
@@ -190,7 +194,7 @@
 	</update>
 	
 	<!-- 通过编号查询 -->
-	<select id="findById" parameterType="java.lang.Integer" resultMap="DeviceMap">
+	<select id="findById" parameterType="java.lang.Integer" resultMap="DeviceMap" >
 		SELECT
 			<include refid="Field"></include>
 		FROM
@@ -212,4 +216,14 @@
         </foreach>
     </update>
 
+	<select id="statisticsNewDeviceEveryDay" resultMap="newDeviceMap">
+		select `date`,count(0) as device_num from
+		(SELECT date(created_time) as `date` from ec_device ) as t
+		where `date` in
+		<foreach item="date" index="index" collection="dates" open="(" separator="," close=")">
+			#{date}
+		</foreach>
+		group by `date`
+		order by `date` asc
+	</select>
 </mapper>

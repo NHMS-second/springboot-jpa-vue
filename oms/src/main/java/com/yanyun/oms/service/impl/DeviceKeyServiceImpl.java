@@ -159,5 +159,35 @@ public class DeviceKeyServiceImpl extends BaseServiceImpl implements DeviceKeySe
 		return deviceKeyMapper.updateStatus(ids, status);
 	}
 
+	/**
+	 * 查看设备ID总数
+	 * @return
+	 */
+	@Override
+	public Integer getDeviceKeyTotalNum(){
+		return deviceKeyMapper.countByStatus(null);
+	}
+
+	/**
+	 * 获取已经使用的设备ID数量
+	 * @return
+	 */
+	@Override
+	public Integer getDeviceKeyUsedNum(){
+		//使用状态： 0未使用 1已使用
+		return deviceKeyMapper.countByStatus(1);
+	}
+
+	/**
+	 * 获取未使用的设备ID数量
+	 * @return
+	 */
+	@Override
+	public Integer getDeviceKeyNotUsedNum(){
+		//使用状态： 0未使用 1已使用
+		return deviceKeyMapper.countByStatus(0);
+	}
+
+
 }
 

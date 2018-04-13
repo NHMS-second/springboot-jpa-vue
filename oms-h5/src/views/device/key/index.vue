@@ -2,7 +2,7 @@
 <div class="app-container calendar-list-container">
   <!-- 筛选条件 -->
   <div class="filter-container">
-    <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" :placeholder="$t('deviceKey.qniqueId')" v-model="params.search_like_deviceUniqueId"></el-input>
+    <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" :placeholder="$t('deviceKey.uniqueId')" v-model="params.search_like_deviceUniqueId"></el-input>
   <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" :placeholder="$t('deviceKey.key')" v-model="params.search_like_deviceKey"></el-input>
     <el-select v-model="params.search_eq_status" style="width: 120px" class="filter-item" clearable :placeholder="$t('message.status')">
       <el-option v-for="item in options.status"
@@ -105,8 +105,8 @@ export default {
 
       options: {
         status: [
-          { value: 0, label: this.$t('deviceKey.noUsered') },
-          { value: 1, label: this.$t('deviceKey.usered') }
+          { value: 0, label: this.$t('deviceKey.notUsed') },
+          { value: 1, label: this.$t('deviceKey.used') }
         ]
       }
     }

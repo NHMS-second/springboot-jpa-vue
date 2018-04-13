@@ -17,7 +17,6 @@ package com.ydd.oms.util;
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.AmazonServiceException;
 import com.amazonaws.HttpMethod;
-import com.amazonaws.auth.profile.ProfileCredentialsProvider;
 import com.amazonaws.regions.Region;
 import com.amazonaws.regions.Regions;
 import com.amazonaws.services.s3.AmazonS3;
@@ -26,7 +25,6 @@ import com.amazonaws.services.s3.model.*;
 
 import java.io.*;
 import java.net.URL;
-import java.util.UUID;
 
 /**
  * This sample demonstrates how to make basic requests to Amazon S3 using
@@ -64,7 +62,7 @@ public class S3Sample {
         s3.setRegion(usWest2);
 
         String bucketName = "yanyun";
-        String key = "test";
+        String key = System.currentTimeMillis()+"";
 
         System.out.println("===========================================");
         System.out.println("Getting Started with Amazon S3");
@@ -104,10 +102,11 @@ public class S3Sample {
 
 
             //AmazonS3 s3client = new AmazonS3Client(new ProfileCredentialsProvider());
+
             java.util.Date expiration = new java.util.Date();
             long msec = expiration.getTime(); msec += 1000 * 60 * 60;  // 1 hour.
             expiration.setTime(msec);
-            GeneratePresignedUrlRequest generatePresignedUrlRequest = new GeneratePresignedUrlRequest("yanyun", "aaa.png");
+            GeneratePresignedUrlRequest generatePresignedUrlRequest = new GeneratePresignedUrlRequest("yanyun", key);
             generatePresignedUrlRequest.setMethod(HttpMethod.GET); // Default.
             generatePresignedUrlRequest.setExpiration(expiration);
             URL s = s3.generatePresignedUrl(generatePresignedUrlRequest);

@@ -23,6 +23,7 @@ import javax.annotation.Resource;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -173,6 +174,16 @@ public class MemberServiceImpl extends BaseServiceImpl implements MemberService 
 		}
 
 		return memberMapper.updateStatus(ids, status);
+	}
+
+	/**
+	 * 获取今日新增用户数量
+	 * @return
+	 */
+	@Override
+	public Integer getNewMemberToday(){
+		Date date = getCurrentDate();
+		return memberMapper.countMemberByDate(date,null);
 	}
 
 }

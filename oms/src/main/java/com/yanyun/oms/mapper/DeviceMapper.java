@@ -1,9 +1,12 @@
 package com.yanyun.oms.mapper;
 
+import com.yanyun.oms.dto.StatisticsNewDeviceDTO;
 import com.yanyun.oms.entity.device.Device;
+import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Param;
 
 
+import java.util.LinkedHashMap;
 import java.util.List;
 
 /**
@@ -68,4 +71,5 @@ public interface DeviceMapper {
      */
     int updateStatus(@Param("ids") Integer[] ids, @Param("status") Byte status);
 
+    List<StatisticsNewDeviceDTO> statisticsNewDeviceEveryDay(@Param("dates") List<String> dates);
 }

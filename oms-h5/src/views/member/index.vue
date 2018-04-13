@@ -152,11 +152,13 @@ export default {
       }
     },
     getUserFrom(from) {
+      var s = ''
       memberFromOptions.forEach(element => {
         if (element.value === from) {
-          return element.label
+          s = element.label
         }
       })
+      return this.$t(s)
     },
     /**
      * 搜索会员

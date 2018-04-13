@@ -6,6 +6,7 @@ import com.yanyun.oms.entity.member.Member;
 import org.apache.ibatis.annotations.Param;
 
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -69,4 +70,5 @@ public interface MemberMapper {
      */
     int updateStatus(@Param("ids") Integer[] ids, @Param("status") Integer status);
 
+    Integer countMemberByDate(@Param("startDate") Date startDate,@Param("endDate") Date endDate);
 }

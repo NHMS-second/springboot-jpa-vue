@@ -5,6 +5,9 @@ import com.ydd.framework.core.service.BaseService;
 
 import com.yanyun.oms.entity.device.Device;
 
+import java.util.Date;
+import java.util.LinkedHashMap;
+
 
 /**
  * Service - 设备
@@ -69,5 +72,7 @@ public interface DeviceService extends BaseService {
      */
     Integer updateStatus(Integer[] ids, Byte status);
 
+
+    LinkedHashMap<String, Integer> statisticsNewDeviceEveryDay(Date date);
 }
 

@@ -223,4 +223,11 @@
         </foreach>
     </update>
 
+	<select id="countByStatus" resultType="java.lang.Integer">
+		SELECT count(0) from ec_device_key
+		<if test="status != null">
+			WHERE status = #{status}
+		</if>
+	</select>
+
 </mapper>

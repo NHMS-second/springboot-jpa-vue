@@ -69,5 +69,10 @@ public interface DeviceKeyService extends BaseService {
      */
     Integer updateStatus(Integer[] ids, Byte status);
 
+    Integer getDeviceKeyTotalNum();
+
+    Integer getDeviceKeyUsedNum();
+
+    Integer getDeviceKeyNotUsedNum();
 }
 

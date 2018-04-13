@@ -18,11 +18,11 @@ export const memberStatusOptions = [
 ]
 
 export const memberFromOptions = [
-  { value: 1, label: '手机短信' },
-  { value: 2, label: '手机注册' },
-  { value: 3, label: '微信' },
+  { value: 1, label: 'member.mobile' },
+  { value: 2, label: 'member.sms' },
+  { value: 3, label: 'member.wechat' },
   { value: 4, label: 'QQ' },
-  { value: 5, label: '邮箱' },
+  { value: 5, label: 'member.email' },
   { value: 6, label: 'Facebook' },
   { value: 7, label: 'Google' }
 ]
