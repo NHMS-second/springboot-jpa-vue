@@ -70,11 +70,11 @@ export default {
       this.notUsedDeviceKeyNum = response.notUsedDeviceKeyNum
       this.todayMemberCount = response.todayMemberCount
     })
-    // setInterval(() => {
-    //   currentTime().then(response => {
-    //     this.time = response.time
-    //   })
-    // }, 1000)
+    setInterval(() => {
+      currentTime().then(response => {
+        this.time = response.time
+      })
+    }, 1000)
     this.handleSearchDeviceNum()
     if (this.roles.indexOf('admin') >= 0) {
       return

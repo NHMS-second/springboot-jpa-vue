@@ -34,9 +34,9 @@ public class PushService {
 	
 	public void sendAndroidBroadcast() throws Exception {
 		AndroidBroadcast broadcast = new AndroidBroadcast(appkey,appMasterSecret);
-		broadcast.setTicker( "Android broadcast ticker");
-		broadcast.setTitle(  "张宁再一次再一次再一次再一次hello.....");
-		broadcast.setText(   "Android broadcast text");
+		broadcast.setTicker("Android broadcast ticker");
+		broadcast.setTitle("张宁再一次再一次再一次再一次hello.....");
+		broadcast.setText("Android broadcast text");
 		broadcast.goAppAfterOpen();
 		broadcast.setDisplayType(AndroidNotification.DisplayType.NOTIFICATION);
 		// TODO Set 'production_mode' to 'false' if it's a test device. 
@@ -158,6 +158,7 @@ public class PushService {
 		broadcast.setSound( "default");
 		// TODO set 'production_mode' to 'true' if your app is under production mode
 		broadcast.setTestMode();
+
 		// Set customized fields
 		broadcast.setCustomizedField("test", "helloworld");
 		client.send(broadcast);
@@ -168,8 +169,8 @@ public class PushService {
 		// TODO Set your device token
 		unicast.setDeviceToken( "xx");
 		unicast.setAlert("IOS 单播测试");
-		unicast.setBadge( 0);
-		unicast.setSound( "default");
+		unicast.setBadge(0);
+		unicast.setSound("default");
 		// TODO set 'production_mode' to 'true' if your app is under production mode
 		unicast.setTestMode();
 		// Set customized fields
