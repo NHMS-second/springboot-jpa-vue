@@ -13,7 +13,6 @@
     </el-select>
 
     <el-button class="filter-item" type="primary" v-waves icon="search" @click="handleSearch">搜索</el-button>
-    <el-button class="filter-item pull-right" type="success" icon="edit" @click="handleCreate">添加</el-button>
   </div>
 
   <!-- 列表数据 -->
@@ -34,25 +33,28 @@
       </el-table-column>
 
       <!-- 固件型号  -->
-      <el-table-column align="center" label="固件型号 ">
+      <el-table-column align="center" label="设备状态">
         <template scope="scope">
-          <span>{{scope.row.chipType}}</span>
+         <el-tag :type="getStatusTag(scope.row.status)" v-text="getStatus(scope.row.status)"></el-tag>
         </template>
       </el-table-column>
 
       <!-- 创建时间 -->
-      <el-table-column align="center" label="创建时间">
+      <el-table-column align="center" label="最近登录时间">
         <template scope="scope">
-          <span>{{scope.row.createdTime | parseTime('{y}-{m}-{d} {h}:{i}')}}</span>
+          <span>{{scope.row.onlineTime | parseTime('{y}-{m}-{d} {h}:{i}:{s}')}}</span>
+        </template>
+      </el-table-column>
+
+      <el-table-column align="center" label="最近离线时间">
+        <template scope="scope">
+          <span>{{scope.row.offlineTime | parseTime('{y}-{m}-{d} {h}:{i}:{s}')}}</span>
         </template>
       </el-table-column>
 
     <el-table-column label="操作" align="center" width="150">
-      <template scope="scope">
-        <el-button v-if="scope.row.status === 1" size="small" type="text" @click="handleUpdateStatus(scope.row, 0)">禁用</el-button>
-        <el-button v-if="scope.row.status === 0" size="small" type="text" @click="handleUpdateStatus(scope.row, 1)">启用</el-button>
-        <el-button size="small" type="text" @click="handleEdit(scope.row.id)">编辑</el-button>
-        <el-button size="small" type="text" class="danger" @click="handleDelete(scope.row)">删除</el-button>
+      <template scope="scope">        
+        <el-button size="small" type="text" @click="handleShowLog(scope.row)">上下线记录</el-button>
       </template>
     </el-table-column>
   </Pagination>
@@ -79,7 +81,6 @@ export default {
         search_like_deviceSn: undefined,
         search_eq_status: undefined
       },
-
       options: {
         status: statusOptions
       }
@@ -88,6 +89,24 @@ export default {
   created() {
   },
   methods: {
+    getStatus(status) {
+      if (status === 1) {
+        return '在线'
+      } else if (status === 2) {
+        return '离线'
+      } else if (status === 3) {
+        return '异常'
+      }
+    },
+    getStatusTag(status) {
+      if (status === 1) {
+        return 'success'
+      } else if (status === 2) {
+        return 'gray'
+      } else if (status === 3) {
+        return 'danger'
+      }
+    },
     /**
      * 搜索设备
      */

@@ -17,6 +17,6 @@ public class DeviceTest {
 
     @Test
     public void test(){
-        deviceService.statisticsNewDeviceEveryDay(null,null);
+        //deviceService.statisticsNewDeviceEveryDay(null,null);
     }
 }

@@ -1,41 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yanyun.oms.mapper.DeviceMapper">
+<mapper namespace="com.yanyun.oms.mapper.DeviceStatusLogMapper">
 
-	<resultMap id="DeviceMap" type="com.yanyun.oms.entity.device.Device">
+<resultMap id="DeviceStatusLogMap" type="com.yanyun.oms.entity.DeviceStatusLog">
+
 		<id column="id" jdbcType="INTEGER" property="id" />
-		<result column="nickname" property="nickname" />
-		<result column="device_sn" property="deviceSn" />
-		<result column="status" property="status" />
-		<result column="offline_time" property="offlineTime"></result>
-		<result column="online_time" property="onlineTime"></result>
-		<result column="chip_type" property="chipType" />
+		<result column="device_id" property="deviceId" />
+		<result column="type" property="type" />
+		<result column="time" property="time" />
 		<result column="created_id" property="createdId" />
 		<result column="modified_id" property="modifiedId" />
 		<result column="created_time" property="createdTime" />
 		<result column="modified_time" property="modifiedTime" />
 		<result column="deleted" property="deleted" />
     </resultMap>
-
-	<resultMap id="newDeviceMap" type="com.yanyun.oms.dto.StatisticsNewDeviceDTO">
-		<result property="date" column="date"></result>
-		<result property="deviceNum" column="device_num"></result>
-	</resultMap>
-
+	
 	<!--表名 -->
 	<sql id="tableName">
-		ec_device
+		ec_device_status_log
 	</sql>
 	
 	<!-- 字段 -->
 	<sql id="Field">
 		id,
-		nickname,
-		device_sn,
-		status,
-		chip_type,
-		online_time,
-		offline_time,
+		device_id,
+		type,
+		time,
 		created_id,
 		modified_id,
 		created_time,
@@ -46,10 +36,9 @@
 	<!-- 字段值 -->
 	<sql id="FieldValue">
 		#{id, jdbcType=INTEGER},
-		#{nickname, jdbcType=VARCHAR},
-		#{deviceSn, jdbcType=VARCHAR},
-		#{status, jdbcType=TINYINT},
-		#{chipType, jdbcType=TINYINT},
+		#{deviceId, jdbcType=INTEGER},
+		#{type, jdbcType=TINYINT},
+		#{time, jdbcType=TIMESTAMP},
 		#{createdId, jdbcType=INTEGER},
 		#{modifiedId, jdbcType=INTEGER},
 		#{createdTime, jdbcType=TIMESTAMP},
@@ -58,17 +47,17 @@
 	</sql>
 
 	<!-- 查询全部记录 -->
-    <select id="findAll" resultMap="DeviceMap">
+    <select id="findAll" resultMap="DeviceStatusLogMap">
         SELECT
         	<include refid="Field"></include>
         FROM
         	<include refid="tableName"></include>
 		WHERE
-			deleted = 0
+			deleted = 0 and device_id = #{deviceId}
     </select>
 	
 	<!-- 新增-->
-<insert id="insert" parameterType="com.yanyun.oms.entity.device.Device" useGeneratedKeys="true" keyProperty="id">
+<insert id="insert" parameterType="com.yanyun.oms.entity.DeviceStatusLog" useGeneratedKeys="true" keyProperty="id">
 
         INSERT INTO
 			<include refid="tableName"></include>
@@ -76,17 +65,14 @@
             <if test="id != null">
 				id,
             </if>
-            <if test="nickname != null">
-				nickname,
+            <if test="deviceId != null">
+				device_id,
             </if>
-            <if test="deviceSn != null">
-				device_sn,
+            <if test="type != null">
+				type,
             </if>
-            <if test="status != null">
-				status,
-            </if>
-            <if test="chipType != null">
-				chip_type,
+            <if test="time != null">
+				time,
             </if>
             <if test="createdId != null">
 				created_id,
@@ -108,17 +94,14 @@
             <if test="id != null">
 				#{id},
             </if>
-            <if test="nickname != null">
-				#{nickname},
+            <if test="deviceId != null">
+				#{deviceId},
             </if>
-            <if test="deviceSn != null">
-				#{deviceSn},
+            <if test="type != null">
+				#{type},
             </if>
-            <if test="status != null">
-				#{status},
-            </if>
-            <if test="chipType != null">
-				#{chipType},
+            <if test="time != null">
+				#{time},
             </if>
             <if test="createdId != null">
 				#{createdId},
@@ -162,21 +145,18 @@
     </delete>
 	
 	<!-- 更新记录 -->
-<update id="update" parameterType="com.yanyun.oms.entity.device.Device">
+<update id="update" parameterType="com.yanyun.oms.entity.DeviceStatusLog">
 		UPDATE
 			<include refid="tableName"></include>
         <set>
-			<if test="nickname != null">
-				nickname = #{nickname},
+			<if test="deviceId != null">
+				device_id = #{deviceId},
 			</if>
-			<if test="deviceSn != null">
-				device_sn = #{deviceSn},
+			<if test="type != null">
+				type = #{type},
 			</if>
-			<if test="status != null">
-				status = #{status},
-			</if>
-			<if test="chipType != null">
-				chip_type = #{chipType},
+			<if test="time != null">
+				time = #{time},
 			</if>
 			<if test="createdId != null">
 				created_id = #{createdId},
@@ -198,7 +178,7 @@
 	</update>
 	
 	<!-- 通过编号查询 -->
-	<select id="findById" parameterType="java.lang.Integer" resultMap="DeviceMap" >
+	<select id="findById" parameterType="java.lang.Integer" resultMap="DeviceStatusLogMap">
 		SELECT
 			<include refid="Field"></include>
 		FROM
@@ -206,28 +186,4 @@
 		WHERE id = #{id}
 	</select>
 
-    <!--更新设备状态-->
-    <update id="updateStatus">
-        UPDATE
-        	<include refid="tableName"></include>
-        SET
-        	status = #{status, jdbcType=TINYINT}
-        WHERE
-        	id
-        IN
-        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
-			#{id}
-        </foreach>
-    </update>
-
-	<select id="statisticsNewDeviceEveryDay" resultMap="newDeviceMap">
-		select `date`,count(0) as device_num from
-		(SELECT date(created_time) as `date` from ec_device ) as t
-		where `date` in
-		<foreach item="date" index="index" collection="dates" open="(" separator="," close=")">
-			#{date}
-		</foreach>
-		group by `date`
-		order by `date` asc
-	</select>
 </mapper>

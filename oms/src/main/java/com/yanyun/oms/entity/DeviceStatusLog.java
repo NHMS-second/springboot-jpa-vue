@@ -1,15 +1,15 @@
-package com.yanyun.oms.entity.device;
+package com.yanyun.oms.entity;
 
 import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Entity - 设备
+ * Entity - 设备上下线记录
  *
- * @author Demon
- * @since 2018-03-30
+ * @author zhaoziyu
+ * @since 2018-04-27
  */
-public class Device implements Serializable {
+public class DeviceStatusLog implements Serializable {
 
 
     /**
@@ -18,36 +18,19 @@ public class Device implements Serializable {
     private Integer id;
 
     /**
-     * 设备昵称
+     * 
      */
-    private String nickname;
+    private Integer deviceId;
 
     /**
-     * 设备编号
+     * 事件
      */
-    private String deviceSn;
+    private Integer type;
 
     /**
-     * 设备状态
-     *
-     * @see com.ydd.framework.core.entity.enums.StatusEnum
+     * 设备上下线时间
      */
-    private Integer status;
-
-    /**
-     * 固件型号 
-     */
-    private Integer chipType;
-
-    /**
-     * 上线时间
-     */
-    private Date onlineTime;
-
-    /**
-     * 下线时间
-     */
-    private Date offlineTime;
+    private Date time;
 
     /**
      * 创建者编号
@@ -58,8 +41,6 @@ public class Device implements Serializable {
      * 更新者编号
      */
     private Integer modifiedId;
-
-
 
     /**
      * 创建时间
@@ -100,80 +81,59 @@ public class Device implements Serializable {
 
 
     /**
-     * 设置设备昵称
+     * 设置
      *
-     * @param nickname 设备昵称
+     * @param deviceId 
      */
-    public void setNickname(String nickname){
-        this.nickname = nickname;
+    public void setDeviceId(Integer deviceId){
+        this.deviceId = deviceId;
     }
 
     /**
-     * 获取设备昵称
+     * 获取
      *
-     * @return 设备昵称
+     * @return 
      */
-    public String getNickname(){
-        return nickname;
-    }
-
-
-    /**
-     * 设置设备编号
-     *
-     * @param deviceSn 设备编号
-     */
-    public void setDeviceSn(String deviceSn){
-        this.deviceSn = deviceSn;
-    }
-
-    /**
-     * 获取设备编号
-     *
-     * @return 设备编号
-     */
-    public String getDeviceSn(){
-        return deviceSn;
+    public Integer getDeviceId(){
+        return deviceId;
     }
 
 
     /**
-     * 设置设备状态
+     * 设置事件
      *
-     * @see com.ydd.framework.core.entity.enums.StatusEnum
-     * @param status 设备状态
+     * @param type 事件
      */
-    public void setStatus(Integer status){
-        this.status = status;
+    public void setType(Integer type){
+        this.type = type;
     }
 
     /**
-     * 获取设备状态
+     * 获取事件
      *
-     * @see com.ydd.framework.core.entity.enums.StatusEnum
-     * @return 设备状态
+     * @return 事件
      */
-    public Integer getStatus(){
-        return status;
+    public Integer getType(){
+        return type;
     }
 
 
     /**
-     * 设置固件型号 
+     * 设置设备上下线时间
      *
-     * @param chipType 固件型号 
+     * @param time 设备上下线时间
      */
-    public void setChipType(Integer chipType){
-        this.chipType = chipType;
+    public void setTime(Date time){
+        this.time = time;
     }
 
     /**
-     * 获取固件型号 
+     * 获取设备上下线时间
      *
-     * @return 固件型号 
+     * @return 设备上下线时间
      */
-    public Integer getChipType(){
-        return chipType;
+    public Date getTime(){
+        return time;
     }
 
 
@@ -273,19 +233,4 @@ public class Device implements Serializable {
         return deleted;
     }
 
-    public Date getOnlineTime() {
-        return onlineTime;
-    }
-
-    public void setOnlineTime(Date onlineTime) {
-        this.onlineTime = onlineTime;
-    }
-
-    public Date getOfflineTime() {
-        return offlineTime;
-    }
-
-    public void setOfflineTime(Date offlineTime) {
-        this.offlineTime = offlineTime;
-    }
 }
