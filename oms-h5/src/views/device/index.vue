@@ -2,14 +2,12 @@
 <div class="app-container calendar-list-container">
   <!-- 筛选条件 -->
   <div class="filter-container">
-    <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" placeholder="设备昵称" v-model="params.search_like_nickname"></el-input>
+    
   <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" placeholder="设备编号" v-model="params.search_like_deviceSn"></el-input>
     <el-select v-model="params.search_eq_status" style="width: 120px" class="filter-item" clearable placeholder="状态">
-      <el-option v-for="item in options.status"
-        :key="item.value"
-        :label="item.label"
-        :value="item.value">
-      </el-option>
+      <el-option label="在线" :value="1"></el-option>
+      <el-option label="离线" :value="2"></el-option>
+      <el-option label="异常" :value="3"></el-option>
     </el-select>
 
     <el-button class="filter-item" type="primary" v-waves icon="search" @click="handleSearch">搜索</el-button>
@@ -17,14 +15,6 @@
 
   <!-- 列表数据 -->
   <Pagination uri="/devices" :request-params="params" ref="pagination">
-
-      <!-- 设备昵称 -->
-      <el-table-column align="center" label="设备昵称">
-        <template scope="scope">
-          <span>{{scope.row.nickname}}</span>
-        </template>
-      </el-table-column>
-
       <!-- 设备编号 -->
       <el-table-column align="center" label="设备编号">
         <template scope="scope">
@@ -113,7 +103,9 @@ export default {
     handleSearch() {
       this.$refs.pagination.pageRequest()
     },
-
+    handleShowLog(device) {
+      this.$router.push({ path: '/device/status/log/index', query: { id: device.id }})
+    },
     /**
      * 编辑设备
      */

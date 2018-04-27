@@ -17,6 +17,14 @@
             <div style="line-height:100px;text-align:center;verticle-align:middle;">今日新增用户:<span v-text="todayMemberCount"></span></div>
           </el-card>
         </el-col>
+        <el-col :span="6">
+          <el-card class="box-card">
+            <div>设备总数:<span v-text="allDeviceNum"></span></div>
+            <div>设备在线数:<span v-text="onlineDeviceNum"></span></div>
+            <div>设备离线数:<span v-text="offlineDeviceNum"></span></div>
+            <div>设备异常数:<span v-text="errorDeviceNum"></span></div>
+          </el-card>
+        </el-col>
       </el-row>
     </div>
     <el-card style="margin:10px">
@@ -53,6 +61,10 @@ export default {
       usedDeviceKeyNum: 0,
       totalDeviceKeyNum: 0,
       todayMemberCount: 0,
+      errorDeviceNum: 0,
+      offlineDeviceNum: 0,
+      onlineDeviceNum: 0,
+      allDeviceNum: 0,
       time: '',
       month: '',
       deviceChart: undefined
@@ -65,6 +77,10 @@ export default {
   },
   created() {
     dashboard().then(response => {
+      this.allDeviceNum = response.allDeviceNum
+      this.onlineDeviceNum = response.onlineDeviceNum
+      this.offlineDeviceNum = response.offlineDeviceNum
+      this.errorDeviceNum = response.errorDeviceNum
       this.totalDeviceKeyNum = response.totalDeviceKeyNum
       this.usedDeviceKeyNum = response.usedDeviceKeyNum
       this.notUsedDeviceKeyNum = response.notUsedDeviceKeyNum
@@ -138,6 +154,6 @@ export default {
     margin-bottom: 0;    
   }
   .box-card{
-    height: 150px;
+    height: 180px;
   }
 </style>

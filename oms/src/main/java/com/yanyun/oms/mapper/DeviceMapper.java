@@ -72,4 +72,8 @@ public interface DeviceMapper {
     int updateStatus(@Param("ids") Integer[] ids, @Param("status") Byte status);
 
     List<StatisticsNewDeviceDTO> statisticsNewDeviceEveryDay(@Param("dates") List<String> dates);
+
+    List<Device> findByStatus(@Param("status") Integer status);
+
+    Integer countByStatus(@Param("status") Integer status);
 }

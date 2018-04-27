@@ -176,5 +176,33 @@ public class DeviceServiceImpl extends BaseServiceImpl implements DeviceService 
 		return deviceNumMap;
 	}
 
+	/**
+	 * 获取所有离线设备
+	 * @return
+	 */
+	@Override
+	public List<Device> findAllOfflineDevice() {
+		return deviceMapper.findByStatus(2);
+	}
+
+	@Override
+	public Integer findAllDeviceNum() {
+		return deviceMapper.countByStatus(null);
+	}
+
+	@Override
+	public Integer findOfflineDeviceNum() {
+		return deviceMapper.countByStatus(2);
+	}
+
+	@Override
+	public Integer findOnlineDeviceNum() {
+		return deviceMapper.countByStatus(1);
+	}
+
+	@Override
+	public Integer findErrorDeviceNum() {
+		return deviceMapper.countByStatus(3);
+	}
 }
 

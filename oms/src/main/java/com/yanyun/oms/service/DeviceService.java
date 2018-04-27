@@ -7,6 +7,7 @@ import com.yanyun.oms.entity.device.Device;
 
 import java.util.Date;
 import java.util.LinkedHashMap;
+import java.util.List;
 
 
 /**
@@ -66,7 +67,7 @@ public interface DeviceService extends BaseService {
     /**
      * 更新状态
      *
-     * @param ids 编号
+     * @param ids    编号
      * @param status 状态
      * @return 更新数量
      */
@@ -74,5 +75,15 @@ public interface DeviceService extends BaseService {
 
 
     LinkedHashMap<String, Integer> statisticsNewDeviceEveryDay(Date date);
+
+    List<Device> findAllOfflineDevice();
+
+    Integer findAllDeviceNum();
+
+    Integer findOfflineDeviceNum();
+
+    Integer findOnlineDeviceNum();
+
+    Integer findErrorDeviceNum();
 }
 

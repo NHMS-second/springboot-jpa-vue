@@ -41,6 +41,12 @@ public class DashboardController extends OmsController {
         res.addAttribute("usedDeviceKeyNum",usedDeviceKeyNum);
         res.addAttribute("notUsedDeviceKeyNum",notUsedDeviceKeyNum);
         res.addAttribute("todayMemberCount",todayMemberCount);
+
+        res.addAttribute("allDeviceNum",deviceService.findAllDeviceNum());
+        res.addAttribute("onlineDeviceNum",deviceService.findOnlineDeviceNum());
+        res.addAttribute("offlineDeviceNum",deviceService.findOfflineDeviceNum());
+        res.addAttribute("errorDeviceNum",deviceService.findErrorDeviceNum());
+
         return res;
     }
 
