@@ -2,8 +2,11 @@
   <library name="Gradle: com.amazonaws:aws-java-sdk-logs:1.9.6">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/com/amazonaws/aws-java-sdk-logs/1.9.6/aws-java-sdk-logs-1.9.6.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-logs/1.9.6/6335d18fe0716b579c3cd85c8dfd8306e6a16411/aws-java-sdk-logs-1.9.6.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-logs/1.9.6/7a6e417d14a611cb8dc4180fd82ee1b4cdd06864/aws-java-sdk-logs-1.9.6-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
