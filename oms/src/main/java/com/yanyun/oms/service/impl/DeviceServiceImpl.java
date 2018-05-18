@@ -185,6 +185,15 @@ public class DeviceServiceImpl extends BaseServiceImpl implements DeviceService 
 		return deviceMapper.findByStatus(2);
 	}
 
+	/**
+	 * 获取所有在线设备
+	 * @return
+	 */
+	@Override
+	public List<Integer> findAllOnlineDevice() {
+		return deviceMapper.findDeviceIdByStatus(1);
+	}
+
 	@Override
 	public Integer findAllDeviceNum() {
 		return deviceMapper.countByStatus(null);
@@ -203,6 +212,17 @@ public class DeviceServiceImpl extends BaseServiceImpl implements DeviceService 
 	@Override
 	public Integer findErrorDeviceNum() {
 		return deviceMapper.countByStatus(3);
+	}
+
+	/**
+	 * 累计设备的在线时间
+	 * @param seconds
+	 * @param deviceIds
+	 */
+	@Override
+	@Transactional
+	public void addOnlineTime(Integer seconds, List<Integer> deviceIds) {
+		deviceMapper.addTotalOnlineTime(deviceIds,seconds);
 	}
 }
 

@@ -2,82 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ccdfc10-9223-41bd-ba48-393908fdc400" name="Default" comment="zhaoziyu 设备ID">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/built.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/Yanyun-com.ydd.oms.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/Yanyun-com.ydd.oms_main.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules/Yanyun-com.ydd.oms_test.iml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/classes/com/yanyun/oms/controller/member/MemberController.class" afterPath="$PROJECT_DIR$/oms/out/production/classes/com/yanyun/oms/controller/member/MemberController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/classes/com/yanyun/oms/entity/member/Member.class" afterPath="$PROJECT_DIR$/oms/out/production/classes/com/yanyun/oms/entity/member/Member.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/classes/com/yanyun/oms/mapper/MemberMapper.class" afterPath="$PROJECT_DIR$/oms/out/production/classes/com/yanyun/oms/mapper/MemberMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/classes/com/yanyun/oms/service/MemberService.class" afterPath="$PROJECT_DIR$/oms/out/production/classes/com/yanyun/oms/service/MemberService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/classes/com/yanyun/oms/service/impl/MemberServiceImpl.class" afterPath="$PROJECT_DIR$/oms/out/production/classes/com/yanyun/oms/service/impl/MemberServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/config/mybatis/RequestSearchPlugin.class" afterPath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/config/mybatis/RequestSearchPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/config/shiro/MyFormAuthenticationFilter.class" afterPath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/config/shiro/MyFormAuthenticationFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/controller/sys/LoginController.class" afterPath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/controller/sys/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/dto/sys/MenuDTO.class" afterPath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/dto/sys/MenuDTO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/entity/sys/Menu.class" afterPath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/entity/sys/Menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/service/sys/MenuService.class" afterPath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/service/sys/MenuService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/task/DeviceOnlineTimeTask.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/service/sys/impl/MenuServiceImpl.class" afterPath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/service/sys/impl/MenuServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/service/sys/impl/PermissionServiceImpl.class" afterPath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/service/sys/impl/PermissionServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_autoscaling_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_autoscaling_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cloudformation_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cloudformation_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cloudfront_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cloudfront_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cloudsearch_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cloudsearch_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cloudtrail_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cloudtrail_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cloudwatch_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cloudwatch_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cloudwatchmetrics_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cloudwatchmetrics_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_codedeploy_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_codedeploy_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cognitoidentity_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cognitoidentity_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cognitosync_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_cognitosync_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_config_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_config_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_core_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_core_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_datapipeline_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_datapipeline_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_directconnect_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_directconnect_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_dynamodb_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_dynamodb_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_ec2_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_ec2_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_elasticache_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_elasticache_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_elasticbeanstalk_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_elasticbeanstalk_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_elasticloadbalancing_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_elasticloadbalancing_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_elastictranscoder_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_elastictranscoder_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_emr_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_emr_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_glacier_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_glacier_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_iam_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_iam_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_importexport_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_importexport_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_kinesis_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_kinesis_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_kms_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_kms_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_lambda_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_lambda_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_logs_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_logs_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_opsworks_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_opsworks_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_rds_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_rds_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_redshift_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_redshift_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_route53_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_route53_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_s3_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_s3_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_ses_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_ses_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_simpledb_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_simpledb_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_simpleworkflow_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_simpleworkflow_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_sns_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_sns_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_sqs_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_sqs_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_storagegateway_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_storagegateway_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_sts_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_sts_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_support_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_support_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_swf_libraries_1_9_6.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_amazonaws_aws_java_sdk_swf_libraries_1_9_6.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__joda_time_joda_time_2_9_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__joda_time_joda_time_2_9_9.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_json_json_20140107.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_json_json_20140107.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_slf4j_slf4j_api_1_7_25.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__xmlpull_xmlpull_1_1_3_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__xmlpull_xmlpull_1_1_3_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__xpp3_xpp3_min_1_1_4c.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__xpp3_xpp3_min_1_1_4c.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/oms/oms.iml" afterPath="$PROJECT_DIR$/.idea/modules/oms/oms.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/oms/oms_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/oms/oms_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/oms/oms_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/oms/oms_test.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/resources/mybatis/mapper/yanyun/MemberMapper.xml" afterPath="$PROJECT_DIR$/oms/out/production/resources/mybatis/mapper/yanyun/MemberMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms-h5/src/filters/index.js" afterPath="$PROJECT_DIR$/oms-h5/src/filters/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms-h5/src/views/device/index.vue" afterPath="$PROJECT_DIR$/oms-h5/src/views/device/index.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms-h5/src/views/device/status/log/index.vue" afterPath="$PROJECT_DIR$/oms-h5/src/views/device/status/log/index.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms-h5/src/views/member/index.vue" afterPath="$PROJECT_DIR$/oms-h5/src/views/member/index.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/resources/config/application-development.yml" afterPath="$PROJECT_DIR$/oms/out/production/resources/config/application-development.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/resources/mybatis/mapper/sys/MenuMapper.xml" afterPath="$PROJECT_DIR$/oms/out/production/resources/mybatis/mapper/sys/MenuMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/entity/device/Device.java" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/entity/device/Device.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceMapper.java" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceService.java" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceServiceImpl.java" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/service/sys/impl/MenuServiceImpl.java" afterPath="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/service/sys/impl/MenuServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/resources/config/application-development.yml" afterPath="$PROJECT_DIR$/oms/src/main/resources/config/application-development.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/sys/MenuMapper.xml" afterPath="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/sys/MenuMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceMapper.xml" afterPath="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/oms/.gradle/" />
     <ignored path="$PROJECT_DIR$/oms/build/" />
@@ -119,7 +60,85 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="DeviceStatusTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/task/DeviceStatusTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="38" column="65" lean-forward="false" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceOnlineTimeTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/task/DeviceOnlineTimeTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="64" column="19" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="112" column="48" lean-forward="true" selection-start-line="112" selection-start-column="48" selection-end-line="112" selection-end-column="48" />
+              <folding>
+                <element signature="e#4080#4081#0" expanded="true" />
+                <element signature="e#4122#4123#0" expanded="true" />
+                <element signature="e#4215#4216#0" expanded="true" />
+                <element signature="e#4265#4266#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="657">
+              <caret line="81" column="27" lean-forward="false" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeviceMapper.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="11" column="68" lean-forward="false" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
+              <folding>
+                <marker date="1526609976453" expanded="true" signature="1962:2094" ph="SELECT FROM WHERE" />
+                <marker date="1526609976453" expanded="true" signature="4035:4125" ph="UPDATE SET d... " />
+                <marker date="1526609976453" expanded="true" signature="4515:5264" ph="UPDATE nickn... " />
+                <marker date="1526609976453" expanded="true" signature="5378:5488" ph="SELECT FROM WHERE" />
+                <marker date="1526609976453" expanded="true" signature="5912:6186" ph="select `date... t" />
+                <marker date="1526609976453" expanded="true" signature="5957:6007" ph="SELECT date(... " />
+                <marker date="1526609976453" expanded="true" signature="6250:6314" ph="SELECT * fro... ec_device" />
+                <marker date="1526609976453" expanded="true" signature="6582:6631" ph="SELECT id fr... ec_device" />
+                <marker date="1526609976453" expanded="true" signature="6680:6770" ph="UPDATE ec_de... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -131,9 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>status</find>
-      <find>getStatu</find>
-      <find>findall</find>
       <find>INTEGER</find>
       <find>UPDATES</find>
       <find>findAll</find>
@@ -161,6 +177,9 @@
       <find>AmazonS3</find>
       <find>key</find>
       <find>update</find>
+      <find>MenuService menuService;</find>
+      <find>menuService</find>
+      <find>export</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -656,13 +675,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/JxlsExcelView.java" />
-        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/dto/CommonDto.java" />
-        <option value="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/controller/OmsController.java" />
-        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/CommonService.java" />
         <option value="$PROJECT_DIR$/oms/.gitignore" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/service/sys/impl/MenuServiceImpl.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/QuestionnaireController.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/firmware/FirmwareController.java" />
         <option value="$PROJECT_DIR$/settings.gradle" />
@@ -672,7 +686,6 @@
         <option value="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/config/shiro/MyFormAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/controller/sys/LoginController.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/service/sys/impl/PermissionServiceImpl.java" />
-        <option value="$PROJECT_DIR$/oms/src/main/resources/config/application.yml" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/service/UploadService.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/member/MemberController.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/controller/UploadController.java" />
@@ -689,7 +702,6 @@
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/NabtoService.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/NabtoServiceImpl.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/DeviceController.java" />
-        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/entity/device/Device.java" />
         <option value="$PROJECT_DIR$/oms/src/test/java/com/test/DeviceTest.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceStatusLogService.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceStatusLogServiceImpl.java" />
@@ -701,12 +713,19 @@
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/ConfigMapper.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/ConfigServiceImpl.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/task/DeviceStatusTask.java" />
-        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceService.java" />
-        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceMapper.java" />
-        <option value="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceMapper.xml" />
-        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceServiceImpl.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/DashboardController.java" />
         <option value="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/ConfigMapper.xml" />
+        <option value="$PROJECT_DIR$/oms/src/main/resources/config/application.yml" />
+        <option value="$PROJECT_DIR$/oms/src/main/resources/config/application-development.yml" />
+        <option value="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/sys/MenuMapper.xml" />
+        <option value="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/service/sys/impl/MenuServiceImpl.java" />
+        <option value="$PROJECT_DIR$/oms-h5/src/views/member/index.vue" />
+        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceService.java" />
+        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceMapper.java" />
+        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceServiceImpl.java" />
+        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/task/DeviceOnlineTimeTask.java" />
+        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/entity/device/Device.java" />
+        <option value="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceMapper.xml" />
       </list>
     </option>
   </component>
@@ -738,6 +757,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -748,16 +770,74 @@
             <path>
               <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
               <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="oms-h5" type="462c0819:PsiDirectoryNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="oms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="oms" type="462c0819:PsiDirectoryNode" />
+              <item name="task" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="oms" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -780,19 +860,20 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\project\Yanyun-oms\oms\oms\src\libs" />
-      <recent name="D:\project\Yanyun-oms\oms\oms" />
-      <recent name="D:\git-wangguang\yanyun\oms\oms\src\main\resources\models" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\Yanyun-oms\oms\oms\src\main\resources\mybatis\mapper\yanyun" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yanyun.oms.task" />
       <recent name="com.yanyun.oms.service" />
       <recent name="com.ydd.oms.util" />
       <recent name="com.ydd.oms.controller" />
       <recent name="com.yanyun.oms.enums" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\project\Yanyun-oms\oms\oms\src\main\resources\mybatis\mapper\yanyun" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\Yanyun-oms\oms\oms\src\libs" />
+      <recent name="D:\project\Yanyun-oms\oms\oms" />
+      <recent name="D:\git-wangguang\yanyun\oms\oms\src\main\resources\models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1049,7 +1130,13 @@
       <workItem from="1524532904312" duration="26000" />
       <workItem from="1524619453990" duration="1175000" />
       <workItem from="1524813465974" duration="6446000" />
-      <workItem from="1524899400356" duration="645000" />
+      <workItem from="1524899400356" duration="2315000" />
+      <workItem from="1525223477894" duration="1077000" />
+      <workItem from="1525834294654" duration="2349000" />
+      <workItem from="1525860128573" duration="605000" />
+      <workItem from="1525931156624" duration="14000" />
+      <workItem from="1526548178694" duration="4302000" />
+      <workItem from="1526605877545" duration="3797000" />
     </task>
     <task id="LOCAL-00001" summary="zhaoziyu">
       <created>1522202111693</created>
@@ -1192,16 +1279,18 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142623000" />
+    <option name="totallyTimeSpent" value="156437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4366516" sideWeight="0.50858366" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1213,11 +1302,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4322799" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.73024833" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4321267" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4356659" sideWeight="0.4914163" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21137339" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43552035" sideWeight="0.4914163" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22639485" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1226,7 +1315,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63222224" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1267,7 +1355,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="47" />
+      <option name="time" value="50" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -1301,104 +1389,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/util/S3Sample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1222">
-          <caret line="53" column="10" lean-forward="false" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/message/MessageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceKeyMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="85" column="50" lean-forward="false" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceKeyMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="211" column="14" lean-forward="true" selection-start-line="211" selection-start-column="14" selection-end-line="211" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceKeyServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1757">
-          <caret line="184" column="11" lean-forward="true" selection-start-line="184" selection-start-column="11" selection-end-line="184" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/MemberMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="72" column="29" lean-forward="false" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.6/4765e418c9084c4e01233cb5f09bdd6b5f311ccc/commons-lang3-3.6-sources.jar!/org/apache/commons/lang3/time/DateUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="807" column="23" lean-forward="false" selection-start-line="807" selection-start-column="23" selection-end-line="807" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ydd/framework-core/1.7.6/3d75e2ec8419a25f6b913b0863609e6ee1d610f4/framework-core-1.7.6-sources.jar!/com/ydd/framework/core/service/impl/BaseServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="34" column="30" lean-forward="false" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/MemberServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="183" column="36" lean-forward="false" selection-start-line="183" selection-start-column="19" selection-end-line="183" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/java/jdk/src.zip!/java/util/LinkedHashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="426" column="66" lean-forward="false" selection-start-line="426" selection-start-column="63" selection-end-line="426" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/test/java/com/test/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="16" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.4.5/e762c2c3d81be2ecaf5655613853d645c7b8c9b7/mybatis-3.4.5-sources.jar!/org/apache/ibatis/annotations/MapKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceKeyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/dto/StatisticsNewDeviceDTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="12" column="29" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/config/mybatis/RequestSearchPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
@@ -1410,7 +1400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-256">
           <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1425,13 +1414,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
           <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/CommonService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1453,14 +1435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1055">
           <caret line="127" column="59" lean-forward="false" selection-start-line="127" selection-start-column="59" selection-end-line="127" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-751">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1508,23 +1482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/entity/device/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="28" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="28" />
-          <folding>
-            <element signature="e#4071#4072#0" expanded="false" />
-            <element signature="e#4104#4105#0" expanded="false" />
-            <element signature="e#4154#4155#0" expanded="false" />
-            <element signature="e#4198#4199#0" expanded="false" />
-            <element signature="e#4234#4235#0" expanded="false" />
-            <element signature="e#4268#4269#0" expanded="false" />
-            <element signature="e#4320#4321#0" expanded="false" />
-            <element signature="e#4366#4367#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceStatusLogService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -1550,21 +1507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
           <caret line="55" column="50" lean-forward="false" selection-start-line="55" selection-start-column="50" selection-end-line="55" selection-end-column="50" />
-          <folding>
-            <marker date="1524816625288" expanded="true" signature="1423:1555" ph="SELECT FROM WHERE" />
-            <marker date="1524816625288" expanded="true" signature="1423:1583" ph="SELECT FROM WHERE" />
-            <marker date="1524816625288" expanded="true" signature="3352:3442" ph="UPDATE SET d... " />
-            <marker date="1524816625288" expanded="true" signature="3834:4495" ph="UPDATE devic... " />
-            <marker date="1524816625288" expanded="true" signature="4617:4727" ph="SELECT FROM WHERE" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1586,7 +1528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1611,47 +1552,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/task/DeviceStatusTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="35" column="31" lean-forward="false" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="236" column="29" lean-forward="false" selection-start-line="236" selection-start-column="29" selection-end-line="236" selection-end-column="29" />
-          <folding>
-            <marker date="1524819340625" expanded="true" signature="1867:1999" ph="SELECT FROM WHERE" />
-            <marker date="1524819340625" expanded="true" signature="3940:4030" ph="UPDATE SET d... " />
-            <marker date="1524819340625" expanded="true" signature="4420:5169" ph="UPDATE nickn... " />
-            <marker date="1524819340625" expanded="true" signature="5283:5393" ph="SELECT FROM WHERE" />
-            <marker date="1524819340625" expanded="true" signature="5817:6091" ph="select ,coun... " />
-            <marker date="1524819340625" expanded="true" signature="5862:5912" ph="SELECT date(... " />
-            <marker date="1524819340625" expanded="true" signature="6155:6219" ph="SELECT * fro... ec_device" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/ConfigMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="182" column="42" lean-forward="true" selection-start-line="182" selection-start-column="42" selection-end-line="182" selection-end-column="42" />
-          <folding>
-            <marker date="1524819753152" expanded="true" signature="1450:1582" ph="SELECT FROM WHERE" />
-            <marker date="1524819753152" expanded="true" signature="1647:1777" ph="SELECT FROM WHERE" />
-            <marker date="1524819753152" expanded="true" signature="3669:3759" ph="UPDATE SET d... " />
-            <marker date="1524819753152" expanded="true" signature="4142:4863" ph="UPDATE name " />
-            <marker date="1524819753152" expanded="true" signature="4976:5086" ph="SELECT FROM WHERE" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1662,36 +1566,208 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/MemberMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-305">
+          <caret line="277" column="17" lean-forward="true" selection-start-line="277" selection-start-column="17" selection-end-line="277" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/resources/shiro/ehcache-shiro.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="52" column="43" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="52" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/resources/config/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/resources/config/application-production.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/resources/config/application-test.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/CommonService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/resources/config/application-development.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/controller/sys/MenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="73" column="30" lean-forward="false" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/controller/sys/RoleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/config/shiro/MyFormAuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="42" column="45" lean-forward="false" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/sys/MenuMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="287" column="62" lean-forward="false" selection-start-line="287" selection-start-column="62" selection-end-line="287" selection-end-column="62" />
+          <folding>
+            <marker date="1526552655396" expanded="true" signature="2020:2178" ph="SELECT FROM WHERE" />
+            <marker date="1526552655396" expanded="true" signature="2265:2401" ph="SELECT id, s... WHERE" />
+            <marker date="1526552655396" expanded="true" signature="4807:4897" ph="UPDATE SET d... " />
+            <marker date="1526552655396" expanded="true" signature="5280:6242" ph="UPDATE statu... " />
+            <marker date="1526552655396" expanded="true" signature="6353:6463" ph="SELECT FROM WHERE" />
+            <marker date="1526552655396" expanded="true" signature="6833:7049" ph="SELECT * FRO... sys_menu" />
+            <marker date="1526552655396" expanded="true" signature="6903:7045" ph="SELECT menu_... sys_role_menu" />
+            <marker date="1526552655396" expanded="true" signature="6960:7040" ph="SELECT role_... sys_admin_role" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/service/sys/impl/MenuServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="235" column="25" lean-forward="false" selection-start-line="235" selection-start-column="25" selection-end-line="235" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms-h5/src/views/member/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="157" column="9" lean-forward="true" selection-start-line="157" selection-start-column="9" selection-end-line="157" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/member/MemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="116" column="41" lean-forward="false" selection-start-line="116" selection-start-column="41" selection-end-line="116" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="657">
+          <caret line="81" column="27" lean-forward="false" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/task/DeviceStatusTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="38" column="65" lean-forward="false" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/task/DeviceOnlineTimeTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="80" column="22" lean-forward="false" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="22" />
+        <state relative-caret-position="270">
+          <caret line="64" column="19" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="195" column="5" lean-forward="true" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
+        <state relative-caret-position="365">
+          <caret line="112" column="48" lean-forward="true" selection-start-line="112" selection-start-column="48" selection-end-line="112" selection-end-column="48" />
           <folding>
-            <element signature="e#4270#4271#0" expanded="true" />
-            <element signature="e#4313#4314#0" expanded="true" />
-            <element signature="e#4365#4366#0" expanded="true" />
-            <element signature="e#4408#4409#0" expanded="true" />
+            <element signature="e#4080#4081#0" expanded="true" />
+            <element signature="e#4122#4123#0" expanded="true" />
+            <element signature="e#4215#4216#0" expanded="true" />
+            <element signature="e#4265#4266#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/MemberMapper.xml">
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/entity/device/Device.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-305">
-          <caret line="277" column="17" lean-forward="true" selection-start-line="277" selection-start-column="17" selection-end-line="277" selection-end-column="17" />
+        <state relative-caret-position="160">
+          <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="68" lean-forward="false" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
           <folding>
-            <marker date="1523589222670" expanded="true" signature="6014:6104" ph="UPDATE SET d... " />
-            <marker date="1523589222670" expanded="true" signature="6494:7889" ph="UPDATE mobil... " />
-            <marker date="1523589222670" expanded="true" signature="8002:8112" ph="SELECT FROM WHERE" />
-            <marker date="1523589222670" expanded="true" signature="8168:8220" ph="select now()... dual" />
-            <marker date="1523589222670" expanded="true" signature="8638:8867" ph="SELECT m.* f... ec_member" />
+            <marker date="1526609976453" expanded="true" signature="1962:2094" ph="SELECT FROM WHERE" />
+            <marker date="1526609976453" expanded="true" signature="4035:4125" ph="UPDATE SET d... " />
+            <marker date="1526609976453" expanded="true" signature="4515:5264" ph="UPDATE nickn... " />
+            <marker date="1526609976453" expanded="true" signature="5378:5488" ph="SELECT FROM WHERE" />
+            <marker date="1526609976453" expanded="true" signature="5912:6186" ph="select `date... t" />
+            <marker date="1526609976453" expanded="true" signature="5957:6007" ph="SELECT date(... " />
+            <marker date="1526609976453" expanded="true" signature="6250:6314" ph="SELECT * fro... ec_device" />
+            <marker date="1526609976453" expanded="true" signature="6582:6631" ph="SELECT id fr... ec_device" />
+            <marker date="1526609976453" expanded="true" signature="6680:6770" ph="UPDATE ec_de... " />
           </folding>
         </state>
       </provider>

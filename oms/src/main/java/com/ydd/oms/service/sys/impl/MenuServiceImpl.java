@@ -232,6 +232,8 @@ public class MenuServiceImpl extends BaseServiceImpl implements MenuService {
 		}
 
 		for (MenuDTO menuDTO : menuList) {
+			if(parentMap.get(menuDTO.getParentId()) == null)
+				continue;
 			parentMap.get(menuDTO.getParentId()).getChildList().add(menuDTO);
 		}
 

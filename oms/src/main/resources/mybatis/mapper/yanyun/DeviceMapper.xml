@@ -9,6 +9,7 @@
 		<result column="status" property="status" />
 		<result column="offline_time" property="offlineTime"></result>
 		<result column="online_time" property="onlineTime"></result>
+		<result column="total_online_time" property="totalOnlineTime"></result>
 		<result column="chip_type" property="chipType" />
 		<result column="created_id" property="createdId" />
 		<result column="modified_id" property="modifiedId" />
@@ -36,6 +37,7 @@
 		chip_type,
 		online_time,
 		offline_time,
+		total_online_time,
 		created_id,
 		modified_id,
 		created_time,
@@ -240,4 +242,17 @@
 			and status = #{status}
 		</if>
 	</select>
+
+	<select id="findDeviceIdByStatus" resultType="java.lang.Integer">
+		SELECT id from ec_device where status = #{status}
+	</select>
+
+	<insert id="addTotalOnlineTime">
+		UPDATE ec_device
+		SET total_online_time = total_online_time + #{onlineTime}
+		where id in
+		<foreach item="item" index="index" collection="ids" open="(" separator="," close=")">
+			#{item}
+		</foreach>
+	</insert>
 </mapper>

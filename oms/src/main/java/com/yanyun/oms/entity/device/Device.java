@@ -49,6 +49,8 @@ public class Device implements Serializable {
      */
     private Date offlineTime;
 
+    private Integer totalOnlineTime;
+
     /**
      * 创建者编号
      */
@@ -287,5 +289,13 @@ public class Device implements Serializable {
 
     public void setOfflineTime(Date offlineTime) {
         this.offlineTime = offlineTime;
+    }
+
+    public Integer getTotalOnlineTime() {
+        return totalOnlineTime;
+    }
+
+    public void setTotalOnlineTime(Integer totalOnlineTime) {
+        this.totalOnlineTime = totalOnlineTime;
     }
 }

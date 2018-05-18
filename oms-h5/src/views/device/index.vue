@@ -29,6 +29,12 @@
         </template>
       </el-table-column>
 
+      <el-table-column align="center" label="在线时间">
+        <template scope="scope">
+          <span v-text="getOnlineTime(scope.row.totalOnlineTime)"></span>
+        </template>
+      </el-table-column>
+
       <!-- 创建时间 -->
       <el-table-column align="center" label="最近登录时间">
         <template scope="scope">
@@ -96,6 +102,23 @@ export default {
       } else if (status === 3) {
         return 'danger'
       }
+    },
+    getOnlineTime(time) {
+      var second = time
+      var minute = 0
+      var hour = 0
+      var day = 0
+      minute = parseInt(second / 60) // 算出一共有多少分钟
+      second %= 60// 算出有多少秒
+      if (minute > 60) { // 如果分钟大于60，计算出小时和分钟
+        hour = parseInt(minute / 60)
+        minute %= 60// 算出有多分钟
+      }
+      if (hour > 24) { // 如果小时大于24，计算出天和小时
+        day = parseInt(hour / 24)
+        hour %= 24// 算出有多分钟
+      }
+      return day + '天' + hour + '小时' + minute + '分'
     },
     /**
      * 搜索设备

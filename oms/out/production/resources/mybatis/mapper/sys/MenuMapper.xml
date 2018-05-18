@@ -285,7 +285,7 @@
 
 	<!--根绝管理员编号查询菜单-->
 	<select id="findListByAdminId" resultMap="MenuDTOMap">
-		SELECT * FROM sys_menu WHERE deleted = 0 AND id IN (
+		SELECT * FROM sys_menu WHERE deleted = 0 and status= 1 AND id IN (
 			SELECT menu_id FROM sys_role_menu WHERE role_id IN (
 				SELECT role_id FROM sys_admin_role WHERE admin_id = #{adminId, jdbcType=INTEGER}
 			)

@@ -76,4 +76,8 @@ public interface DeviceMapper {
     List<Device> findByStatus(@Param("status") Integer status);
 
     Integer countByStatus(@Param("status") Integer status);
+
+    List<Integer> findDeviceIdByStatus(@Param("status") Integer status);
+
+    void addTotalOnlineTime(@Param("ids") List<Integer> ids,@Param("onlineTime") Integer onlineTime);
 }

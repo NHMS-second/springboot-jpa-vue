@@ -102,7 +102,6 @@
         <el-button v-if="scope.row.status != -2 " size="small" type="text" @click="handleUpdateStatus(scope.row, -2)">{{$t('member.black')}}</el-button>
         <el-button v-if="scope.row.status != 0 " size="small" type="text" @click="handleUpdateStatus(scope.row, 0)">{{$t('member.toNoraml')}}</el-button>
         <!-- <el-button size="small" type="text" @click="handleEdit(scope.row.id)">编辑</el-button> -->
-        <el-button size="small" type="text" class="danger" @click="handleDelete(scope.row)">{{$t('message.delete')}}</el-button>
       </template>
     </el-table-column>
   </Pagination>
@@ -181,8 +180,7 @@ export default {
       if (this.params.search_eq_from !== undefined) {
         paramsVal = '&search_eq_from=' + this.params.search_eq_from
       }
-      console.log('aa:' + paramsVal)
-      window.open('http://localhost:8098/member/export?language=en' + paramsVal)
+      window.open('http://device.eyecloud.top:8098/member/export?language=zh' + paramsVal)
     },
 
     /**

@@ -78,6 +78,8 @@ public interface DeviceService extends BaseService {
 
     List<Device> findAllOfflineDevice();
 
+    List<Integer> findAllOnlineDevice();
+
     Integer findAllDeviceNum();
 
     Integer findOfflineDeviceNum();
@@ -85,5 +87,7 @@ public interface DeviceService extends BaseService {
     Integer findOnlineDeviceNum();
 
     Integer findErrorDeviceNum();
+
+    void addOnlineTime(Integer seconds,List<Integer> deviceIds);
 }
 

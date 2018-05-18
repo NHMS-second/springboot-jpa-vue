@@ -22,13 +22,6 @@
         </template>
       </el-table-column>
 
-   
-    <el-table-column label="操作" align="center" width="150">
-      <template scope="scope">
-        <el-button size="small" type="text" @click="handleEdit(scope.row.id)">编辑</el-button>
-        <el-button size="small" type="text" class="danger" @click="handleDelete(scope.row)">删除</el-button>
-      </template>
-    </el-table-column>
   </Pagination>
 </div>
 </template>
