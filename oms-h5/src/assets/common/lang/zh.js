@@ -85,7 +85,8 @@ export default{
     keyMaxlength: '设备key不能超过50个字符',
     notUsed: '未使用',
     used: '已使用',
-    import: '导入设备key数据'
+    import: '导入设备key数据',
+    showLog:'日志'
   },
   device:{
     nickname:'设备昵称'

@@ -85,7 +85,8 @@ export default {
     keyMaxlength: 'key max length 50 ',
     notUsed: 'not used',
     used: 'used',
-    import: 'import excel file for saving device Keys '
+    import: 'import excel file for saving device Keys ',
+    showLog:'log',
   },
   device:{
     nickname:'device nickname'

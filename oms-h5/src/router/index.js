@@ -41,7 +41,8 @@ export const constantRouterMap = [
       { path: '/faq/edit', component: _import('faq/edit'), hidden: true, name: 'message.add' },
       { path: '/', component: _import('dashboard/index'), hidden: true, name: 'home' },
       { path: '/device/status/log/index', component: _import('device/status/log/index'), hidden: true, name: 'log' },
-      { path: '/config/edit', component: _import('config/edit'), hidden: true, name: 'config' }
+      { path: '/config/edit', component: _import('config/edit'), hidden: true, name: 'config' },
+      { path: '/device/key/log/index', component: _import('device/key/log/index'), hidden: true, name: 'deviceKey' }
     ]
   }
 ]

@@ -74,7 +74,8 @@
         <!-- <el-button v-if="scope.row.status === 1" size="small" type="text" @click="handleUpdateStatus(scope.row, 0)">禁用</el-button>
         <el-button v-if="scope.row.status === 0" size="small" type="text" @click="handleUpdateStatus(scope.row, 1)">启用</el-button> -->
         <el-button size="small" type="text" @click="handleEdit(scope.row.id)">{{$t('message.edit')}}</el-button>
-        <el-button size="small" type="text" class="danger" @click="handleDelete(scope.row)">{{$t('message.delete')}}</el-button>
+        <el-button size="small" type="text" @click="handleShowLog(scope.row.id)">{{$t('deviceKey.showLog')}}</el-button>
+        <el-button size="small" type="text" class="danger" @click="handleDelete(scope.row)" v-if="scope.row.status === 0">{{$t('message.delete')}}</el-button>
       </template>
     </el-table-column>
   </Pagination>
@@ -114,6 +115,9 @@ export default {
   created() {
   },
   methods: {
+    handleShowLog(id) {
+      this.$router.push({ path: '/device/key/log/index', query: { id: id }})
+    },
     /**
      * 搜索设备唯一序列号
      */

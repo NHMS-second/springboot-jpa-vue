@@ -68,7 +68,6 @@ export default {
     handleEdit(id) {
       this.$router.push({ path: '/device/status/log/edit', query: { id: id }})
     },
-
     /**
      * 创建设备上下线记录
      */

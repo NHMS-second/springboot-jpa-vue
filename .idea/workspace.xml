@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ccdfc10-9223-41bd-ba48-393908fdc400" name="Default" comment="zhaoziyu 设备ID">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/task/DeviceOnlineTimeTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/service/sys/impl/MenuServiceImpl.class" afterPath="$PROJECT_DIR$/oms/out/production/classes/com/ydd/oms/service/sys/impl/MenuServiceImpl.class" />
+    <list default="true" id="8ccdfc10-9223-41bd-ba48-393908fdc400" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/DeviceKeyLogController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/entity/DeviceKeyLog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceKeyLogMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceKeyLogService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceKeyLogServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceKeyLogMapper.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/oms-h5/src/views/device/status/log/edit.vue" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms-h5/src/filters/index.js" afterPath="$PROJECT_DIR$/oms-h5/src/filters/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms-h5/src/views/device/index.vue" afterPath="$PROJECT_DIR$/oms-h5/src/views/device/index.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms-h5/src/assets/common/lang/en.js" afterPath="$PROJECT_DIR$/oms-h5/src/assets/common/lang/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms-h5/src/assets/common/lang/zh.js" afterPath="$PROJECT_DIR$/oms-h5/src/assets/common/lang/zh.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms-h5/src/router/index.js" afterPath="$PROJECT_DIR$/oms-h5/src/router/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms-h5/src/views/device/key/index.vue" afterPath="$PROJECT_DIR$/oms-h5/src/views/device/key/index.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms-h5/src/views/device/status/log/index.vue" afterPath="$PROJECT_DIR$/oms-h5/src/views/device/status/log/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms-h5/src/views/member/index.vue" afterPath="$PROJECT_DIR$/oms-h5/src/views/member/index.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/resources/config/application-development.yml" afterPath="$PROJECT_DIR$/oms/out/production/resources/config/application-development.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/out/production/resources/mybatis/mapper/sys/MenuMapper.xml" afterPath="$PROJECT_DIR$/oms/out/production/resources/mybatis/mapper/sys/MenuMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/entity/device/Device.java" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/entity/device/Device.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceMapper.java" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceService.java" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceServiceImpl.java" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/service/sys/impl/MenuServiceImpl.java" afterPath="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/service/sys/impl/MenuServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/resources/config/application-development.yml" afterPath="$PROJECT_DIR$/oms/src/main/resources/config/application-development.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/sys/MenuMapper.xml" afterPath="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/sys/MenuMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceMapper.xml" afterPath="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceKeyMapper.java" afterPath="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceKeyMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceKeyMapper.xml" afterPath="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceKeyMapper.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/oms/.gradle/" />
     <ignored path="$PROJECT_DIR$/oms/build/" />
@@ -61,79 +59,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="DeviceStatusTask.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/task/DeviceStatusTask.java">
+      <file leaf-file-name="DeviceKeyServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceKeyServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="38" column="65" lean-forward="false" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="65" />
+            <state relative-caret-position="357">
+              <caret line="103" column="14" lean-forward="false" selection-start-line="103" selection-start-column="14" selection-end-line="103" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeviceOnlineTimeTask.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/task/DeviceOnlineTimeTask.java">
+      <file leaf-file-name="DeviceKeyLogController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/DeviceKeyLogController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeviceService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="64" column="19" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+            <state relative-caret-position="121">
+              <caret line="33" column="73" lean-forward="false" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="73" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeviceServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="112" column="48" lean-forward="true" selection-start-line="112" selection-start-column="48" selection-end-line="112" selection-end-column="48" />
-              <folding>
-                <element signature="e#4080#4081#0" expanded="true" />
-                <element signature="e#4122#4123#0" expanded="true" />
-                <element signature="e#4215#4216#0" expanded="true" />
-                <element signature="e#4265#4266#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeviceMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="657">
-              <caret line="81" column="27" lean-forward="false" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeviceMapper.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="11" column="68" lean-forward="false" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
-              <folding>
-                <marker date="1526609976453" expanded="true" signature="1962:2094" ph="SELECT FROM WHERE" />
-                <marker date="1526609976453" expanded="true" signature="4035:4125" ph="UPDATE SET d... " />
-                <marker date="1526609976453" expanded="true" signature="4515:5264" ph="UPDATE nickn... " />
-                <marker date="1526609976453" expanded="true" signature="5378:5488" ph="SELECT FROM WHERE" />
-                <marker date="1526609976453" expanded="true" signature="5912:6186" ph="select `date... t" />
-                <marker date="1526609976453" expanded="true" signature="5957:6007" ph="SELECT date(... " />
-                <marker date="1526609976453" expanded="true" signature="6250:6314" ph="SELECT * fro... ec_device" />
-                <marker date="1526609976453" expanded="true" signature="6582:6631" ph="SELECT id fr... ec_device" />
-                <marker date="1526609976453" expanded="true" signature="6680:6770" ph="UPDATE ec_de... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -675,12 +616,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/oms/.gitignore" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/QuestionnaireController.java" />
-        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/firmware/FirmwareController.java" />
-        <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/oms/src/test/java/com/test/Test.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/entity/deviceKey/DeviceKey.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/config/mybatis/RequestSearchPlugin.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/config/shiro/MyFormAuthenticationFilter.java" />
@@ -690,9 +625,6 @@
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/member/MemberController.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/controller/UploadController.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/util/S3Sample.java" />
-        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceKeyMapper.java" />
-        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceKeyServiceImpl.java" />
-        <option value="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceKeyMapper.xml" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/MemberMapper.java" />
         <option value="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/MemberMapper.xml" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/MemberServiceImpl.java" />
@@ -726,6 +658,15 @@
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/task/DeviceOnlineTimeTask.java" />
         <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/entity/device/Device.java" />
         <option value="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceMapper.xml" />
+        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceKeyMapper.java" />
+        <option value="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceKeyMapper.xml" />
+        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceKeyServiceImpl.java" />
+        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/DeviceKeyLogController.java" />
+        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceKeyLogService.java" />
+        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceKeyLogServiceImpl.java" />
+        <option value="$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceKeyLogMapper.java" />
+        <option value="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/DeviceKeyLogMapper.xml" />
+        <option value="$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceKeyLogMapper.xml" />
       </list>
     </option>
   </component>
@@ -766,72 +707,6 @@
             <path>
               <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
               <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="oms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="oms" type="462c0819:PsiDirectoryNode" />
-              <item name="task" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Yanyun-com" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="oms" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="oms" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1136,7 +1011,7 @@
       <workItem from="1525860128573" duration="605000" />
       <workItem from="1525931156624" duration="14000" />
       <workItem from="1526548178694" duration="4302000" />
-      <workItem from="1526605877545" duration="3797000" />
+      <workItem from="1526605877545" duration="5954000" />
     </task>
     <task id="LOCAL-00001" summary="zhaoziyu">
       <created>1522202111693</created>
@@ -1264,7 +1139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1524900041770</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="zhaoziyu 计算设备在线时间">
+      <created>1526610296303</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1526610296304</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1279,11 +1161,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156437000" />
+    <option name="totallyTimeSpent" value="158594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4366516" sideWeight="0.50858366" order="7" side_tool="true" content_ui="tabs" />
@@ -1295,9 +1176,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42081448" sideWeight="0.9006445" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42081448" sideWeight="0.9006445" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40293455" sideWeight="0.49570355" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40271494" sideWeight="0.49570355" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1306,7 +1187,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4321267" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918552" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43552035" sideWeight="0.4914163" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22639485" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22639485" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1351,11 +1232,12 @@
     <MESSAGE value="zhaoziyu 设备ID" />
     <MESSAGE value="zhaoziyu 设备管理" />
     <MESSAGE value="zhaoziyu 用户反馈" />
-    <option name="LAST_COMMIT_MESSAGE" value="zhaoziyu 用户反馈" />
+    <MESSAGE value="zhaoziyu 计算设备在线时间" />
+    <option name="LAST_COMMIT_MESSAGE" value="zhaoziyu 计算设备在线时间" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="50" />
+      <option name="time" value="51" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
@@ -1389,69 +1271,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/config/mybatis/RequestSearchPlugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/config/spring/SpringMvcConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-256">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/oms/src/libs/umeng-push.jar!/push/IOSNotification.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
-          <caret line="81" column="16" lean-forward="false" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/ydd/oms/service/PushService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="38" column="26" lean-forward="false" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/MemberService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/MessageService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/MessageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1055">
-          <caret line="127" column="59" lean-forward="false" selection-start-line="127" selection-start-column="59" selection-end-line="127" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/NabtoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.jersey/jersey-client/1.19/78dd71997d4c42608d841161a43a347b36aeefa6/jersey-client-1.19-sources.jar!/com/sun/jersey/api/client/WebResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="394" column="23" lean-forward="false" selection-start-line="394" selection-start-column="23" selection-end-line="394" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/NabtoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -1635,6 +1454,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1680,6 +1500,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="661">
           <caret line="235" column="25" lean-forward="false" selection-start-line="235" selection-start-column="25" selection-end-line="235" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1699,14 +1520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="81" column="27" lean-forward="false" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/task/DeviceStatusTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -1720,7 +1533,7 @@
         <state relative-caret-position="555">
           <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="39" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1769,6 +1582,99 @@
             <marker date="1526609976453" expanded="true" signature="6582:6631" ph="SELECT id fr... ec_device" />
             <marker date="1526609976453" expanded="true" signature="6680:6770" ph="UPDATE ec_de... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="81" column="19" lean-forward="false" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/deviceKey/DeviceKeyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="60" column="28" lean-forward="true" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceKeyMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="235" column="40" lean-forward="false" selection-start-line="235" selection-start-column="40" selection-end-line="235" selection-end-column="40" />
+          <folding>
+            <marker date="1526611682923" expanded="true" signature="2229:2354" ph="SELECT FROM where" />
+            <marker date="1526611682923" expanded="true" signature="4439:4537" ph="DELETE FROM " />
+            <marker date="1526611682923" expanded="true" signature="4962:5820" ph="UPDATE devic... " />
+            <marker date="1526611682923" expanded="true" signature="5950:6082" ph="SELECT FROM WHERE" />
+            <marker date="1526611682923" expanded="true" signature="6197:6355" ph="SELECT FROM WHERE" />
+            <marker date="1526611682923" expanded="true" signature="6465:6612" ph="SELECT FROM WHERE" />
+            <marker date="1526611682923" expanded="true" signature="7269:7364" ph="SELECT count... ec_device_key" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceKeyMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="87" column="36" lean-forward="false" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/mapper/DeviceKeyLogMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="58" column="24" lean-forward="true" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/DeviceKeyLogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="69" column="20" lean-forward="true" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceKeyLogServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="110" column="54" lean-forward="false" selection-start-line="110" selection-start-column="54" selection-end-line="110" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/resources/mybatis/mapper/yanyun/DeviceKeyLogMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-20">
+          <caret line="37" column="4" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+          <folding>
+            <marker date="1526612168741" expanded="true" signature="1256:1404" ph="SELECT FROM WHERE" />
+            <marker date="1526612168741" expanded="true" signature="2913:3003" ph="UPDATE SET d... " />
+            <marker date="1526612168741" expanded="true" signature="3392:3946" ph="UPDATE devic... " />
+            <marker date="1526612168741" expanded="true" signature="4065:4175" ph="SELECT FROM WHERE" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/service/impl/DeviceKeyServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="103" column="14" lean-forward="false" selection-start-line="103" selection-start-column="14" selection-end-line="103" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/oms/src/main/java/com/yanyun/oms/controller/DeviceKeyLogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="33" column="73" lean-forward="false" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="73" />
+          <folding />
         </state>
       </provider>
     </entry>

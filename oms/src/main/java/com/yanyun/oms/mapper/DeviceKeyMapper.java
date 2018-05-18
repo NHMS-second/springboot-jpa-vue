@@ -84,4 +84,6 @@ public interface DeviceKeyMapper {
     int updateStatus(@Param("ids") Integer[] ids, @Param("status") Byte status);
 
     Integer countByStatus(@Param("status") Integer status);
+
+    Integer countByDeviceKeyIdStatus(@Param("status") Integer status,@Param("deviceKeyId") Integer deviceKeyId);
 }
