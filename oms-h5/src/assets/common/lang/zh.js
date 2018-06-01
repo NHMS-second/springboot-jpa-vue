@@ -89,8 +89,20 @@ export default{
     showLog:'日志'
   },
   device:{
-    nickname:'设备昵称'
-
+    nickname:'设备昵称',
+    online:'在线',
+    offline:'离线',
+    error:'异常',
+    deviceId:'设备编号',
+    status:'设备状态',
+    onlineTime:'在线时间',
+    lastOnlineTime:'最近登录时间',
+    lastOfflineTime:"最近离线时间",
+    onlineRecord:'上下线记录',
+    memberId:'用户ID',
+    account:'用户账号',
+    event:'事件',
+    time:'时间'
   },
   faq:{
     title: '问题标题',
@@ -118,5 +130,15 @@ export default{
   },
   faq:{
     title:'标题'
+  },
+  dashboard:{
+    deviceIdTotalNums:'设备ID资源总数',
+    used:'已使用',
+    notUsed:'未使用',
+    totayNewMember:'今日新增用户',
+    totalDeviceNum:'设备总数',
+    totalOnlineDeviceNum:'设备在线数',
+    totalOfflineDeviceNum:'设备离线数',
+    totalErrorDeviceNum:'设备异常数'
   }
 }

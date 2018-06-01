@@ -197,7 +197,7 @@ public enum ExceptionCode {
     //上传excel
     ORDER_SN_NOT_STRING(76001,"订单号数据类型错误"),
     EXCEL_CELL_DATA_TYPE_ERROR(76002,"EXCEL表数据类型错误"),
-    EXCEL_FILE_STREAM_ERROR(76003,"EXCEL表上传流错误"),
+    EXCEL_FILE_STREAM_ERROR(76003,"请上传xlsx类型的excel文件"),
     EXPRESS_COMPANY_ERROR(76004,"请选择正确的快递公司"),
     EXCEL_CELL_ORDER_SN_ERROR(76005,"EXCEL表中订单号格式不对"),
     EXCEL_CELL_EXPRESS_TYPE_FORMAT_ERROR(76006,"EXCEL表中物流公司数据格式不对"),

@@ -7,22 +7,22 @@
       <el-row :gutter="20">
         <el-col :span="6">
           <el-card class="box-card">
-            <div>设备ID资源总数:<span v-text="totalDeviceKeyNum"></span></div>
-            <div>已使用:<span v-text="usedDeviceKeyNum"></span></div>
-            <div>未使用:<span v-text="notUsedDeviceKeyNum"></span></div>
+            <div>{{$t('dashboard.deviceIdTotalNums')}}:<span v-text="totalDeviceKeyNum"></span></div>
+            <div>{{$t('dashboard.used')}}:<span v-text="usedDeviceKeyNum"></span></div>
+            <div>{{$t('dashboard.notUsed')}}:<span v-text="notUsedDeviceKeyNum"></span></div>
           </el-card>
         </el-col>
         <el-col :span="6">
           <el-card class="box-card">
-            <div style="line-height:100px;text-align:center;verticle-align:middle;">今日新增用户:<span v-text="todayMemberCount"></span></div>
+            <div style="line-height:100px;text-align:center;verticle-align:middle;">{{$t('dashboard.totayNewMember')}}:<span v-text="todayMemberCount"></span></div>
           </el-card>
         </el-col>
         <el-col :span="6">
           <el-card class="box-card">
-            <div>设备总数:<span v-text="allDeviceNum"></span></div>
-            <div>设备在线数:<span v-text="onlineDeviceNum"></span></div>
-            <div>设备离线数:<span v-text="offlineDeviceNum"></span></div>
-            <div>设备异常数:<span v-text="errorDeviceNum"></span></div>
+            <div>{{$t('dashboard.totalDeviceNum')}}:<span v-text="allDeviceNum"></span></div>
+            <div>{{$t('dashboard.totalOnlineDeviceNum')}}:<span v-text="onlineDeviceNum"></span></div>
+            <div>{{$t('dashboard.totalOfflineDeviceNum')}}:<span v-text="offlineDeviceNum"></span></div>
+            <div>{{$t('dashboard.totalErrorDeviceNum')}}:<span v-text="errorDeviceNum"></span></div>
           </el-card>
         </el-col>
       </el-row>

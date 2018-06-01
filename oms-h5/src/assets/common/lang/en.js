@@ -89,8 +89,20 @@ export default {
     showLog:'log',
   },
   device:{
-    nickname:'device nickname'
-
+    nickname:'device nickname',
+    online:'online',
+    offline:'offline',
+    error:'error',
+    deviceId:'device id',
+    status:'device status',
+    onlineTime:'online time',
+    lastOnlineTime:'last online time',
+    lastOfflineTime:"last offline time",
+    onlineRecord:'record',    
+    memberId:'member id',
+    account:'member account',
+    event:'event',
+    time:'time'
   },
   faq:{
     title: 'title',
@@ -119,6 +131,16 @@ export default {
   },
   faq:{
     title:'title'
+  },
+  dashboard:{
+    deviceIdTotalNums:'DeviceId Total Number',
+    used:'Used',
+    notUsed:'Not Used',
+    totayNewMember:'The new member Today',
+    totalDeviceNum:'Device Total Number',
+    totalOnlineDeviceNum:'Device Online Total Number',
+    totalOfflineDeviceNum:'Device Offline Total Number',
+    totalErrorDeviceNum:'Device Error Total Number'
   }
 }
 

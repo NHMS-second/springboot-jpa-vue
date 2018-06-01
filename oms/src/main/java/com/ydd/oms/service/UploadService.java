@@ -57,12 +57,10 @@ public class UploadService {
 					List<DeviceKey> lists = Lists.newArrayList();
 					for(int j=0;j < list.size();j++){
 						Row row = list.get(j);
-						if(j==0){//过滤标题
-							continue;
-						}
+						
 						//设备唯一ID ,假设在第二列
 						Cell qniqueCell = row.getCell(1);
-						Cell keyCell = row.getCell(2);
+						Cell keyCell = row.getCell(3);
 						if(qniqueCell == null || keyCell ==null){
 							continue;
 						}
@@ -83,16 +81,15 @@ public class UploadService {
 						String qnique_id = qniqueCell.getStringCellValue().trim();
 						String device_key = keyCell.getStringCellValue().trim();
 
-						DeviceKey qnique = deviceKeyMapper.findByQniqueId(qnique_id);
-						DeviceKey key = deviceKeyMapper.findByKey(device_key);
-						if(qnique!=null){
-							return new ResponseDTO(ExceptionCode.qnique_id_exist.errorCode,
-									qnique_id+":"+ExceptionCode.qnique_id_exist.errorMsg);
-						}
-						if(key!=null){
-							return new ResponseDTO(ExceptionCode.device_key_exist.errorCode,
-									device_key+":"+ExceptionCode.device_key_exist.errorMsg);
-						}
+
+//						if(qnique!=null){
+//							return new ResponseDTO(ExceptionCode.qnique_id_exist.errorCode,
+//									qnique_id+":"+ExceptionCode.qnique_id_exist.errorMsg);
+//						}
+//						if(key!=null){
+//							return new ResponseDTO(ExceptionCode.device_key_exist.errorCode,
+//									device_key+":"+ExceptionCode.device_key_exist.errorMsg);
+//						}
 
 						DeviceKey device = new DeviceKey();
 						device.setDeviceUniqueId(qnique_id);
@@ -101,6 +98,9 @@ public class UploadService {
 					}
 
 					for(DeviceKey d : lists){
+						DeviceKey qnique = deviceKeyMapper.findByQniqueId(d.getDeviceUniqueId());
+						if(qnique != null)
+							continue;
 						d.setStatus(DeviceKeyStatusEnum.noUsered.value);
 						deviceKeyMapper.insert(d);
 					}

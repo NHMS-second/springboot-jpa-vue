@@ -2,34 +2,38 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yanyun.oms.mapper.DeviceMapper">
 
-	<resultMap id="DeviceMap" type="com.yanyun.oms.entity.device.Device">
-		<id column="id" jdbcType="INTEGER" property="id" />
-		<result column="nickname" property="nickname" />
-		<result column="device_sn" property="deviceSn" />
-		<result column="status" property="status" />
-		<result column="offline_time" property="offlineTime"></result>
-		<result column="online_time" property="onlineTime"></result>
-		<result column="total_online_time" property="totalOnlineTime"></result>
-		<result column="chip_type" property="chipType" />
-		<result column="created_id" property="createdId" />
-		<result column="modified_id" property="modifiedId" />
-		<result column="created_time" property="createdTime" />
-		<result column="modified_time" property="modifiedTime" />
-		<result column="deleted" property="deleted" />
+    <resultMap id="DeviceMap" type="com.yanyun.oms.entity.device.Device">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="nickname" property="nickname"/>
+        <result column="device_sn" property="deviceSn"/>
+        <result column="status" property="status"/>
+        <result column="offline_time" property="offlineTime"></result>
+        <result column="online_time" property="onlineTime"></result>
+        <result column="total_online_time" property="totalOnlineTime"></result>
+        <result column="chip_type" property="chipType"/>
+        <result column="created_id" property="createdId"/>
+        <result column="modified_id" property="modifiedId"/>
+        <result column="created_time" property="createdTime"/>
+        <result column="modified_time" property="modifiedTime"/>
+        <result column="deleted" property="deleted"/>
     </resultMap>
 
-	<resultMap id="newDeviceMap" type="com.yanyun.oms.dto.StatisticsNewDeviceDTO">
-		<result property="date" column="date"></result>
-		<result property="deviceNum" column="device_num"></result>
-	</resultMap>
+    <resultMap id="DeviceDTOMap" type="com.yanyun.oms.dto.DeviceDto" extends="DeviceMap">
+        <association property="member" select="findDeviceMember" column="id"></association>
+    </resultMap>
 
-	<!--表名 -->
-	<sql id="tableName">
+    <resultMap id="newDeviceMap" type="com.yanyun.oms.dto.StatisticsNewDeviceDTO">
+        <result property="date" column="date"></result>
+        <result property="deviceNum" column="device_num"></result>
+    </resultMap>
+
+    <!--表名 -->
+    <sql id="tableName">
 		ec_device
 	</sql>
-	
-	<!-- 字段 -->
-	<sql id="Field">
+
+    <!-- 字段 -->
+    <sql id="Field">
 		id,
 		nickname,
 		device_sn,
@@ -44,9 +48,9 @@
 		modified_time,
 		deleted
 	</sql>
-	
-	<!-- 字段值 -->
-	<sql id="FieldValue">
+
+    <!-- 字段值 -->
+    <sql id="FieldValue">
 		#{id, jdbcType=INTEGER},
 		#{nickname, jdbcType=VARCHAR},
 		#{deviceSn, jdbcType=VARCHAR},
@@ -59,200 +63,208 @@
 		#{deleted, jdbcType=TINYINT}
 	</sql>
 
-	<!-- 查询全部记录 -->
-    <select id="findAll" resultMap="DeviceMap">
+    <!-- 查询全部记录 -->
+    <select id="findAll" resultMap="DeviceDTOMap">
         SELECT
-        	<include refid="Field"></include>
+        <include refid="Field"></include>
         FROM
-        	<include refid="tableName"></include>
-		WHERE
-			deleted = 0
+        <include refid="tableName"></include>
+        WHERE
+        deleted = 0
     </select>
-	
-	<!-- 新增-->
-<insert id="insert" parameterType="com.yanyun.oms.entity.device.Device" useGeneratedKeys="true" keyProperty="id">
+
+    <!-- 新增-->
+    <insert id="insert" parameterType="com.yanyun.oms.entity.device.Device" useGeneratedKeys="true" keyProperty="id">
 
         INSERT INTO
-			<include refid="tableName"></include>
+        <include refid="tableName"></include>
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
-				id,
+                id,
             </if>
             <if test="nickname != null">
-				nickname,
+                nickname,
             </if>
             <if test="deviceSn != null">
-				device_sn,
+                device_sn,
             </if>
             <if test="status != null">
-				status,
+                status,
             </if>
             <if test="chipType != null">
-				chip_type,
+                chip_type,
             </if>
             <if test="createdId != null">
-				created_id,
+                created_id,
             </if>
             <if test="modifiedId != null">
-				modified_id,
+                modified_id,
             </if>
             <if test="createdTime != null">
-				created_time,
+                created_time,
             </if>
             <if test="modifiedTime != null">
-				modified_time,
+                modified_time,
             </if>
             <if test="deleted != null">
-				deleted,
+                deleted,
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="id != null">
-				#{id},
+                #{id},
             </if>
             <if test="nickname != null">
-				#{nickname},
+                #{nickname},
             </if>
             <if test="deviceSn != null">
-				#{deviceSn},
+                #{deviceSn},
             </if>
             <if test="status != null">
-				#{status},
+                #{status},
             </if>
             <if test="chipType != null">
-				#{chipType},
+                #{chipType},
             </if>
             <if test="createdId != null">
-				#{createdId},
+                #{createdId},
             </if>
             <if test="modifiedId != null">
-				#{modifiedId},
+                #{modifiedId},
             </if>
             <if test="createdTime != null">
-				#{createdTime},
+                #{createdTime},
             </if>
             <if test="modifiedTime != null">
-				#{modifiedTime},
+                #{modifiedTime},
             </if>
             <if test="deleted != null">
-				#{deleted},
+                #{deleted},
             </if>
         </trim>
-	</insert>
-	
-	<!-- 删除-->
-	<delete id="delete" parameterType="java.lang.Integer">
-		UPDATE
-			<include refid="tableName"></include>
-		SET
-			deleted = 1
-		WHERE
-			id = #{id}
-	</delete>
+    </insert>
+
+    <!-- 删除-->
+    <delete id="delete" parameterType="java.lang.Integer">
+        UPDATE
+        <include refid="tableName"></include>
+        SET
+        deleted = 1
+        WHERE
+        id = #{id}
+    </delete>
 
     <!-- 批量删除 -->
     <delete id="deleteByIds">
         UPDATE
-        	<include refid="tableName"></include>
-		SET
-			deleted = 1
+        <include refid="tableName"></include>
+        SET
+        deleted = 1
         WHERE
-			id IN
-			<foreach item="item" index="index" collection="array" open="(" separator="," close=")">
-				#{item}
-			</foreach>
+        id IN
+        <foreach item="item" index="index" collection="array" open="(" separator="," close=")">
+            #{item}
+        </foreach>
     </delete>
-	
-	<!-- 更新记录 -->
-<update id="update" parameterType="com.yanyun.oms.entity.device.Device">
-		UPDATE
-			<include refid="tableName"></include>
+
+    <!-- 更新记录 -->
+    <update id="update" parameterType="com.yanyun.oms.entity.device.Device">
+        UPDATE
+        <include refid="tableName"></include>
         <set>
-			<if test="nickname != null">
-				nickname = #{nickname},
-			</if>
-			<if test="deviceSn != null">
-				device_sn = #{deviceSn},
-			</if>
-			<if test="status != null">
-				status = #{status},
-			</if>
-			<if test="chipType != null">
-				chip_type = #{chipType},
-			</if>
-			<if test="createdId != null">
-				created_id = #{createdId},
-			</if>
-			<if test="modifiedId != null">
-				modified_id = #{modifiedId},
-			</if>
-			<if test="createdTime != null">
-				created_time = #{createdTime},
-			</if>
-			<if test="modifiedTime != null">
-				modified_time = #{modifiedTime},
-			</if>
-			<if test="deleted != null">
-				deleted = #{deleted},
-			</if>
+            <if test="nickname != null">
+                nickname = #{nickname},
+            </if>
+            <if test="deviceSn != null">
+                device_sn = #{deviceSn},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="chipType != null">
+                chip_type = #{chipType},
+            </if>
+            <if test="createdId != null">
+                created_id = #{createdId},
+            </if>
+            <if test="modifiedId != null">
+                modified_id = #{modifiedId},
+            </if>
+            <if test="createdTime != null">
+                created_time = #{createdTime},
+            </if>
+            <if test="modifiedTime != null">
+                modified_time = #{modifiedTime},
+            </if>
+            <if test="deleted != null">
+                deleted = #{deleted},
+            </if>
         </set>
         WHERE id = #{id}
-	</update>
-	
-	<!-- 通过编号查询 -->
-	<select id="findById" parameterType="java.lang.Integer" resultMap="DeviceMap" >
-		SELECT
-			<include refid="Field"></include>
-		FROM
-			<include refid="tableName"></include>
-		WHERE id = #{id}
-	</select>
+    </update>
+
+    <!-- 通过编号查询 -->
+    <select id="findById" parameterType="java.lang.Integer" resultMap="DeviceMap">
+        SELECT
+        <include refid="Field"></include>
+        FROM
+        <include refid="tableName"></include>
+        WHERE id = #{id}
+    </select>
 
     <!--更新设备状态-->
     <update id="updateStatus">
         UPDATE
-        	<include refid="tableName"></include>
+        <include refid="tableName"></include>
         SET
-        	status = #{status, jdbcType=TINYINT}
+        status = #{status, jdbcType=TINYINT}
         WHERE
-        	id
+        id
         IN
         <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
-			#{id}
+            #{id}
         </foreach>
     </update>
 
-	<select id="statisticsNewDeviceEveryDay" resultMap="newDeviceMap">
-		select `date`,count(0) as device_num from
-		(SELECT date(created_time) as `date` from ec_device ) as t
-		where `date` in
-		<foreach item="date" index="index" collection="dates" open="(" separator="," close=")">
-			#{date}
-		</foreach>
-		group by `date`
-		order by `date` asc
-	</select>
-	<select id="findByStatus" resultMap="DeviceMap">
+    <select id="statisticsNewDeviceEveryDay" resultMap="newDeviceMap">
+        select `date`,count(0) as device_num from
+        (SELECT date(created_time) as `date` from ec_device ) as t
+        where `date` in
+        <foreach item="date" index="index" collection="dates" open="(" separator="," close=")">
+            #{date}
+        </foreach>
+        group by `date`
+        order by `date` asc
+    </select>
+    <select id="findByStatus" resultMap="DeviceMap">
 		SELECT * from ec_device WHERE deleted = 0 and status = #{status}
 	</select>
 
-	<select id="countByStatus" resultType="java.lang.Integer">
-		SELECT count(0) from ec_device WHERE deleted = 0
-		<if test="status != null">
-			and status = #{status}
-		</if>
-	</select>
+    <select id="countByStatus" resultType="java.lang.Integer">
+        SELECT count(0) from ec_device WHERE deleted = 0
+        <if test="status != null">
+            and status = #{status}
+        </if>
+    </select>
 
-	<select id="findDeviceIdByStatus" resultType="java.lang.Integer">
+    <select id="findDeviceIdByStatus" resultType="java.lang.Integer">
 		SELECT id from ec_device where status = #{status}
 	</select>
 
-	<insert id="addTotalOnlineTime">
-		UPDATE ec_device
-		SET total_online_time = total_online_time + #{onlineTime}
-		where id in
-		<foreach item="item" index="index" collection="ids" open="(" separator="," close=")">
-			#{item}
-		</foreach>
-	</insert>
+    <insert id="addTotalOnlineTime">
+        UPDATE ec_device
+        SET total_online_time = total_online_time + #{onlineTime}
+        where id in
+        <foreach item="item" index="index" collection="ids" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </insert>
+
+    <select id="findDeviceMember" resultMap="com.yanyun.oms.mapper.MemberMapper.MemberMap">
+		select m.* from ec_member_device md
+		LEFT JOIN
+		ec_member m
+		on m.id = md.device_id
+		where md.device_id = #{id} and type = 1
+	</select>
 </mapper>

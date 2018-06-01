@@ -3,46 +3,63 @@
   <!-- 筛选条件 -->
   <div class="filter-container">
     
-  <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" placeholder="设备编号" v-model="params.search_like_deviceSn"></el-input>
-    <el-select v-model="params.search_eq_status" style="width: 120px" class="filter-item" clearable placeholder="状态">
-      <el-option label="在线" :value="1"></el-option>
-      <el-option label="离线" :value="2"></el-option>
-      <el-option label="异常" :value="3"></el-option>
+  <el-input @keyup.enter.native="handleSearch" style="width: 120px;" class="filter-item" :placeholder="$t('device.deviceId')" v-model="params.search_like_deviceSn"></el-input>
+    <el-select v-model="params.search_eq_status" style="width: 160px" class="filter-item" clearable :placeholder="$t('device.status')">
+      <el-option :label="$t('device.online')" :value="1"></el-option>
+      <el-option :label="$t('device.offline')" :value="2"></el-option>
+      <el-option :label="$t('device.error')" :value="3"></el-option>
     </el-select>
-
-    <el-button class="filter-item" type="primary" v-waves icon="search" @click="handleSearch">搜索</el-button>
+    <el-button class="filter-item" type="primary" v-waves icon="search" @click="handleSearch">{{$t('message.search')}}</el-button>
   </div>
 
   <!-- 列表数据 -->
-  <Pagination uri="/devices" :request-params="params" ref="pagination">
+  <Pagination uri="/devices" :request-params="params" ref="pagination" :showIndex="false">
+
+        
+      <!-- 用户ID -->
+      <el-table-column align="center" :label="$t('device.memberId')">
+        <template scope="scope">
+          <span v-if="scope.row.member">{{scope.row.member.id}}</span>
+        </template>
+      </el-table-column>
+
+      <el-table-column align="center" :label="$t('device.account')">
+        <template scope="scope">
+          <div v-if="scope.row.member">
+            <span v-if="scope.row.member.mobile" v-text="scope.row.member.mobile"></span>
+            <span v-if="scope.row.member.email" v-text="scope.row.member.email"></span>
+          </div>
+        </template>
+      </el-table-column>
+
       <!-- 设备编号 -->
-      <el-table-column align="center" label="设备编号">
+      <el-table-column align="center" :label="$t('device.deviceId')">
         <template scope="scope">
           <span>{{scope.row.deviceSn}}</span>
         </template>
       </el-table-column>
 
       <!-- 固件型号  -->
-      <el-table-column align="center" label="设备状态">
+      <el-table-column align="center" :label="$t('device.status')">
         <template scope="scope">
          <el-tag :type="getStatusTag(scope.row.status)" v-text="getStatus(scope.row.status)"></el-tag>
         </template>
       </el-table-column>
 
-      <el-table-column align="center" label="在线时间">
+      <el-table-column align="center" :label="$t('device.onlineTime')">
         <template scope="scope">
           <span v-text="getOnlineTime(scope.row.totalOnlineTime)"></span>
         </template>
       </el-table-column>
 
       <!-- 创建时间 -->
-      <el-table-column align="center" label="最近登录时间">
+      <el-table-column align="center" :label="$t('device.lastOnlineTime')">
         <template scope="scope">
           <span>{{scope.row.onlineTime | parseTime('{y}-{m}-{d} {h}:{i}:{s}')}}</span>
         </template>
       </el-table-column>
 
-      <el-table-column align="center" label="最近离线时间">
+      <el-table-column align="center" :label="$t('device.lastOfflineTime')">
         <template scope="scope">
           <span>{{scope.row.offlineTime | parseTime('{y}-{m}-{d} {h}:{i}:{s}')}}</span>
         </template>
@@ -50,7 +67,7 @@
 
     <el-table-column label="操作" align="center" width="150">
       <template scope="scope">        
-        <el-button size="small" type="text" @click="handleShowLog(scope.row)">上下线记录</el-button>
+        <el-button size="small" type="text" @click="handleShowLog(scope.row)">{{$t('device.onlineRecord')}}</el-button>
       </template>
     </el-table-column>
   </Pagination>
@@ -87,11 +104,11 @@ export default {
   methods: {
     getStatus(status) {
       if (status === 1) {
-        return '在线'
+        return this.$t('device.online')
       } else if (status === 2) {
-        return '离线'
+        return this.$t('device.offline')
       } else if (status === 3) {
-        return '异常'
+        return this.$t('device.error')
       }
     },
     getStatusTag(status) {
@@ -118,7 +135,7 @@ export default {
         day = parseInt(hour / 24)
         hour %= 24// 算出有多分钟
       }
-      return day + '天' + hour + '小时' + minute + '分'
+      return day + 'days ' + hour + 'hours ' + minute + 'minutes'
     },
     /**
      * 搜索设备

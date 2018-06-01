@@ -9,14 +9,14 @@
   <Pagination :uri="'/device/status/logs?deviceId='+deviceId" :request-params="params" ref="pagination">
 
       <!-- 事件 -->
-      <el-table-column align="center" label="事件">
+      <el-table-column align="center" :label="$t('device.event')">
         <template scope="scope">
           <span v-text="getType(scope.row.type)"></span>
         </template>
       </el-table-column>
 
       <!-- 设备上下线时间 -->
-      <el-table-column align="center" label="设备上下线时间">
+      <el-table-column align="center" :label="$t('device.time')">
         <template scope="scope">
           <span>{{scope.row.time | parseTime('{y}-{m}-{d} {h}:{i}:{s}')}}</span>
         </template>
@@ -50,9 +50,9 @@ export default {
   methods: {
     getType(type) {
       if (type === 1) {
-        return '上线'
+        return this.$t('device.online')
       } else if (type === 2) {
-        return '下线'
+        return this.$t('device.offline')
       }
     },
     /**

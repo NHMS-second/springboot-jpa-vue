@@ -2,37 +2,41 @@
 <div class="app-container calendar-list-container">
   <!-- 筛选条件 -->
   <div class="filter-container">
+    <el-input @keyup.enter.native="handleSearch" style="width: 160px;" class="filter-item" placeholder="ID" v-model="params.search_eq_id">
+    </el-input>
     <el-input @keyup.enter.native="handleSearch" style="width: 160px;" class="filter-item" :placeholder="$t('member.mobile')" v-model="params.search_like_mobile">
-      </el-input>
+    </el-input>
+    <el-input @keyup.enter.native="handleSearch" style="width: 160px;" class="filter-item" :placeholder="$t('member.email')" v-model="params.search_like_email">
+    </el-input>
+    <el-select v-model="params.search_eq_status" style="width: 120px" class="filter-item" clearable :placeholder="$t('message.status')">
+    <el-option v-for="item in options.status"
+      :key="item.value"
+      :label="$t(item.label)"
+      :value="item.value">
+    </el-option>
+  </el-select>
 
-      <el-input @keyup.enter.native="handleSearch" style="width: 160px;" class="filter-item" :placeholder="$t('member.email')" v-model="params.search_like_email">
-      </el-input>
+  <el-select v-model="params.search_eq_from" style="width: 160px" class="filter-item" clearable :placeholder="$t('member.regsterType')">
+    <el-option v-for="item in ooss.bbbs"
+      :key="item.value"
+      :label="$t(item.label)"
+      :value="item.value">
+    </el-option>
+  </el-select>
 
-
-      <el-select v-model="params.search_eq_status" style="width: 120px" class="filter-item" clearable :placeholder="$t('message.status')">
-      <el-option v-for="item in options.status"
-        :key="item.value"
-        :label="$t(item.label)"
-        :value="item.value">
-      </el-option>
-    </el-select>
-
-    <el-select v-model="params.search_eq_from" style="width: 160px" class="filter-item" clearable :placeholder="$t('member.regsterType')">
-      <el-option v-for="item in ooss.bbbs"
-        :key="item.value"
-        :label="$t(item.label)"
-        :value="item.value">
-      </el-option>
-    </el-select>
-
-
-    <el-button class="filter-item" type="primary" v-waves icon="search" @click="handleSearch">{{$t('message.search')}}</el-button>
-    <!-- <el-button class="filter-item pull-right" type="success" icon="edit" @click="handleCreate">添加</el-button> -->
-    <el-button class="filter-item pull-right" type="success" icon="document" @click="handleDownload">{{$t('member.export')}}</el-button>
+  <el-button class="filter-item" type="primary" v-waves icon="search" @click="handleSearch">{{$t('message.search')}}</el-button>
+  <!-- <el-button class="filter-item pull-right" type="success" icon="edit" @click="handleCreate">添加</el-button> -->
+  <el-button class="filter-item pull-right" type="success" icon="document" @click="handleDownload">{{$t('member.export')}}</el-button>
   </div>
 
   <!-- 列表数据 -->
-  <Pagination uri="/members" :request-params="params" ref="pagination">
+  <Pagination uri="/members" :request-params="params" ref="pagination" :showIndex="false">
+      <!-- id -->
+      <el-table-column align="center" label="ID">
+        <template scope="scope">
+          <span>{{scope.row.id}}</span>
+        </template>
+      </el-table-column>
 
       <!-- 手机号 -->
       <el-table-column align="center" :label="$t('member.mobile')">
@@ -124,6 +128,7 @@ export default {
   data() {
     return {
       params: {
+        search_eq_id: undefined,
         search_like_mobile: undefined,
         search_like_email: undefined,
         search_eq_status: undefined,
